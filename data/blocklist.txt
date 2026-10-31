@@ -1,0 +1,11 @@
+# Domains known to have served malicious code to online stores.
+# One registrable domain per line. Hosts-file format ("0.0.0.0 domain") also works.
+# The nightly workflow adds abuse.ch URLhaus on top of this list.
+
+# 2024 polyfill.io supply-chain attack: the CDN was bought and began injecting
+# redirects into more than 100,000 sites, together with related CDNs run by the same operator.
+polyfill.io
+bootcss.com
+bootcdn.net
+staticfile.org
+staticfile.net

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>skimwatch report</title>
+<style>
+  :root {
+    --bg: #0b0b0c; --surface: #141416; --line: #26262a; --text: #ecebe8; --muted: #8f8d88; --dim: #5d5b57;
+    --critical: #ff5c5c; --high: #ff9f43; --medium: #f5d547; --low: #6cb4ff; --info: #8f8d88; --ok: #7fd18b;
+    --mono: ui-monospace, "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--muted); font: 15px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { color: var(--text); font-size: 26px; margin: 0 0 4px; letter-spacing: -.01em; }
+  h2 { color: var(--text); font-size: 19px; margin: 0; }
+  .sub { font-family: var(--mono); font-size: 13px; color: var(--dim); }
+  .totals { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 36px; }
+  .pill { font-family: var(--mono); font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+  .pill b { color: var(--text); }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+  .critical { --c: var(--critical); } .high { --c: var(--high); } .medium { --c: var(--medium); } .low { --c: var(--low); } .info { --c: var(--info); } .clean { --c: var(--ok); }
+  .dot { background: var(--c); }
+  section.target { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin-bottom: 22px; overflow: hidden; }
+  .thead { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+  .badge { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--c); border: 1px solid var(--c); border-radius: 6px; padding: 2px 8px; }
+  details.f { border-top: 1px solid var(--line); }
+  details.f:first-of-type { border-top: 0; }
+  details.f summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 92px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 20px; }
+  details.f summary::-webkit-details-marker { display: none; }
+  details.f summary:hover { background: #18181b; }
+  .sev { font-family: var(--mono); font-size: 12px; text-transform: uppercase; color: var(--c); }
+  .title { color: var(--text); }
+  .new { font-family: var(--mono); font-size: 11px; color: var(--bg); background: var(--text); border-radius: 4px; padding: 1px 6px; margin-left: 8px; }
+  .layer { font-family: var(--mono); font-size: 12px; color: var(--dim); white-space: nowrap; }
+  .body { padding: 0 20px 18px 124px; }
+  .body p { margin: 0 0 10px; }
+  .kv { font-family: var(--mono); font-size: 12.5px; color: var(--dim); word-break: break-all; margin-bottom: 6px; }
+  pre { font-family: var(--mono); font-size: 12.5px; color: var(--text); background: #0e0e10; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; word-break: break-all; margin: 8px 0 0; }
+  .errors { padding: 12px 20px; font-family: var(--mono); font-size: 12.5px; color: var(--high); border-top: 1px solid var(--line); }
+  .empty { padding: 16px 20px; color: var(--ok); }
+  @media (max-width: 640px) {
+    details.f summary { grid-template-columns: 1fr; gap: 2px; }
+    .body { padding: 0 20px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>skimwatch report</h1>
+  <div class="sub">generated {{fmtTime .Generated}} · {{len .Targets}} target(s) · {{.NewCount}} new finding(s) at medium or above</div>
+
+  <div class="totals">
+    <span class="pill critical"><span class="dot"></span><b>{{index .Totals 4}}</b> critical</span>
+    <span class="pill high"><span class="dot"></span><b>{{index .Totals 3}}</b> high</span>
+    <span class="pill medium"><span class="dot"></span><b>{{index .Totals 2}}</b> medium</span>
+    <span class="pill low"><span class="dot"></span><b>{{index .Totals 1}}</b> low</span>
+    <span class="pill info"><span class="dot"></span><b>{{index .Totals 0}}</b> info</span>
+  </div>
+
+  {{range .Targets}}
+  <section class="target">
+    <div class="thead">
+      <div>
+        <h2>{{.Scan.Target}}</h2>
+        <div class="sub">{{fmtTime .Scan.StartedAt}} · {{len .Scan.Pages}} page(s) · {{len .Scan.Scripts}} script(s) · {{len .Scan.Domains}} third-party domain(s)</div>
+      </div>
+      <span class="badge {{.Max}}">{{.Max}}</span>
+    </div>
+    {{range .Scan.Findings}}
+    <details class="f {{sev .Severity}}">
+      <summary>
+        <span class="sev">{{sev .Severity}}</span>
+        <span class="title">{{.Title}}{{if .New}}<span class="new">new</span>{{end}}</span>
+        <span class="layer">{{.Layer}} · {{.Rule}}</span>
+      </summary>
+      <div class="body">
+        <p>{{.Detail}}</p>
+        {{if .PageURL}}<div class="kv">page: {{.PageURL}}</div>{{end}}
+        {{if .Location}}<div class="kv">where: {{.Location}}</div>{{end}}
+        {{if .Evidence}}<pre>{{.Evidence}}</pre>{{end}}
+      </div>
+    </details>
+    {{else}}
+    <div class="empty">No findings.</div>
+    {{end}}
+    {{if .Scan.Errors}}<div class="errors">{{range .Scan.Errors}}{{.}}<br>{{end}}</div>{{end}}
+  </section>
+  {{end}}
+</div>
+</body>
+</html>

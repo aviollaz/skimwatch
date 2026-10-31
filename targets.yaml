@@ -1,0 +1,31 @@
+# Stores to watch. Each page is fetched, parsed and loaded in a headless browser.
+# Home, a product page and the cart/checkout entry are where skimmers usually live.
+settings:
+  request_delay: 3s        # minimum gap between requests to the same host
+  runtime_wait: 8s         # how long the browser watches each page
+  concurrency: 2           # stores scanned in parallel
+  respect_robots: true
+  check_domain_age: true   # RDAP lookups for unfamiliar third-party domains
+
+targets:
+  - name: vea
+    pages:
+      - https://www.vea.com.ar/
+    # The store's own CDN and platform domains. Anything else that loads code or
+    # receives data is reported for review.
+    allow: [vtexassets.com, vteximg.com.br, cencosud.com.ar]
+
+  - name: jumbo
+    pages:
+      - https://www.jumbo.com.ar/
+    allow: [vtexassets.com, vteximg.com.br, cencosud.com.ar]
+
+  - name: carrefour
+    pages:
+      - https://www.carrefour.com.ar/
+    allow: [vtexassets.com, vteximg.com.br]
+
+  - name: dia
+    pages:
+      - https://diaonline.supermercadosdia.com.ar/
+    allow: [vtexassets.com, vteximg.com.br]

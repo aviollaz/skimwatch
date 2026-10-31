@@ -1,0 +1,53 @@
+name: nightly scan
+
+on:
+  schedule:
+    - cron: "17 7 * * *" # 04:17 in Buenos Aires
+  workflow_dispatch:
+
+# Two runs must never overlap: each one reads the previous scan as its baseline.
+concurrency:
+  group: scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GOFLAGS: -mod=mod
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Download URLhaus blocklist
+        # Fail-open: without the feed the scan still runs on data/blocklist.txt.
+        run: curl -fsSL --max-time 60 https://urlhaus.abuse.ch/downloads/hostfile/ -o data/urlhaus.txt || touch data/urlhaus.txt
+
+      - name: Scan
+        id: scan
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::DATABASE_URL secret is not set; without it there is no baseline between nights."
+            exit 2
+          fi
+          go run ./cmd/skimwatch scan \
+            -config targets.yaml \
+            -blocklist data/blocklist.txt -blocklist data/urlhaus.txt \
+            -chrome "$(command -v google-chrome)" \
+            -report out/report.html -json out/findings.json \
+            -fail-on high
+
+      # The report names weaknesses in third-party stores, so it stays a private artifact
+      # instead of being published. A failed job (new high or critical finding) emails the repo owner.
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skimwatch-report-${{ github.run_id }}
+          path: out/
+          retention-days: 30
