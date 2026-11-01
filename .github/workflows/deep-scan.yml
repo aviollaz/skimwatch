@@ -1,0 +1,25 @@
+name: deep scan (catálogo completo)
+on:
+  push:
+    branches: [deep-scan]
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        store: [jumbo, disco, vea, carrefour]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Escanear ${{ matrix.store }}
+        run: python deep-scan/deep_scan.py --stores ${{ matrix.store }} --redact --every 60 --out out/${{ matrix.store }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deep-scan-${{ matrix.store }}
+          path: out/
+          retention-days: 7
