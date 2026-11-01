@@ -1,0 +1,11 @@
+[
+  {
+    "store": "carrefour",
+    "products": 105299,
+    "suspicious": 44,
+    "low": 0,
+    "requests": 4904,
+    "errors": 0,
+    "minutes": 22.3
+  }
+]

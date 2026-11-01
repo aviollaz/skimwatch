@@ -1,0 +1,25 @@
+00:34:41 [carrefour] categoría lista: Automotor (17/21)
+00:34:41 [carrefour] pase 1 categorías 17/21 | 94,359 productos escaneados | 42 sospechosos ALTO/MEDIO, 0 bajos | 3,984 requests, 0 errores | 16.3 min
+00:34:41 [carrefour] categoría lista: Garantía extendida (18/21)
+00:34:41 [carrefour] pase 1 categorías 18/21 | 94,359 productos escaneados | 42 sospechosos ALTO/MEDIO, 0 bajos | 3,985 requests, 0 errores | 16.3 min
+00:35:14 [carrefour] !!! hallazgo MEDIO (detalle en el artifact)
+00:35:14 [carrefour] !!! hallazgo MEDIO (detalle en el artifact)
+00:35:41 [carrefour] pase 1 categorías 18/21 | 101,260 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,132 requests, 0 errores | 17.3 min
+00:36:39 [carrefour] aviso: Aire Libre y Ocio precio 0-0.74 tiene 3198 y no se puede partir más
+00:36:42 [carrefour] pase 1 categorías 18/21 | 105,245 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,266 requests, 0 errores | 18.3 min
+00:36:57 [carrefour] aviso: Electro y tecnología precio 0-0.74 tiene 17960 y no se puede partir más
+00:36:59 [carrefour] aviso: Libros precio 0-0.74 tiene 3716 y no se puede partir más
+00:37:42 [carrefour] pase 1 categorías 18/21 | 105,296 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,467 requests, 0 errores | 19.3 min
+00:38:02 [carrefour] categoría lista: Aire Libre y Ocio (19/21)
+00:38:02 [carrefour] pase 1 categorías 19/21 | 105,296 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,551 requests, 0 errores | 19.7 min
+00:38:07 [carrefour] aviso: Juguetería y Librería precio 0-0.74 tiene 9045 y no se puede partir más
+00:39:02 [carrefour] pase 1 categorías 19/21 | 105,296 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,696 requests, 0 errores | 20.7 min
+00:39:23 [carrefour] categoría lista: Juguetería y Librería (20/21)
+00:39:23 [carrefour] pase 1 categorías 20/21 | 105,297 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,752 requests, 0 errores | 21.0 min
+00:40:20 [carrefour] categoría lista: Electro y tecnología (21/21)
+00:40:20 [carrefour] pase 1 categorías 21/21 | 105,297 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,801 requests, 0 errores | 22.0 min
+00:40:40 [carrefour] sitemap: 99,760 productos; 2 no aparecieron en el pase 1
+00:40:40 [carrefour] TERMINADO | 105,299 productos escaneados | 44 sospechosos ALTO/MEDIO, 0 bajos | 4,904 requests, 0 errores | 22.3 min
+00:40:40 ======================================================================
+00:40:40 carrefour   105,299 productos    44 sospechosos     0 bajos  0 errores  22.3 min
+00:40:40 Detalle: /home/runner/work/skimwatch/skimwatch/out/carrefour/findings.csv
