@@ -355,7 +355,7 @@ class StoreScan:
     # -------------------------------------------------------------- helpers
     def search_url(self, fq_list, frm, to):
         q = [("fq", f) for f in fq_list] + [("_from", frm), ("_to", to)]
-        return f"{self.base}/api/catalog_system/pub/products/search?" + urllib.parse.urlencode(q)
+        return f"{self.base}/api/catalog_system/pub/products/search?" + urllib.parse.urlencode(q, quote_via=urllib.parse.quote)
 
     def fetch_page(self, fq_list, frm):
         text, hdr = self.http.get(self.search_url(fq_list, frm, frm + PAGE - 1), want_headers=True)
