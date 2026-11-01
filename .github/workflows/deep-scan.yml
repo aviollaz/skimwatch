@@ -27,6 +27,15 @@ jobs:
             d=$(mktemp -d)
             tail -n 25 "out/$S/progress.log" > "$d/progress.txt"
             [ -f "out/$S/summary.json" ] && cp "out/$S/summary.json" "$d/"
+            # Los hallazgos (nombres de productos, payloads) van cifrados: el repo es público.
+            # Solo quien tiene la clave privada de deep-scan/results-pubkey.pem puede leerlos.
+            if [ -f "out/$S/findings.jsonl" ]; then
+              tar -czf "$d/f.tgz" -C "out/$S" findings.jsonl findings.csv payloads 2>/dev/null || true
+              openssl rand -hex 32 > "$d/k"
+              openssl enc -aes-256-cbc -pbkdf2 -salt -in "$d/f.tgz" -out "$d/findings.tgz.enc" -pass file:"$d/k"
+              openssl pkeyutl -encrypt -pubin -inkey deep-scan/results-pubkey.pem -pkeyopt rsa_padding_mode:oaep -in "$d/k" -out "$d/key.enc"
+              rm -f "$d/f.tgz" "$d/k"
+            fi
             ( cd "$d" && git init -q && git add . && git -c user.name=deep-scan -c user.email=deep-scan@users.noreply.github.com commit -qm "progreso $S" \
               && git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}" HEAD:refs/heads/progress-$S ) || true
           }
