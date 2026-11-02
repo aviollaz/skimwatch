@@ -10,3 +10,7 @@
 13:16:39 [sportline] categoría lista: UNISEX (3/6)
 13:16:39 [sportline] pase 1 categorías 3/6 | 3,974 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 90 requests, 0 errores | 1.1 min
 13:17:39 [sportline] pase 1 categorías 3/6 | 4,955 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 139 requests, 0 errores | 2.2 min
+13:18:41 [sportline] pase 1 categorías 3/6 | 6,050 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 205 requests, 0 errores | 3.2 min
+13:19:41 [sportline] pase 1 categorías 3/6 | 6,518 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 255 requests, 0 errores | 4.2 min
+13:20:41 [sportline] pase 1 categorías 3/6 | 6,850 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 306 requests, 0 errores | 5.2 min
+13:21:43 [sportline] pase 1 categorías 3/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 378 requests, 0 errores | 6.2 min
