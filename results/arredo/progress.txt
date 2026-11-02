@@ -1,0 +1,26 @@
+14:55:34 Escaneo profundo de arredo -> /home/runner/work/skimwatch/skimwatch/out/arredo
+14:55:34 [arredo] arrancando https://www.arredo.com.ar
+14:55:34 [arredo] 9 categorías de primer nivel
+14:55:35 [arredo] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:38 [arredo] categoría lista: Baño (1/9)
+14:55:38 [arredo] pase 1 categorías 1/9 | 334 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: Jardines Verticales (2/9)
+14:55:39 [arredo] pase 1 categorías 2/9 | 334 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: Packaging (3/9)
+14:55:39 [arredo] pase 1 categorías 3/9 | 334 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: Cocina (4/9)
+14:55:39 [arredo] pase 1 categorías 4/9 | 339 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: Decoración (5/9)
+14:55:39 [arredo] pase 1 categorías 5/9 | 344 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: En desuso (6/9)
+14:55:39 [arredo] pase 1 categorías 6/9 | 344 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.1 min
+14:55:39 [arredo] categoría lista: Colchones y Sommiers (7/9)
+14:55:39 [arredo] pase 1 categorías 7/9 | 344 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 14 requests, 0 errores | 0.1 min
+14:55:44 [arredo] categoría lista: Infantil (8/9)
+14:55:44 [arredo] pase 1 categorías 8/9 | 515 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.2 min
+14:55:46 [arredo] categoría lista: Ropa de cama (9/9)
+14:55:46 [arredo] pase 1 categorías 9/9 | 600 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.2 min
+14:55:46 [arredo] TERMINADO | 600 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.2 min
+14:55:46 ======================================================================
+14:55:46 arredo          600 productos     0 sospechosos     0 bajos  0 errores  0.2 min
+14:55:46 Detalle: /home/runner/work/skimwatch/skimwatch/out/arredo/findings.csv

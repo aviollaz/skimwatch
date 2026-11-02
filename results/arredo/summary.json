@@ -1,0 +1,11 @@
+[
+  {
+    "store": "arredo",
+    "products": 600,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 23,
+    "errors": 0,
+    "minutes": 0.2
+  }
+]
