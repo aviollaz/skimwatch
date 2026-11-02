@@ -1,0 +1,11 @@
+[
+  {
+    "store": "colorshop",
+    "products": 242,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 9,
+    "errors": 0,
+    "minutes": 0.1
+  }
+]
