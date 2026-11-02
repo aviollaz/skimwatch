@@ -20,3 +20,6 @@
 13:21:35 [newsport] pase 1 categorías 6/7 | 7,698 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 313 requests, 0 errores | 6.2 min
 13:22:35 [newsport] pase 1 categorías 6/7 | 9,391 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 370 requests, 0 errores | 7.2 min
 13:23:36 [newsport] pase 1 categorías 6/7 | 9,430 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 464 requests, 0 errores | 8.2 min
+13:24:36 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 544 requests, 0 errores | 9.2 min
+13:25:51 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 623 requests, 0 errores | 10.4 min
+13:26:55 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 673 requests, 0 errores | 11.5 min
