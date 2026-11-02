@@ -1,0 +1,23 @@
+14:55:27 Escaneo profundo de mimo -> /home/runner/work/skimwatch/skimwatch/out/mimo
+14:55:27 [mimo] arrancando https://www.mimo.com.ar
+14:55:27 [mimo] 6 categorías de primer nivel
+14:55:27 [mimo] pase 1 categorías | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:27 [mimo] categoría lista: Lookbook (1/6)
+14:55:27 [mimo] pase 1 categorías 1/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:28 [mimo] categoría lista: Kids (2/6)
+14:55:28 [mimo] pase 1 categorías 2/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+14:55:28 [mimo] categoría lista: Minimimo (3/6)
+14:55:28 [mimo] pase 1 categorías 3/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+14:55:28 [mimo] categoría lista: Junior (4/6)
+14:55:28 [mimo] pase 1 categorías 4/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+14:55:28 [mimo] categoría lista: Black Friday Moda (5/6)
+14:55:28 [mimo] pase 1 categorías 5/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.0 min
+14:56:31 [mimo] pase 1 categorías 5/6 | 700 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 1.1 min
+14:57:35 [mimo] pase 1 categorías 5/6 | 1,650 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 49 requests, 0 errores | 2.1 min
+14:58:36 [mimo] pase 1 categorías 5/6 | 2,450 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 65 requests, 0 errores | 3.1 min
+14:58:43 [mimo] categoría lista: Productos Colecciones (6/6)
+14:58:43 [mimo] pase 1 categorías 6/6 | 2,552 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 76 requests, 0 errores | 3.3 min
+14:58:43 [mimo] TERMINADO | 2,552 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 76 requests, 0 errores | 3.3 min
+14:58:43 ======================================================================
+14:58:43 mimo          2,552 productos     0 sospechosos     0 bajos  0 errores  3.3 min
+14:58:43 Detalle: /home/runner/work/skimwatch/skimwatch/out/mimo/findings.csv
