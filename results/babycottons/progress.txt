@@ -1,0 +1,28 @@
+16:50:06 [babycottons] magento https://www.babycottons.com
+16:50:06 [babycottons] catálogo por API
+16:50:07   magento página 1/11 — 100 productos
+16:50:09   magento página 2/11 — 200 productos
+16:50:10   magento página 3/11 — 300 productos
+16:50:11   magento página 4/11 — 400 productos
+16:50:13   magento página 5/11 — 500 productos
+16:50:15   magento página 6/11 — 598 productos
+16:50:17   magento página 7/11 — 698 productos
+16:50:19   magento página 8/11 — 798 productos
+16:50:21   magento página 9/11 — 898 productos
+16:50:22   magento página 10/11 — 998 productos
+16:50:23   magento página 11/11 — 1,095 productos
+16:50:23 [babycottons] páginas
+16:50:25   300 páginas de producto del sitemap (muestra de hasta 300)
+16:51:10   páginas 25/302
+16:52:00   páginas 50/302
+16:52:51   páginas 75/302
+16:53:51   páginas 100/302
+16:54:44   páginas 125/302
+16:55:30   páginas 150/302
+16:56:22   páginas 175/302
+16:57:14   páginas 200/302
+16:58:00   páginas 225/302
+16:58:46   páginas 250/302
+16:59:32   páginas 275/302
+17:00:26   páginas 300/302
+17:00:31 [babycottons] TERMINADO {"store": "babycottons", "platform": "magento", "base": "https://www.babycottons.com", "requests": 322, "errors": 0, "minutes": 10.4, "catalog_products": 1095, "catalog_findings": 0, "page_findings": 303, "pages_fetched": 302, "uncommon_script_hosts": ["babycottons-us.grupo-alas.com.ar", "rum.hlx.page"]}
