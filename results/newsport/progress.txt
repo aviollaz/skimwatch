@@ -14,3 +14,6 @@
 13:16:55 [newsport] pase 1 categorías 5/7 | 4,231 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 108 requests, 0 errores | 1.5 min
 13:17:33 [newsport] categoría lista: Templo del Futbol (6/7)
 13:17:33 [newsport] pase 1 categorías 6/7 | 5,333 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 138 requests, 0 errores | 2.1 min
+13:18:34 [newsport] pase 1 categorías 6/7 | 6,284 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 180 requests, 0 errores | 3.1 min
+13:19:35 [newsport] pase 1 categorías 6/7 | 6,364 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 227 requests, 0 errores | 4.2 min
+13:20:35 [newsport] pase 1 categorías 6/7 | 6,365 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 259 requests, 0 errores | 5.2 min
