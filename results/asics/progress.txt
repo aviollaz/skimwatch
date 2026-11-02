@@ -1,0 +1,9 @@
+14:55:27 Escaneo profundo de asics -> /home/runner/work/skimwatch/skimwatch/out/asics
+14:55:27 [asics] arrancando https://www.asics.com.ar
+14:55:27 [asics] 1 categorías de primer nivel
+14:55:49 [asics] categoría lista: asics (1/1)
+14:55:49 [asics] pase 1 categorías 1/1 | 292 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.4 min
+14:55:49 [asics] TERMINADO | 292 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.4 min
+14:55:49 ======================================================================
+14:55:49 asics           292 productos     0 sospechosos     0 bajos  0 errores  0.4 min
+14:55:49 Detalle: /home/runner/work/skimwatch/skimwatch/out/asics/findings.csv
