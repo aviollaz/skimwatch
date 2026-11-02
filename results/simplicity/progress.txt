@@ -1,0 +1,28 @@
+14:55:48 Escaneo profundo de simplicity -> /home/runner/work/skimwatch/skimwatch/out/simplicity
+14:55:48 [simplicity] arrancando https://www.simplicity.com.ar
+14:55:48 [simplicity] 10 categorías de primer nivel
+14:55:48 [simplicity] categoría lista: Category (1/10)
+14:55:48 [simplicity] pase 1 categorías 1/10 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:56:45 [simplicity] categoría lista: Cuidado de la Piel (2/10)
+14:56:45 [simplicity] pase 1 categorías 2/10 | 6,767 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 140 requests, 0 errores | 0.9 min
+14:56:45 [simplicity] categoría lista: Fragancias (3/10)
+14:56:45 [simplicity] pase 1 categorías 3/10 | 6,878 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 143 requests, 0 errores | 1.0 min
+14:56:57 [simplicity] categoría lista: Maquillaje (4/10)
+14:56:57 [simplicity] pase 1 categorías 4/10 | 8,263 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 172 requests, 0 errores | 1.1 min
+14:56:59 [simplicity] categoría lista: Regalería (5/10)
+14:56:59 [simplicity] pase 1 categorías 5/10 | 8,871 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 185 requests, 0 errores | 1.2 min
+14:57:11 [simplicity] categoría lista: Hogar (6/10)
+14:57:11 [simplicity] pase 1 categorías 6/10 | 10,637 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 222 requests, 0 errores | 1.4 min
+14:57:11 [simplicity] categoría lista: Regalos (7/10)
+14:57:11 [simplicity] pase 1 categorías 7/10 | 10,645 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 223 requests, 0 errores | 1.4 min
+14:57:15 [simplicity] categoría lista: Cuidado Capilar (8/10)
+14:57:15 [simplicity] pase 1 categorías 8/10 | 11,158 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 237 requests, 0 errores | 1.5 min
+14:57:25 [simplicity] categoría lista: Moda y Accesorios (9/10)
+14:57:25 [simplicity] pase 1 categorías 9/10 | 11,164 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 249 requests, 0 errores | 1.6 min
+14:58:27 [simplicity] pase 1 categorías 9/10 | 11,164 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 289 requests, 0 errores | 2.6 min
+14:58:44 [simplicity] categoría lista: Cuidado Personal (10/10)
+14:58:44 [simplicity] pase 1 categorías 10/10 | 11,164 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 314 requests, 0 errores | 2.9 min
+14:58:44 [simplicity] TERMINADO | 11,164 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 314 requests, 0 errores | 2.9 min
+14:58:44 ======================================================================
+14:58:44 simplicity   11,164 productos     0 sospechosos     0 bajos  0 errores  2.9 min
+14:58:44 Detalle: /home/runner/work/skimwatch/skimwatch/out/simplicity/findings.csv
