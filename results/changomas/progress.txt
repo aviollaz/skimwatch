@@ -1,11 +1,3 @@
-13:17:45 [changomas] categoría lista: Automotor (6/19)
-13:17:45 [changomas] pase 1 categorías 6/19 | 18,892 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 555 requests, 0 errores | 2.2 min
-13:17:47 [changomas] categoría lista: Carnicería y Pescadería (7/19)
-13:17:47 [changomas] pase 1 categorías 7/19 | 19,341 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 570 requests, 0 errores | 2.3 min
-13:18:29 [changomas] categoría lista: Bebidas (8/19)
-13:18:29 [changomas] pase 1 categorías 8/19 | 24,622 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 768 requests, 0 errores | 3.0 min
-13:18:36 [changomas] aviso: Perfumería y Belleza precio 0-0.74 tiene 3510 y no se puede partir más
-13:18:39 [changomas] categoría lista: Congelados (9/19)
 13:18:39 [changomas] pase 1 categorías 9/19 | 25,773 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 817 requests, 0 errores | 3.1 min
 13:19:00 [changomas] aviso: Hogar precio 0-0.74 tiene 3871 y no se puede partir más
 13:19:08 [changomas] categoría lista: Almacén (10/19)
@@ -28,3 +20,11 @@
 13:20:42 [changomas] categoría lista: Hogar (18/19)
 13:20:42 [changomas] pase 1 categorías 18/19 | 37,550 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,438 requests, 0 errores | 5.2 min
 13:20:49 [changomas] aviso: Librería y Arte precio 0-0.74 tiene 4094 y no se puede partir más
+13:21:42 [changomas] pase 1 categorías 18/19 | 37,768 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,565 requests, 0 errores | 6.2 min
+13:21:44 [changomas] aviso: Deportes, Ocio y Aire Libre precio 0-0.74 tiene 4587 y no se puede partir más
+13:22:23 [changomas] categoría lista: Deportes, Ocio y Aire Libre (19/19)
+13:22:23 [changomas] pase 1 categorías 19/19 | 37,768 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,654 requests, 0 errores | 6.9 min
+13:22:23 [changomas] TERMINADO | 37,768 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,654 requests, 0 errores | 6.9 min
+13:22:23 ======================================================================
+13:22:23 changomas    37,768 productos     0 sospechosos     0 bajos  0 errores  6.9 min
+13:22:23 Detalle: /home/runner/work/skimwatch/skimwatch/out/changomas/findings.csv
