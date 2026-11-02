@@ -1,0 +1,15 @@
+{
+ "store": "taverniti",
+ "platform": "tiendanube",
+ "base": "https://www.taverniti.com.ar",
+ "requests": 510,
+ "errors": 0,
+ "minutes": 7.0,
+ "catalog_products": 503,
+ "catalog_findings": 0,
+ "page_findings": 507,
+ "pages_fetched": 503,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}

@@ -1,0 +1,24 @@
+16:58:07 [taverniti] tiendanube https://www.taverniti.com.ar
+16:58:07 [taverniti] páginas
+16:58:09   502 páginas de producto del sitemap (muestra de hasta 3000)
+16:58:32   páginas 25/504
+16:58:52   páginas 50/504
+16:59:11   páginas 75/504
+16:59:32   páginas 100/504
+16:59:50   páginas 125/504
+17:00:10   páginas 150/504
+17:00:31   páginas 175/504
+17:00:50   páginas 200/504
+17:01:13   páginas 225/504
+17:01:35   páginas 250/504
+17:01:53   páginas 275/504
+17:02:17   páginas 300/504
+17:02:38   páginas 325/504
+17:02:57   páginas 350/504
+17:03:19   páginas 375/504
+17:03:41   páginas 400/504
+17:03:59   páginas 425/504
+17:04:18   páginas 450/504
+17:04:37   páginas 475/504
+17:04:58   páginas 500/504
+17:05:06 [taverniti] TERMINADO {"store": "taverniti", "platform": "tiendanube", "base": "https://www.taverniti.com.ar", "requests": 510, "errors": 0, "minutes": 7.0, "catalog_products": 503, "catalog_findings": 0, "page_findings": 507, "pages_fetched": 503, "uncommon_script_hosts": ["acdn-us.mitiendanube.com"]}
