@@ -1,0 +1,16 @@
+{
+ "store": "tematika",
+ "platform": "tiendanube",
+ "base": "https://www.tematika.com",
+ "requests": 3010,
+ "errors": 0,
+ "minutes": 38.2,
+ "catalog_products": 3001,
+ "catalog_findings": 0,
+ "page_findings": 3026,
+ "pages_fetched": 3001,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com",
+  "www.yenny-elateneo.com"
+ ]
+}
