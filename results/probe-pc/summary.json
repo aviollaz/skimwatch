@@ -1,0 +1,30 @@
+{
+ "found": true,
+ "productName": "Smart TV Noblex 58\" Android TV 4K DB58X7580",
+ "brand": "Noblex",
+ "releaseDate": "2026-09-16T00:00:00Z",
+ "link": "https://www.provinciacompras.com.ar/smart-tv-noblex-58--android-tv-4k-db58x7580-328954/p",
+ "description_has_script": true,
+ "description_head": "<script>(function(){var n=\"i_p67x_cb986adc\";if(location.search.indexOf(\"i_p67x=1\")===-1)return;document.title=n;fetch(\"/",
+ "sellers": [
+  {
+   "sellerId": "tiendanewsan165",
+   "sellerName": "Tienda Newsan NS",
+   "qty": 155,
+   "price": 767999.0
+  },
+  {
+   "sellerId": "1",
+   "sellerName": "Provincia Compras",
+   "qty": 0,
+   "price": 0.0
+  }
+ ],
+ "same_seller_scanned": 344,
+ "same_seller_hits": [
+  [
+   "328954",
+   "Smart TV Noblex 58\" Android TV 4K DB58X7580"
+  ]
+ ]
+}
