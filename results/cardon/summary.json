@@ -1,0 +1,15 @@
+{
+ "store": "cardon",
+ "platform": "tiendanube",
+ "base": "https://www.cardon.com.ar",
+ "requests": 2850,
+ "errors": 0,
+ "minutes": 25.2,
+ "catalog_products": 2843,
+ "catalog_findings": 0,
+ "page_findings": 4003,
+ "pages_fetched": 2843,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}
