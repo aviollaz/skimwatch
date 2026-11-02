@@ -1,0 +1,11 @@
+[
+  {
+    "store": "provinciacompras",
+    "products": 70258,
+    "suspicious": 15,
+    "low": 1,
+    "requests": 3394,
+    "errors": 0,
+    "minutes": 34.9
+  }
+]
