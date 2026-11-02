@@ -1,0 +1,15 @@
+{
+ "store": "integrados",
+ "platform": "tiendanube",
+ "base": "https://www.integradosargentinos.com",
+ "requests": 648,
+ "errors": 0,
+ "minutes": 5.5,
+ "catalog_products": 638,
+ "catalog_findings": 0,
+ "page_findings": 1276,
+ "pages_fetched": 638,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}

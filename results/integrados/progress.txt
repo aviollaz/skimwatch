@@ -1,0 +1,29 @@
+16:50:06 [integrados] tiendanube https://www.integradosargentinos.com
+16:50:06 [integrados] páginas
+16:50:07   638 páginas de producto del sitemap (muestra de hasta 3000)
+16:50:21   páginas 25/640
+16:50:33   páginas 50/640
+16:50:45   páginas 75/640
+16:50:56   páginas 100/640
+16:51:08   páginas 125/640
+16:51:19   páginas 150/640
+16:51:31   páginas 175/640
+16:51:43   páginas 200/640
+16:51:54   páginas 225/640
+16:52:05   páginas 250/640
+16:52:17   páginas 275/640
+16:52:30   páginas 300/640
+16:52:40   páginas 325/640
+16:52:52   páginas 350/640
+16:53:04   páginas 375/640
+16:53:15   páginas 400/640
+16:53:27   páginas 425/640
+16:53:38   páginas 450/640
+16:53:50   páginas 475/640
+16:54:02   páginas 500/640
+16:54:13   páginas 525/640
+16:54:24   páginas 550/640
+16:54:36   páginas 575/640
+16:54:46   páginas 600/640
+16:54:56   páginas 625/640
+16:55:34 [integrados] TERMINADO {"store": "integrados", "platform": "tiendanube", "base": "https://www.integradosargentinos.com", "requests": 648, "errors": 0, "minutes": 5.5, "catalog_products": 638, "catalog_findings": 0, "page_findings": 1276, "pages_fetched": 638, "uncommon_script_hosts": ["acdn-us.mitiendanube.com"]}
