@@ -1,0 +1,15 @@
+14:55:29 Escaneo profundo de underarmour -> /home/runner/work/skimwatch/skimwatch/out/underarmour
+14:55:29 [underarmour] arrancando https://www.underarmour.com.ar
+14:55:29 [underarmour] 4 categorías de primer nivel
+14:55:30 [underarmour] categoría lista: UnderArmour (1/4)
+14:55:30 [underarmour] pase 1 categorías 1/4 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:31 [underarmour] categoría lista: Accesorios (2/4)
+14:55:31 [underarmour] pase 1 categorías 2/4 | 34 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+14:55:40 [underarmour] categoría lista: Calzado (3/4)
+14:55:40 [underarmour] pase 1 categorías 3/4 | 268 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.2 min
+14:55:47 [underarmour] categoría lista: Indumentaria (4/4)
+14:55:47 [underarmour] pase 1 categorías 4/4 | 437 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.3 min
+14:55:47 [underarmour] TERMINADO | 437 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.3 min
+14:55:47 ======================================================================
+14:55:47 underarmour      437 productos     0 sospechosos     0 bajos  0 errores  0.3 min
+14:55:47 Detalle: /home/runner/work/skimwatch/skimwatch/out/underarmour/findings.csv
