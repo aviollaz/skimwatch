@@ -1,0 +1,30 @@
+14:56:03 [legacy] categoría lista: Remeras (2/14)
+14:56:03 [legacy] pase 1 categorías 2/14 | 42 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+14:56:04 [legacy] categoría lista: Buzos/ Polar (3/14)
+14:56:04 [legacy] pase 1 categorías 3/14 | 70 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+14:56:04 [legacy] categoría lista: Camperas (4/14)
+14:56:04 [legacy] pase 1 categorías 4/14 | 91 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+14:56:04 [legacy] categoría lista: Sweaters (5/14)
+14:56:04 [legacy] pase 1 categorías 5/14 | 95 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+14:56:04 [legacy] categoría lista: Bermudas (6/14)
+14:56:04 [legacy] pase 1 categorías 6/14 | 138 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+14:56:04 [legacy] categoría lista: Camisas (7/14)
+14:56:04 [legacy] pase 1 categorías 7/14 | 139 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Pantalones (8/14)
+14:56:05 [legacy] pase 1 categorías 8/14 | 156 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Accesorios (9/14)
+14:56:05 [legacy] pase 1 categorías 9/14 | 160 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Jeans-Denim (10/14)
+14:56:05 [legacy] pase 1 categorías 10/14 | 165 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Chalecos (11/14)
+14:56:05 [legacy] pase 1 categorías 11/14 | 170 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Calzado (12/14)
+14:56:05 [legacy] pase 1 categorías 12/14 | 174 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.1 min
+14:56:05 [legacy] categoría lista: Shorts de baño (13/14)
+14:56:05 [legacy] pase 1 categorías 13/14 | 185 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 14 requests, 0 errores | 0.1 min
+14:56:07 [legacy] categoría lista: Mujer (14/14)
+14:56:07 [legacy] pase 1 categorías 14/14 | 221 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.1 min
+14:56:07 [legacy] TERMINADO | 221 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.1 min
+14:56:07 ======================================================================
+14:56:07 legacy          221 productos     0 sospechosos     0 bajos  0 errores  0.1 min
+14:56:07 Detalle: /home/runner/work/skimwatch/skimwatch/out/legacy/findings.csv

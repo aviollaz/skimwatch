@@ -1,0 +1,11 @@
+[
+  {
+    "store": "legacy",
+    "products": 221,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 15,
+    "errors": 0,
+    "minutes": 0.1
+  }
+]
