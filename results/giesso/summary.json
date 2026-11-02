@@ -1,0 +1,15 @@
+{
+ "store": "giesso",
+ "platform": "tiendanube",
+ "base": "https://www.giesso.com.ar",
+ "requests": 859,
+ "errors": 0,
+ "minutes": 7.1,
+ "catalog_products": 849,
+ "catalog_findings": 0,
+ "page_findings": 851,
+ "pages_fetched": 849,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}
