@@ -1,31 +1,32 @@
 #!/usr/bin/env python3
-"""Detalle público de un producto VTEX: vendedor, fechas y si la descripción tiene <script>."""
-import json, os, re, urllib.request
+"""¿Son VTEX (por HTML o Intelligent Search) las candidatas que no respondieron a la API de catálogo?"""
+import gzip, json, os, re, urllib.request, urllib.error, urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-BASE, PID = "https://www.provinciacompras.com.ar", "328954"
-def get(u):
-    with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=30) as r:
-        return json.loads(r.read().decode())
-p = get(f"{BASE}/api/catalog_system/pub/products/search?fq=productId:{PID}")
-out = {"found": bool(p)}
-if p:
-    p = p[0]
-    d = p.get("description") or ""
-    out.update(productName=p.get("productName"), brand=p.get("brand"), releaseDate=p.get("releaseDate"), link=p.get("link"),
-               description_has_script="<script" in d.lower(), description_head=d[:120],
-               sellers=[{"sellerId": s.get("sellerId"), "sellerName": s.get("sellerName"),
-                         "qty": (s.get("commertialOffer") or {}).get("AvailableQuantity"), "price": (s.get("commertialOffer") or {}).get("Price")}
-                        for it in p.get("items", []) for s in it.get("sellers", [])])
-    sid = out["sellers"][0]["sellerId"] if out["sellers"] else None
-    if sid:  # otros productos del mismo vendedor con <script> en algún campo
-        hits, n = [], 0
-        for frm in range(0, 2500, 50):
-            try: L = get(f"{BASE}/api/catalog_system/pub/products/search?fq=sellerId:{sid}&_from={frm}&_to={frm+49}")
-            except Exception: break
-            if not L: break
-            for q in L:
-                n += 1
-                if re.search(r"<\s*script|i_p67x|onerror\s*=", json.dumps(q), re.I): hits.append([q.get("productId"), q.get("productName")])
-        out["same_seller_scanned"], out["same_seller_hits"] = n, hits
-os.makedirs("out/probe-pc", exist_ok=True)
-json.dump(out, open("out/probe-pc/summary.json", "w"), indent=1, ensure_ascii=False)
+NAMES = "tiendanewsan noblex tiendamacro tiendacomafi tiendaclaro tiendamovistar drean philco atma rodo casadelaudio converse vans kevingston cheeky prune cardon lamartina akiabara rapsodia solodeportes opensports reebok morph selma openfarma natura avon atomo lacoope musimundo philips stanley hush gaelle markova yagmour jazmin caro lupo babycottons owoko grisino".split()
+def get(url, n=400_000):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/json,*/*", "Accept-Encoding": "gzip"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            b = r.read(n)
+            if r.headers.get("Content-Encoding") == "gzip":
+                try: b = gzip.decompress(b)
+                except Exception: pass
+            return r.status, r.geturl(), b.decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        return e.code, url, ""
+    except Exception as e:
+        return None, url, ""
+urls = dict(l.split() for l in open("stores/vtex_candidates.txt") if l.strip() and not l.startswith("#"))
+FP = {"vtex": r"vtex", "shopify": r"cdn\.shopify|Shopify\.", "tiendanube": r"tiendanube|nuvemshop|d26lpennugtm8s", "magento": r"Magento|mage/cookies",
+      "woocommerce": r"woocommerce|wp-content", "sfcc": r"demandware", "prestashop": r"prestashop", "vnda": r"vnda", "nextjs": r"__NEXT_DATA__"}
+def p(name):
+    st, final, body = get(urls[name])
+    root = "{0.scheme}://{0.netloc}".format(urllib.parse.urlsplit(final))
+    s2, _, b2 = get(root + "/api/io/_v/api/intelligent-search/product_search/?count=1&page=1", 100_000)
+    tot = re.search(r'"recordsFiltered"\s*:\s*(\d+)', b2)
+    return {"name": name, "root": root, "home": st, "fp": [k for k, rx in FP.items() if re.search(rx, body, re.I)],
+            "is_status": s2, "is_total": int(tot.group(1)) if tot else None, "is_has_desc": '"description"' in b2}
+with ThreadPoolExecutor(10) as ex: res = list(ex.map(p, NAMES))
+os.makedirs("out/probe2", exist_ok=True)
+json.dump(res, open("out/probe2/summary.json", "w"), indent=1)

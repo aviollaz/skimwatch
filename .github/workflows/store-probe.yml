@@ -16,4 +16,4 @@ jobs:
       - run: python stores/probe.py
       - name: Publicar (cifrado)
         env: { GH_TOKEN: "${{ github.token }}" }
-        run: stores/publish.sh probe-pc out/probe-pc 1
+        run: stores/publish.sh probe2 out/probe2 0
