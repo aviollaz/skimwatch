@@ -1,0 +1,13 @@
+{
+ "store": "ansilta",
+ "platform": "shopify",
+ "base": "https://ansilta.com",
+ "requests": 433,
+ "errors": 0,
+ "minutes": 5.3,
+ "catalog_products": 604,
+ "catalog_findings": 0,
+ "page_findings": 302,
+ "pages_fetched": 302,
+ "uncommon_script_hosts": []
+}

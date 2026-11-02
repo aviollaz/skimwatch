@@ -1,0 +1,20 @@
+16:59:38 [ansilta] shopify https://ansilta.com
+16:59:38 [ansilta] catálogo por API
+16:59:39   shopify página 1 — 250 productos
+16:59:41   shopify página 2 — 500 productos
+16:59:42   shopify página 3 — 604 productos
+16:59:43 [ansilta] páginas
+16:59:46   300 páginas de producto del sitemap (muestra de hasta 300)
+16:59:58   páginas 25/302
+17:00:11   páginas 50/302
+17:00:32   páginas 75/302
+17:01:13   páginas 100/302
+17:01:36   páginas 125/302
+17:02:02   páginas 150/302
+17:02:27   páginas 175/302
+17:02:52   páginas 200/302
+17:03:18   páginas 225/302
+17:03:43   páginas 250/302
+17:04:09   páginas 275/302
+17:04:34   páginas 300/302
+17:04:56 [ansilta] TERMINADO {"store": "ansilta", "platform": "shopify", "base": "https://ansilta.com", "requests": 433, "errors": 0, "minutes": 5.3, "catalog_products": 604, "catalog_findings": 0, "page_findings": 302, "pages_fetched": 302, "uncommon_script_hosts": []}
