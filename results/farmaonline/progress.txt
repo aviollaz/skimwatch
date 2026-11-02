@@ -1,0 +1,30 @@
+14:56:49 [farmaonline] categoría lista: Cuidado de Adulto (7/18)
+14:56:49 [farmaonline] pase 1 categorías 7/18 | 8,432 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 175 requests, 0 errores | 1.1 min
+14:57:00 [farmaonline] categoría lista: Hogar (8/18)
+14:57:00 [farmaonline] pase 1 categorías 8/18 | 9,535 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 198 requests, 0 errores | 1.2 min
+14:57:00 [farmaonline] categoría lista: Insumos Médicos (9/18)
+14:57:00 [farmaonline] pase 1 categorías 9/18 | 9,596 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 200 requests, 0 errores | 1.3 min
+14:57:01 [farmaonline] categoría lista: Deluxe Beauty (10/18)
+14:57:01 [farmaonline] pase 1 categorías 10/18 | 9,596 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 201 requests, 0 errores | 1.3 min
+14:57:01 [farmaonline] categoría lista: Nutrición & Deporte (11/18)
+14:57:01 [farmaonline] pase 1 categorías 11/18 | 9,639 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 202 requests, 0 errores | 1.3 min
+14:57:01 [farmaonline] categoría lista: Test de Prueba (12/18)
+14:57:01 [farmaonline] pase 1 categorías 12/18 | 9,639 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 203 requests, 0 errores | 1.3 min
+14:57:03 [farmaonline] categoría lista: Uso Profesional (13/18)
+14:57:03 [farmaonline] pase 1 categorías 13/18 | 9,697 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 206 requests, 0 errores | 1.3 min
+14:57:03 [farmaonline] categoría lista: Medicamentos de Venta Libre (14/18)
+14:57:03 [farmaonline] pase 1 categorías 14/18 | 9,698 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 207 requests, 0 errores | 1.3 min
+14:57:05 [farmaonline] categoría lista: San Valentín (15/18)
+14:57:05 [farmaonline] pase 1 categorías 15/18 | 9,995 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 215 requests, 0 errores | 1.3 min
+14:57:11 [farmaonline] categoría lista: Infantiles (16/18)
+14:57:11 [farmaonline] pase 1 categorías 16/18 | 10,641 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 229 requests, 0 errores | 1.4 min
+14:57:11 [farmaonline] categoría lista: Dermocosmética (17/18)
+14:57:11 [farmaonline] pase 1 categorías 17/18 | 10,658 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 230 requests, 0 errores | 1.4 min
+14:58:12 [farmaonline] pase 1 categorías 17/18 | 12,778 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 307 requests, 0 errores | 2.5 min
+14:59:12 [farmaonline] pase 1 categorías 17/18 | 12,778 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 382 requests, 0 errores | 3.5 min
+14:59:31 [farmaonline] categoría lista: Cuidado Personal (18/18)
+14:59:31 [farmaonline] pase 1 categorías 18/18 | 12,778 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 411 requests, 0 errores | 3.8 min
+14:59:31 [farmaonline] TERMINADO | 12,778 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 411 requests, 0 errores | 3.8 min
+14:59:31 ======================================================================
+14:59:31 farmaonline   12,778 productos     0 sospechosos     0 bajos  0 errores  3.8 min
+14:59:31 Detalle: /home/runner/work/skimwatch/skimwatch/out/farmaonline/findings.csv
