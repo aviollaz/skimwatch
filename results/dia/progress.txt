@@ -1,0 +1,30 @@
+13:15:44 [dia] categoría lista: Frescos (5/17)
+13:15:44 [dia] pase 1 categorías 5/17 | 2,821 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 59 requests, 0 errores | 0.3 min
+13:15:46 [dia] categoría lista: Bebidas (6/17)
+13:15:46 [dia] pase 1 categorías 6/17 | 3,328 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 70 requests, 0 errores | 0.3 min
+13:15:52 [dia] categoría lista: Almacén (7/17)
+13:15:52 [dia] pase 1 categorías 7/17 | 4,420 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 92 requests, 0 errores | 0.4 min
+13:15:52 [dia] categoría lista: Indumentaria y Calzado (8/17)
+13:15:52 [dia] pase 1 categorías 8/17 | 4,420 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 93 requests, 0 errores | 0.4 min
+13:15:54 [dia] categoría lista: Hogar y Deco (9/17)
+13:15:54 [dia] pase 1 categorías 9/17 | 4,690 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 99 requests, 0 errores | 0.4 min
+13:15:54 [dia] categoría lista: Aire libre (10/17)
+13:15:54 [dia] pase 1 categorías 10/17 | 4,740 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 101 requests, 0 errores | 0.4 min
+13:15:54 [dia] categoría lista: Tecnología (11/17)
+13:15:54 [dia] pase 1 categorías 11/17 | 4,808 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 104 requests, 0 errores | 0.4 min
+13:15:55 [dia] categoría lista: Combos (12/17)
+13:15:55 [dia] pase 1 categorías 12/17 | 4,840 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 105 requests, 0 errores | 0.4 min
+13:15:57 [dia] categoría lista: Perfumería (13/17)
+13:15:57 [dia] pase 1 categorías 13/17 | 5,228 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 113 requests, 0 errores | 0.5 min
+13:15:58 [dia] categoría lista: Carnicería (14/17)
+13:15:58 [dia] pase 1 categorías 14/17 | 5,290 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 115 requests, 0 errores | 0.5 min
+13:15:59 [dia] categoría lista: Limpieza (15/17)
+13:15:59 [dia] pase 1 categorías 15/17 | 5,343 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 117 requests, 0 errores | 0.5 min
+13:15:59 [dia] categoría lista: Electro Hogar (16/17)
+13:15:59 [dia] pase 1 categorías 16/17 | 5,505 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 121 requests, 0 errores | 0.5 min
+13:16:00 [dia] categoría lista: Frutas y Verduras (17/17)
+13:16:00 [dia] pase 1 categorías 17/17 | 5,509 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 122 requests, 0 errores | 0.5 min
+13:16:00 [dia] TERMINADO | 5,509 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 122 requests, 0 errores | 0.5 min
+13:16:00 ======================================================================
+13:16:00 dia           5,509 productos     0 sospechosos     0 bajos  0 errores  0.5 min
+13:16:00 Detalle: /home/runner/work/skimwatch/skimwatch/out/dia/findings.csv

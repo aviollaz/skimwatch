@@ -1,0 +1,11 @@
+[
+  {
+    "store": "dia",
+    "products": 5509,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 122,
+    "errors": 0,
+    "minutes": 0.5
+  }
+]
