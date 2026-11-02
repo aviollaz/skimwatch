@@ -26,3 +26,5 @@
 13:29:57 [sportline] pase 1 categorías 5/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 613 requests, 0 errores | 14.5 min
 13:31:29 [sportline] pase 1 categorías 5/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 623 requests, 0 errores | 16.0 min
 13:32:35 [sportline] pase 1 categorías 5/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 625 requests, 0 errores | 17.1 min
+13:34:50 [sportline] pase 1 categorías 5/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 629 requests, 0 errores | 19.3 min
+13:35:54 [sportline] pase 1 categorías 5/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 640 requests, 0 errores | 20.4 min
