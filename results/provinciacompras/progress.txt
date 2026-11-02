@@ -1,10 +1,3 @@
-13:21:02 [provinciacompras] pase 1 categorías | 26,366 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 624 requests, 0 errores | 5.6 min
-13:22:02 [provinciacompras] pase 1 categorías | 27,884 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 766 requests, 0 errores | 6.6 min
-13:23:02 [provinciacompras] pase 1 categorías | 28,106 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 884 requests, 0 errores | 7.6 min
-13:24:03 [provinciacompras] pase 1 categorías | 28,303 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,047 requests, 0 errores | 8.6 min
-13:24:22 [provinciacompras] categoría lista: Moda (1/18)
-13:24:22 [provinciacompras] pase 1 categorías 1/18 | 28,680 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,103 requests, 0 errores | 8.9 min
-13:24:52 [provinciacompras] categoría lista: Tecnología (2/18)
 13:24:52 [provinciacompras] pase 1 categorías 2/18 | 30,168 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,177 requests, 0 errores | 9.4 min
 13:25:27 [provinciacompras] categoría lista: Librería (3/18)
 13:25:27 [provinciacompras] pase 1 categorías 3/18 | 33,447 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,284 requests, 0 errores | 10.0 min
@@ -28,3 +21,10 @@
 13:32:58 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
 13:32:58 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
 13:33:09 [provinciacompras] pase 1 categorías 5/18 | 52,378 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 2,161 requests, 0 errores | 17.7 min
+13:33:38 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
+13:33:42 [provinciacompras] categoría lista: Renovación (6/18)
+13:33:42 [provinciacompras] pase 1 categorías 6/18 | 54,282 productos escaneados | 14 sospechosos ALTO/MEDIO, 0 bajos | 2,213 requests, 0 errores | 18.3 min
+13:34:43 [provinciacompras] pase 1 categorías 6/18 | 56,689 productos escaneados | 14 sospechosos ALTO/MEDIO, 0 bajos | 2,294 requests, 0 errores | 19.3 min
+13:35:45 [provinciacompras] pase 1 categorías 6/18 | 59,048 productos escaneados | 14 sospechosos ALTO/MEDIO, 0 bajos | 2,393 requests, 0 errores | 20.3 min
+13:35:47 [provinciacompras] categoría lista: Deportes (7/18)
+13:35:47 [provinciacompras] pase 1 categorías 7/18 | 59,111 productos escaneados | 14 sospechosos ALTO/MEDIO, 0 bajos | 2,397 requests, 0 errores | 20.3 min
