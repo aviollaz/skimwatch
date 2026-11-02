@@ -1,0 +1,11 @@
+[
+  {
+    "store": "toledo",
+    "products": 8908,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 184,
+    "errors": 0,
+    "minutes": 1.8
+  }
+]

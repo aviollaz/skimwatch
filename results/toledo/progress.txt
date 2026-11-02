@@ -1,0 +1,30 @@
+14:56:01 [toledo] categoría lista: Fiambrería (1/13)
+14:56:01 [toledo] pase 1 categorías 1/13 | 493 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.1 min
+14:56:23 [toledo] categoría lista: Frescos (2/13)
+14:56:23 [toledo] pase 1 categorías 2/13 | 2,626 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 54 requests, 0 errores | 0.5 min
+14:56:31 [toledo] categoría lista: Congelados (3/13)
+14:56:31 [toledo] pase 1 categorías 3/13 | 3,329 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 69 requests, 0 errores | 0.6 min
+14:56:50 [toledo] categoría lista: Bebidas (4/13)
+14:56:50 [toledo] pase 1 categorías 4/13 | 5,007 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 102 requests, 0 errores | 1.0 min
+14:57:21 [toledo] categoría lista: Perfumeria (5/13)
+14:57:21 [toledo] pase 1 categorías 5/13 | 7,653 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 155 requests, 0 errores | 1.5 min
+14:57:23 [toledo] categoría lista: Carnes (6/13)
+14:57:23 [toledo] pase 1 categorías 6/13 | 7,831 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 159 requests, 0 errores | 1.5 min
+14:57:26 [toledo] categoría lista: Almacén (7/13)
+14:57:26 [toledo] pase 1 categorías 7/13 | 8,148 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 166 requests, 0 errores | 1.6 min
+14:57:30 [toledo] categoría lista: Mascotas (8/13)
+14:57:30 [toledo] pase 1 categorías 8/13 | 8,430 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 172 requests, 0 errores | 1.6 min
+14:57:30 [toledo] categoría lista: Rotisería (9/13)
+14:57:30 [toledo] pase 1 categorías 9/13 | 8,616 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 176 requests, 0 errores | 1.6 min
+14:57:31 [toledo] categoría lista: Black Friday (10/13)
+14:57:31 [toledo] pase 1 categorías 10/13 | 8,616 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 177 requests, 0 errores | 1.6 min
+14:57:33 [toledo] categoría lista: Verdulería (11/13)
+14:57:33 [toledo] pase 1 categorías 11/13 | 8,662 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 178 requests, 0 errores | 1.7 min
+14:57:34 [toledo] categoría lista: Limpieza (12/13)
+14:57:34 [toledo] pase 1 categorías 12/13 | 8,772 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 181 requests, 0 errores | 1.7 min
+14:57:39 [toledo] categoría lista: Hogar (13/13)
+14:57:39 [toledo] pase 1 categorías 13/13 | 8,908 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 184 requests, 0 errores | 1.8 min
+14:57:39 [toledo] TERMINADO | 8,908 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 184 requests, 0 errores | 1.8 min
+14:57:39 ======================================================================
+14:57:39 toledo        8,908 productos     0 sospechosos     0 bajos  0 errores  1.8 min
+14:57:39 Detalle: /home/runner/work/skimwatch/skimwatch/out/toledo/findings.csv
