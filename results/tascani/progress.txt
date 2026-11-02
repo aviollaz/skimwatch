@@ -1,0 +1,30 @@
+16:56:04 [tascani] categoría lista: Calzado (9/21)
+16:56:04 [tascani] pase 1 categorías 9/21 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.0 min
+16:56:04 [tascani] categoría lista: Bermudas (10/21)
+16:56:04 [tascani] pase 1 categorías 10/21 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.0 min
+16:56:05 [tascani] categoría lista: Short de Baño (11/21)
+16:56:05 [tascani] pase 1 categorías 11/21 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.0 min
+16:56:05 [tascani] categoría lista: Cyber-monday (12/21)
+16:56:05 [tascani] pase 1 categorías 12/21 | 7 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.0 min
+16:56:05 [tascani] categoría lista: test2 (13/21)
+16:56:05 [tascani] pase 1 categorías 13/21 | 7 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 14 requests, 0 errores | 0.0 min
+16:56:07 [tascani] categoría lista: INVIERNO (14/21)
+16:56:07 [tascani] pase 1 categorías 14/21 | 60 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 16 requests, 0 errores | 0.1 min
+16:56:09 [tascani] categoría lista: Young (15/21)
+16:56:09 [tascani] pase 1 categorías 15/21 | 111 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+16:56:12 [tascani] categoría lista: Preventa (16/21)
+16:56:12 [tascani] pase 1 categorías 16/21 | 412 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 27 requests, 0 errores | 0.2 min
+16:56:13 [tascani] categoría lista: CLASICOS (17/21)
+16:56:13 [tascani] pase 1 categorías 17/21 | 542 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 31 requests, 0 errores | 0.2 min
+16:56:13 [tascani] categoría lista: Feria (18/21)
+16:56:13 [tascani] pase 1 categorías 18/21 | 546 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 32 requests, 0 errores | 0.2 min
+16:56:18 [tascani] categoría lista: Anticipo (19/21)
+16:56:18 [tascani] pase 1 categorías 19/21 | 756 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 38 requests, 0 errores | 0.3 min
+16:56:23 [tascani] categoría lista: Liquidacion Total (20/21)
+16:56:23 [tascani] pase 1 categorías 20/21 | 923 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 42 requests, 0 errores | 0.3 min
+16:57:01 [tascani] categoría lista: Outlet (21/21)
+16:57:01 [tascani] pase 1 categorías 21/21 | 1,475 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 59 requests, 0 errores | 1.0 min
+16:57:01 [tascani] TERMINADO | 1,475 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 59 requests, 0 errores | 1.0 min
+16:57:01 ======================================================================
+16:57:01 tascani       1,475 productos     0 sospechosos     0 bajos  0 errores  1.0 min
+16:57:01 Detalle: /home/runner/work/skimwatch/skimwatch/out/tascani/findings.csv
