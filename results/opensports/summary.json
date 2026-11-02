@@ -1,0 +1,13 @@
+{
+ "store": "opensports",
+ "platform": "other",
+ "base": "https://www.opensports.com.ar",
+ "requests": 41,
+ "errors": 0,
+ "minutes": 0.2,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 1,
+ "uncommon_script_hosts": []
+}
