@@ -1,0 +1,4 @@
+17:00:51 [carrousel] tiendanube https://www.carrousel.com.ar
+17:00:51 [carrousel] páginas
+17:00:51   0 páginas de producto del sitemap (muestra de hasta 3000)
+17:00:53 [carrousel] TERMINADO {"store": "carrousel", "platform": "tiendanube", "base": "https://www.carrousel.com.ar", "requests": 8, "errors": 0, "minutes": 0.0, "catalog_products": 1, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 1, "uncommon_script_hosts": ["dcdn-us.mitiendanube.com"]}
