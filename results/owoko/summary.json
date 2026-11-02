@@ -1,0 +1,15 @@
+{
+ "store": "owoko",
+ "platform": "tiendanube",
+ "base": "https://www.owoko.com.ar",
+ "requests": 2431,
+ "errors": 0,
+ "minutes": 30.1,
+ "catalog_products": 2422,
+ "catalog_findings": 0,
+ "page_findings": 2424,
+ "pages_fetched": 2422,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}
