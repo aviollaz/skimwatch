@@ -1,0 +1,16 @@
+{
+ "store": "huapi",
+ "platform": "tiendanube",
+ "base": "https://www.huapi.com.ar",
+ "requests": 1275,
+ "errors": 0,
+ "minutes": 16.3,
+ "catalog_products": 1264,
+ "catalog_findings": 0,
+ "page_findings": 1114,
+ "pages_fetched": 1264,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com",
+  "ftp-cdn.mitiendanube.com"
+ ]
+}
