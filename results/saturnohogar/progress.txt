@@ -1,0 +1,19 @@
+14:55:35 Escaneo profundo de saturnohogar -> /home/runner/work/skimwatch/skimwatch/out/saturnohogar
+14:55:35 [saturnohogar] arrancando https://www.saturnohogar.com.ar
+14:55:35 [saturnohogar] 5 categorías de primer nivel
+14:55:38 [saturnohogar] categoría lista: Celulares, Notebooks y Tecnología (1/5)
+14:55:38 [saturnohogar] pase 1 categorías 1/5 | 24 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.1 min
+14:55:39 [saturnohogar] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:39 [saturnohogar] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:39 [saturnohogar] categoría lista: TV y Audio (2/5)
+14:55:39 [saturnohogar] pase 1 categorías 2/5 | 183 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+14:55:39 [saturnohogar] categoría lista: Salud, Belleza y Fitness (3/5)
+14:55:39 [saturnohogar] pase 1 categorías 3/5 | 231 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.1 min
+14:55:40 [saturnohogar] categoría lista: Hogar, Muebles y Jardin (4/5)
+14:55:40 [saturnohogar] pase 1 categorías 4/5 | 267 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+14:55:59 [saturnohogar] categoría lista: Electrodomesticos y Aires Acondicionados (5/5)
+14:55:59 [saturnohogar] pase 1 categorías 5/5 | 803 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.4 min
+14:55:59 [saturnohogar] TERMINADO | 803 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.4 min
+14:55:59 ======================================================================
+14:55:59 saturnohogar      803 productos     2 sospechosos     0 bajos  0 errores  0.4 min
+14:55:59 Detalle: /home/runner/work/skimwatch/skimwatch/out/saturnohogar/findings.csv
