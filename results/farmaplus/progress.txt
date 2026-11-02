@@ -1,0 +1,30 @@
+16:55:44 [farmaplus] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:56:05 [farmaplus] categoría lista: Bebés y Maternidad (1/12)
+16:56:05 [farmaplus] pase 1 categorías 1/12 | 2,647 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 55 requests, 0 errores | 0.4 min
+16:56:12 [farmaplus] categoría lista: Dermocosmética (2/12)
+16:56:12 [farmaplus] pase 1 categorías 2/12 | 3,624 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 75 requests, 0 errores | 0.5 min
+16:56:32 [farmaplus] categoría lista: Cuidado de la Piel (3/12)
+16:56:33 [farmaplus] pase 1 categorías 3/12 | 5,998 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 125 requests, 0 errores | 0.8 min
+16:56:35 [farmaplus] categoría lista: Suplementos y Nutrición (4/12)
+16:56:35 [farmaplus] pase 1 categorías 4/12 | 6,292 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 132 requests, 0 errores | 0.9 min
+16:56:37 [farmaplus] categoría lista: Electrónica (5/12)
+16:56:37 [farmaplus] pase 1 categorías 5/12 | 6,884 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 144 requests, 0 errores | 0.9 min
+16:56:38 [farmaplus] categoría lista: Fragancias (6/12)
+16:56:38 [farmaplus] pase 1 categorías 6/12 | 6,944 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 146 requests, 0 errores | 0.9 min
+16:56:45 [farmaplus] categoría lista: Hogar (7/12)
+16:56:45 [farmaplus] pase 1 categorías 7/12 | 7,941 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 167 requests, 0 errores | 1.0 min
+16:56:46 [farmaplus] categoría lista: Mas Categorias (8/12)
+16:56:46 [farmaplus] pase 1 categorías 8/12 | 8,068 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 170 requests, 0 errores | 1.1 min
+16:56:48 [farmaplus] categoría lista: Perfumes y fragancias (9/12)
+16:56:48 [farmaplus] pase 1 categorías 9/12 | 8,217 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 173 requests, 0 errores | 1.1 min
+16:56:52 [farmaplus] categoría lista: Salud y Farmacia (10/12)
+16:56:52 [farmaplus] pase 1 categorías 10/12 | 8,782 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 185 requests, 0 errores | 1.2 min
+16:56:55 [farmaplus] categoría lista: Maquillajes y Estética (11/12)
+16:56:55 [farmaplus] pase 1 categorías 11/12 | 9,037 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 191 requests, 0 errores | 1.2 min
+16:57:56 [farmaplus] pase 1 categorías 11/12 | 9,401 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 227 requests, 0 errores | 2.2 min
+16:58:56 [farmaplus] categoría lista: Cuidado Personal (12/12)
+16:58:56 [farmaplus] pase 1 categorías 12/12 | 9,407 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 275 requests, 0 errores | 3.2 min
+16:58:56 [farmaplus] TERMINADO | 9,407 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 275 requests, 0 errores | 3.2 min
+16:58:56 ======================================================================
+16:58:56 farmaplus     9,407 productos     0 sospechosos     0 bajos  0 errores  3.2 min
+16:58:56 Detalle: /home/runner/work/skimwatch/skimwatch/out/farmaplus/findings.csv
