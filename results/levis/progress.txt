@@ -1,0 +1,15 @@
+14:55:27 Escaneo profundo de levis -> /home/runner/work/skimwatch/skimwatch/out/levis
+14:55:27 [levis] arrancando https://www.levi.com.ar
+14:55:28 [levis] 4 categorías de primer nivel
+14:55:33 [levis] categoría lista: Kids (1/4)
+14:55:33 [levis] pase 1 categorías 1/4 | 460 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.1 min
+14:55:40 [levis] categoría lista: Mujer (2/4)
+14:55:40 [levis] pase 1 categorías 2/4 | 966 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 26 requests, 0 errores | 0.2 min
+14:55:42 [levis] categoría lista: SALE (3/4)
+14:55:42 [levis] pase 1 categorías 3/4 | 1,090 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 29 requests, 0 errores | 0.2 min
+14:55:48 [levis] categoría lista: Hombre (4/4)
+14:55:48 [levis] pase 1 categorías 4/4 | 1,198 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 35 requests, 0 errores | 0.3 min
+14:55:48 [levis] TERMINADO | 1,198 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 35 requests, 0 errores | 0.3 min
+14:55:48 ======================================================================
+14:55:48 levis         1,198 productos     0 sospechosos     0 bajos  0 errores  0.3 min
+14:55:48 Detalle: /home/runner/work/skimwatch/skimwatch/out/levis/findings.csv

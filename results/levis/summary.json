@@ -1,0 +1,11 @@
+[
+  {
+    "store": "levis",
+    "products": 1198,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 35,
+    "errors": 0,
+    "minutes": 0.3
+  }
+]
