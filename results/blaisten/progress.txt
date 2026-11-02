@@ -1,0 +1,26 @@
+13:15:27 Escaneo profundo de blaisten -> /home/runner/work/skimwatch/skimwatch/out/blaisten
+13:15:27 [blaisten] arrancando https://www.blaisten.com.ar
+13:15:28 [blaisten] 9 categorías de primer nivel
+13:15:28 [blaisten] pase 1 categorías | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+13:15:28 [blaisten] categoría lista: Category (1/9)
+13:15:28 [blaisten] pase 1 categorías 1/9 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+13:15:29 [blaisten] categoría lista: Instalación de Baños y Cocinas (2/9)
+13:15:29 [blaisten] pase 1 categorías 2/9 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+13:15:29 [blaisten] categoría lista: Electrodomésticos (3/9)
+13:15:29 [blaisten] pase 1 categorías 3/9 | 7 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+13:15:29 [blaisten] categoría lista: Bachas de Cocina y Complementos (4/9)
+13:15:29 [blaisten] pase 1 categorías 4/9 | 42 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+13:15:30 [blaisten] categoría lista: Muebles (5/9)
+13:15:30 [blaisten] pase 1 categorías 5/9 | 348 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.1 min
+13:15:31 [blaisten] categoría lista: Bañeras y Complementos de Baño (6/9)
+13:15:31 [blaisten] pase 1 categorías 6/9 | 616 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+13:15:33 [blaisten] categoría lista: Griferías (7/9)
+13:15:33 [blaisten] pase 1 categorías 7/9 | 747 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 21 requests, 0 errores | 0.1 min
+13:15:34 [blaisten] categoría lista: Sanitarios (8/9)
+13:15:34 [blaisten] pase 1 categorías 8/9 | 826 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.1 min
+13:15:37 [blaisten] categoría lista: Pisos y Revestimientos (9/9)
+13:15:37 [blaisten] pase 1 categorías 9/9 | 958 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 26 requests, 0 errores | 0.2 min
+13:15:37 [blaisten] TERMINADO | 958 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 26 requests, 0 errores | 0.2 min
+13:15:37 ======================================================================
+13:15:37 blaisten        958 productos     0 sospechosos     0 bajos  0 errores  0.2 min
+13:15:37 Detalle: /home/runner/work/skimwatch/skimwatch/out/blaisten/findings.csv
