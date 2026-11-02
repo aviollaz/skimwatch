@@ -1,0 +1,26 @@
+16:55:08 Escaneo profundo de desiderata -> /home/runner/work/skimwatch/skimwatch/out/desiderata
+16:55:08 [desiderata] arrancando https://www.desiderata.com.ar
+16:55:08 [desiderata] 9 categorías de primer nivel
+16:55:08 [desiderata] pase 1 categorías | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:55:08 [desiderata] categoría lista: Verano (1/9)
+16:55:08 [desiderata] pase 1 categorías 1/9 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:55:08 [desiderata] categoría lista: General (2/9)
+16:55:08 [desiderata] pase 1 categorías 2/9 | 7 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:55:08 [desiderata] categoría lista: Invierno (3/9)
+16:55:08 [desiderata] pase 1 categorías 3/9 | 9 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+16:55:09 [desiderata] categoría lista: SALE (4/9)
+16:55:09 [desiderata] pase 1 categorías 4/9 | 10 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+16:55:09 [desiderata] categoría lista: Eventos (5/9)
+16:55:09 [desiderata] pase 1 categorías 5/9 | 10 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.0 min
+16:55:09 [desiderata] categoría lista: Hot Sale (6/9)
+16:55:09 [desiderata] pase 1 categorías 6/9 | 10 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.0 min
+16:55:09 [desiderata] categoría lista: CyberMonday (7/9)
+16:55:09 [desiderata] pase 1 categorías 7/9 | 10 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.0 min
+16:55:10 [desiderata] categoría lista: Winter (8/9)
+16:55:10 [desiderata] pase 1 categorías 8/9 | 13 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.0 min
+16:55:41 [desiderata] categoría lista: Summer (9/9)
+16:55:41 [desiderata] pase 1 categorías 9/9 | 500 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.6 min
+16:55:41 [desiderata] TERMINADO | 500 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.6 min
+16:55:41 ======================================================================
+16:55:41 desiderata      500 productos     0 sospechosos     0 bajos  0 errores  0.6 min
+16:55:41 Detalle: /home/runner/work/skimwatch/skimwatch/out/desiderata/findings.csv

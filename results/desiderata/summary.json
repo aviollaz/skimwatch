@@ -1,0 +1,11 @@
+[
+  {
+    "store": "desiderata",
+    "products": 500,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 19,
+    "errors": 0,
+    "minutes": 0.6
+  }
+]
