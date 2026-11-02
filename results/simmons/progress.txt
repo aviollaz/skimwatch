@@ -1,0 +1,30 @@
+16:54:05 [simmons] categoría lista: Beautyrest (8/20)
+16:54:05 [simmons] pase 1 categorías 8/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.0 min
+16:54:06 [simmons] categoría lista: BackCare Foam (9/20)
+16:54:06 [simmons] pase 1 categorías 9/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.0 min
+16:54:06 [simmons] categoría lista: Beautysleep Foam (10/20)
+16:54:06 [simmons] pase 1 categorías 10/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.0 min
+16:54:06 [simmons] categoría lista: BeautySleep (11/20)
+16:54:06 [simmons] pase 1 categorías 11/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.0 min
+16:54:06 [simmons] categoría lista: BackCare (12/20)
+16:54:06 [simmons] pase 1 categorías 12/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 14 requests, 0 errores | 0.1 min
+16:54:06 [simmons] categoría lista: MEGA OFERTAS (13/20)
+16:54:06 [simmons] pase 1 categorías 13/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.1 min
+16:54:06 [simmons] categoría lista: Belspring 1 (14/20)
+16:54:06 [simmons] pase 1 categorías 14/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 16 requests, 0 errores | 0.1 min
+16:54:06 [simmons] categoría lista: Belspring 2 (15/20)
+16:54:06 [simmons] pase 1 categorías 15/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 17 requests, 0 errores | 0.1 min
+16:54:07 [simmons] categoría lista: Belspring 3 (16/20)
+16:54:07 [simmons] pase 1 categorías 16/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+16:54:07 [simmons] categoría lista: Density 1 (17/20)
+16:54:07 [simmons] pase 1 categorías 17/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.1 min
+16:54:07 [simmons] categoría lista: Density 2 (18/20)
+16:54:07 [simmons] pase 1 categorías 18/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 20 requests, 0 errores | 0.1 min
+16:54:07 [simmons] categoría lista: Pocket 1 (19/20)
+16:54:07 [simmons] pase 1 categorías 19/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 21 requests, 0 errores | 0.1 min
+16:54:07 [simmons] categoría lista: DuoBed (20/20)
+16:54:07 [simmons] pase 1 categorías 20/20 | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.1 min
+16:54:07 [simmons] TERMINADO | 59 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.1 min
+16:54:07 ======================================================================
+16:54:07 simmons          59 productos     0 sospechosos     0 bajos  0 errores  0.1 min
+16:54:07 Detalle: /home/runner/work/skimwatch/skimwatch/out/simmons/findings.csv
