@@ -1,0 +1,11 @@
+[
+  {
+    "store": "gafa",
+    "products": 42,
+    "suspicious": 31,
+    "low": 0,
+    "requests": 5,
+    "errors": 0,
+    "minutes": 0.0
+  }
+]

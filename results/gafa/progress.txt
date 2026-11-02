@@ -1,0 +1,30 @@
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [gafa] categoría lista: Grandes Electrodomésticos (4/4)
+14:55:29 [gafa] pase 1 categorías 4/4 | 42 productos escaneados | 31 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+14:55:29 [gafa] TERMINADO | 42 productos escaneados | 31 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+14:55:29 ======================================================================
+14:55:29 gafa             42 productos    31 sospechosos     0 bajos  0 errores  0.0 min
+14:55:29 Detalle: /home/runner/work/skimwatch/skimwatch/out/gafa/findings.csv
