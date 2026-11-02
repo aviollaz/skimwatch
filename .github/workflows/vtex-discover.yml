@@ -1,0 +1,54 @@
+name: vtex discover
+# 1) prueba las candidatas de stores/vtex_candidates.txt  2) escanea el catálogo de las que son VTEX y responden
+on:
+  push:
+    branches: [store-scan]
+    paths: [.github/workflows/vtex-discover.yml, stores/vtex_candidates.txt]
+  workflow_dispatch:
+permissions:
+  contents: write   # publicar resultados (cifrados) en scan-results
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      matrix: ${{ steps.d.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - id: d
+        run: |
+          python stores/vtex_discover.py
+          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+      - name: Publicar relevamiento (info pública, sin cifrar)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh discover out/discover 0
+  scan:
+    needs: discover
+    if: ${{ needs.discover.outputs.matrix != '[]' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        store: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Escanear ${{ matrix.store.name }}
+        env:
+          N: ${{ matrix.store.name }}
+          U: ${{ matrix.store.url }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ( while true; do sleep 300; stores/publish.sh "$N" "out/$N" 1 >/dev/null 2>&1; done ) &
+          LOOP=$!
+          python deep-scan/deep_scan.py --site "$N=$U" --no-sitemap --redact --every 60 --out "out/$N"
+          kill $LOOP || true
+      - name: Publicar resultados
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh ${{ matrix.store.name }} out/${{ matrix.store.name }} 1
