@@ -595,7 +595,9 @@ class Output:
 def main():
     global _log_file
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--stores", default=",".join(STORES), help="tiendas separadas por coma")
+    ap.add_argument("--stores", default=None, help="tiendas separadas por coma (default: jumbo,disco,vea,carrefour)")
+    ap.add_argument("--site", action="append", default=[], metavar="NOMBRE=URL",
+                    help="cualquier otra tienda VTEX, ej: --site nike=https://www.nike.com.ar (se puede repetir)")
     ap.add_argument("--out", default=None, help="carpeta de salida")
     ap.add_argument("--workers", type=int, default=4, help="hilos por tienda")
     ap.add_argument("--rps", type=float, default=6, help="requests por segundo máximo, por tienda")
@@ -609,7 +611,13 @@ def main():
     if args.self_test:
         return self_test()
 
-    keys = [k.strip() for k in args.stores.split(",") if k.strip()]
+    for spec in args.site:
+        name, _, url = spec.partition("=")
+        if not name or not url.startswith("http"):
+            sys.exit(f"--site espera NOMBRE=URL, recibió: {spec}")
+        STORES[name.strip()] = url.strip().rstrip("/")
+    default = ",".join(s.split("=")[0].strip() for s in args.site) if args.site else ",".join(STORES)
+    keys = [k.strip() for k in (args.stores or default).split(",") if k.strip()]
     for k in keys:
         if k not in STORES:
             sys.exit(f"tienda desconocida: {k} (opciones: {', '.join(STORES)})")

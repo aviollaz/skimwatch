@@ -1,0 +1,36 @@
+# Tiendas con protección antibots: correr skimwatch DESDE UNA PC (conexión residencial),
+# no desde GitHub Actions, que estas tiendas bloquean con 403.
+#   go run ./cmd/skimwatch scan -config stores/targets-ar.yaml -report out/report-ar.html -json out/findings-ar.json
+# Si un sitio muestra captcha o 403, se deja: no se intenta saltear la protección.
+settings:
+  request_delay: 4s
+  runtime_wait: 10s
+  concurrency: 1
+  respect_robots: true
+  check_domain_age: true
+
+targets:
+  - name: adidas
+    pages:
+      - https://www.adidas.com.ar/
+      - https://www.adidas.com.ar/calzado-zapatillas
+      - https://www.adidas.com.ar/zapatillas-samba-og/ID1453.html
+      - https://www.adidas.com.ar/cart
+    allow: [adidas.com.ar, adidas.com, assets.adidas.com]
+
+  - name: nike
+    # VTEX: además de esto, el catálogo completo se puede escanear con
+    #   python deep-scan/deep_scan.py --site nike=https://www.nike.com.ar
+    pages:
+      - https://www.nike.com.ar/
+      - https://www.nike.com.ar/air-force-1
+      - https://www.nike.com.ar/nike-air-force-1-07-lv8-ii7630-001/p
+      - https://www.nike.com.ar/checkout/#/cart
+    allow: [nike.com.ar, vtexassets.com, vteximg.com.br, vtex.com.br]
+
+  - name: despegar
+    pages:
+      - https://www.despegar.com.ar/
+      - https://www.despegar.com.ar/hoteles/h-6790470/radisson-blu-bariloche-san+carlos+de+bariloche
+      - https://www.despegar.com.ar/vuelos/
+    allow: [despegar.com.ar, despegar.com, despegar.com.br]
