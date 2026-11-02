@@ -1,0 +1,30 @@
+14:55:30 [bgh] categoría lista: Cocina (8/20)
+14:55:30 [bgh] pase 1 categorías 8/20 | 138 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: Llevalos Juntos (9/20)
+14:55:31 [bgh] pase 1 categorías 9/20 | 172 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: Lavado (10/20)
+14:55:31 [bgh] pase 1 categorías 10/20 | 185 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: HotSale (11/20)
+14:55:31 [bgh] pase 1 categorías 11/20 | 186 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: BGH Days (12/20)
+14:55:31 [bgh] pase 1 categorías 12/20 | 189 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 14 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: Heladeras (13/20)
+14:55:31 [bgh] pase 1 categorías 13/20 | 201 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.0 min
+14:55:31 [bgh] categoría lista: TDF (14/20)
+14:55:31 [bgh] pase 1 categorías 14/20 | 201 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 16 requests, 0 errores | 0.1 min
+14:55:31 [bgh] categoría lista: Plan Canje Microondas (15/20)
+14:55:31 [bgh] pase 1 categorías 15/20 | 201 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 17 requests, 0 errores | 0.1 min
+14:55:32 [bgh] categoría lista: Camisetas (16/20)
+14:55:32 [bgh] pase 1 categorías 16/20 | 203 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+14:55:32 [bgh] categoría lista: Camiseta (17/20)
+14:55:32 [bgh] pase 1 categorías 17/20 | 203 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.1 min
+14:55:32 [bgh] categoría lista: cybermonday (18/20)
+14:55:32 [bgh] pase 1 categorías 18/20 | 203 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 20 requests, 0 errores | 0.1 min
+14:55:32 [bgh] categoría lista: 1 pago (19/20)
+14:55:32 [bgh] pase 1 categorías 19/20 | 203 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 21 requests, 0 errores | 0.1 min
+14:55:32 [bgh] categoría lista: Pequeños Electro (20/20)
+14:55:32 [bgh] pase 1 categorías 20/20 | 209 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.1 min
+14:55:32 [bgh] TERMINADO | 209 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.1 min
+14:55:32 ======================================================================
+14:55:32 bgh             209 productos     0 sospechosos     0 bajos  0 errores  0.1 min
+14:55:32 Detalle: /home/runner/work/skimwatch/skimwatch/out/bgh/findings.csv
