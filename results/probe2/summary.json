@@ -1,0 +1,437 @@
+[
+ {
+  "name": "tiendanewsan",
+  "root": "https://tiendanewsan.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "noblex",
+  "root": "https://www.noblex.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "tiendamacro",
+  "root": "https://www.tiendamacro.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "tiendacomafi",
+  "root": "https://www.tiendacomafi.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "tiendaclaro",
+  "root": "https://tienda.claro.com.ar",
+  "home": 200,
+  "fp": [
+   "nextjs"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "tiendamovistar",
+  "root": "https://tiendaonline.movistar.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 200,
+  "is_total": null,
+  "is_has_desc": true
+ },
+ {
+  "name": "drean",
+  "root": "https://drean.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "philco",
+  "root": "https://www.philco.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "atma",
+  "root": "https://www.atma.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "rodo",
+  "root": "https://www.rodo.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "casadelaudio",
+  "root": "https://casadelaudio.com",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "converse",
+  "root": "https://converse.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 200,
+  "is_total": null,
+  "is_has_desc": true
+ },
+ {
+  "name": "vans",
+  "root": "https://www.vans.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "kevingston",
+  "root": "https://www.kevingston.com",
+  "home": 200,
+  "fp": [
+   "vtex"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "cheeky",
+  "root": "https://www.cheeky.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "prune",
+  "root": "https://www.prune.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "cardon",
+  "root": "https://www.cardon.com.ar",
+  "home": 200,
+  "fp": [
+   "tiendanube"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "lamartina",
+  "root": "https://lamartina.com",
+  "home": 200,
+  "fp": [
+   "shopify"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "akiabara",
+  "root": "https://akiabara.com",
+  "home": 200,
+  "fp": [],
+  "is_status": 401,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "rapsodia",
+  "root": "https://www.rapsodia.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "solodeportes",
+  "root": "https://www.solodeportes.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "opensports",
+  "root": "https://www.opensports.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "reebok",
+  "root": "https://reebok.com.ar",
+  "home": 200,
+  "fp": [
+   "shopify"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "morph",
+  "root": "https://morph.com.ar",
+  "home": 200,
+  "fp": [
+   "tiendanube"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "selma",
+  "root": "https://selmadigital.com",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "openfarma",
+  "root": "https://www.openfarma.com.ar",
+  "home": 200,
+  "fp": [
+   "vtex"
+  ],
+  "is_status": 301,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "natura",
+  "root": "https://www.natura.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "avon",
+  "root": "https://www.avon.com.ar",
+  "home": 200,
+  "fp": [
+   "sfcc"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "atomo",
+  "root": "https://atomoconviene.com",
+  "home": 200,
+  "fp": [],
+  "is_status": 200,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "lacoope",
+  "root": "https://www.lacoopeencasa.coop",
+  "home": 200,
+  "fp": [],
+  "is_status": 200,
+  "is_total": null,
+  "is_has_desc": true
+ },
+ {
+  "name": "musimundo",
+  "root": "https://www.musimundo.com",
+  "home": 200,
+  "fp": [],
+  "is_status": 200,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "philips",
+  "root": "https://www.philips.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "stanley",
+  "root": "https://stanley1913.ar",
+  "home": 200,
+  "fp": [
+   "shopify"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "hush",
+  "root": "https://www.hushpuppies.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "gaelle",
+  "root": "https://gaelle.com.ar",
+  "home": 200,
+  "fp": [
+   "tiendanube"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "markova",
+  "root": "https://markova.com",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "yagmour",
+  "root": "https://www.yagmour.com.ar",
+  "home": 200,
+  "fp": [],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "jazmin",
+  "root": "https://www.jazminchebar.com.ar",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "caro",
+  "root": "https://www.carocuore.com",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "lupo",
+  "root": "https://lupo.com.ar",
+  "home": 200,
+  "fp": [
+   "tiendanube"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "babycottons",
+  "root": "https://www.babycottons.com",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "owoko",
+  "root": "https://www.owoko.com.ar",
+  "home": 200,
+  "fp": [
+   "tiendanube"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ },
+ {
+  "name": "grisino",
+  "root": "https://www.grisino.com",
+  "home": 200,
+  "fp": [
+   "magento"
+  ],
+  "is_status": 404,
+  "is_total": null,
+  "is_has_desc": false
+ }
+]
