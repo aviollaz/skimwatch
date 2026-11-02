@@ -1,0 +1,20 @@
+16:52:39 Escaneo profundo de liliana -> /home/runner/work/skimwatch/skimwatch/out/liliana
+16:52:39 [liliana] arrancando https://www.liliana.com.ar
+16:52:40 [liliana] 6 categorías de primer nivel
+16:52:40 [liliana] pase 1 categorías | 61 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:52:41 [liliana] categoría lista: Desayuno (1/6)
+16:52:41 [liliana] pase 1 categorías 1/6 | 111 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+16:52:42 [liliana] categoría lista: Calefacción (2/6)
+16:52:42 [liliana] pase 1 categorías 2/6 | 186 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+16:52:42 [liliana] categoría lista: Cocción (3/6)
+16:52:42 [liliana] pase 1 categorías 3/6 | 241 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+16:52:43 [liliana] categoría lista: Hogar (4/6)
+16:52:43 [liliana] pase 1 categorías 4/6 | 327 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+16:52:43 [liliana] categoría lista: Preparación (5/6)
+16:52:43 [liliana] pase 1 categorías 5/6 | 327 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+16:53:03 [liliana] categoría lista: Ventiladores (6/6)
+16:53:03 [liliana] pase 1 categorías 6/6 | 442 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.4 min
+16:53:03 [liliana] TERMINADO | 442 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.4 min
+16:53:03 ======================================================================
+16:53:03 liliana         442 productos     0 sospechosos     0 bajos  0 errores  0.4 min
+16:53:03 Detalle: /home/runner/work/skimwatch/skimwatch/out/liliana/findings.csv
