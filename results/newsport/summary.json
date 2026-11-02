@@ -1,0 +1,11 @@
+[
+  {
+    "store": "newsport",
+    "products": 9822,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 739,
+    "errors": 0,
+    "minutes": 12.8
+  }
+]

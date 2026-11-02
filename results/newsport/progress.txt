@@ -1,5 +1,3 @@
-13:15:25 Escaneo profundo de newsport -> /home/runner/work/skimwatch/skimwatch/out/newsport
-13:15:25 [newsport] arrancando https://www.newsport.com.ar
 13:15:26 [newsport] 7 categorías de primer nivel
 13:15:44 [newsport] categoría lista: Tienda Fuencarral (1/7)
 13:15:44 [newsport] pase 1 categorías 1/7 | 1,128 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 0.3 min
@@ -23,3 +21,10 @@
 13:24:36 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 544 requests, 0 errores | 9.2 min
 13:25:51 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 623 requests, 0 errores | 10.4 min
 13:26:55 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 673 requests, 0 errores | 11.5 min
+13:27:56 [newsport] pase 1 categorías 6/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 723 requests, 0 errores | 12.5 min
+13:28:13 [newsport] categoría lista: Newsport (7/7)
+13:28:13 [newsport] pase 1 categorías 7/7 | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 739 requests, 0 errores | 12.8 min
+13:28:13 [newsport] TERMINADO | 9,822 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 739 requests, 0 errores | 12.8 min
+13:28:13 ======================================================================
+13:28:13 newsport      9,822 productos     0 sospechosos     0 bajos  0 errores  12.8 min
+13:28:13 Detalle: /home/runner/work/skimwatch/skimwatch/out/newsport/findings.csv
