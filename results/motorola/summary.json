@@ -1,0 +1,11 @@
+[
+  {
+    "store": "motorola",
+    "products": 366,
+    "suspicious": 4,
+    "low": 0,
+    "requests": 13,
+    "errors": 0,
+    "minutes": 0.2
+  }
+]

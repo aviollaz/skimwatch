@@ -1,0 +1,23 @@
+14:55:28 Escaneo profundo de motorola -> /home/runner/work/skimwatch/skimwatch/out/motorola
+14:55:28 [motorola] arrancando https://www.motorola.com.ar
+14:55:28 [motorola] 6 categorías de primer nivel
+14:55:30 [motorola] categoría lista: Motorola tv (1/6)
+14:55:30 [motorola] pase 1 categorías 1/6 | 66 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+14:55:30 [motorola] categoría lista: Promo (2/6)
+14:55:30 [motorola] pase 1 categorías 2/6 | 109 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+14:55:30 [motorola] categoría lista: Accesorios (3/6)
+14:55:30 [motorola] pase 1 categorías 3/6 | 156 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.0 min
+14:55:30 [motorola] categoría lista: Tablets (4/6)
+14:55:30 [motorola] pase 1 categorías 4/6 | 172 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.0 min
+14:55:31 [motorola] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:31 [motorola] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:31 [motorola] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:31 [motorola] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:31 [motorola] categoría lista: Smartphones (5/6)
+14:55:31 [motorola] pase 1 categorías 5/6 | 200 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.1 min
+14:55:37 [motorola] categoría lista: Moto Care (6/6)
+14:55:37 [motorola] pase 1 categorías 6/6 | 366 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.2 min
+14:55:37 [motorola] TERMINADO | 366 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 13 requests, 0 errores | 0.2 min
+14:55:37 ======================================================================
+14:55:37 motorola        366 productos     4 sospechosos     0 bajos  0 errores  0.2 min
+14:55:37 Detalle: /home/runner/work/skimwatch/skimwatch/out/motorola/findings.csv
