@@ -1,0 +1,28 @@
+16:50:19 [rapsodia] magento https://www.rapsodia.com.ar
+16:50:19 [rapsodia] catálogo por API
+16:50:21   magento página 1/11 — 100 productos
+16:50:22   magento página 2/11 — 200 productos
+16:50:24   magento página 3/11 — 300 productos
+16:50:25   magento página 4/11 — 400 productos
+16:50:26   magento página 5/11 — 500 productos
+16:50:28   magento página 6/11 — 598 productos
+16:50:29   magento página 7/11 — 698 productos
+16:50:31   magento página 8/11 — 798 productos
+16:50:32   magento página 9/11 — 898 productos
+16:50:34   magento página 10/11 — 998 productos
+16:50:35   magento página 11/11 — 1,095 productos
+16:50:35 [rapsodia] páginas
+16:50:36   300 páginas de producto del sitemap (muestra de hasta 300)
+16:51:09   páginas 25/302
+16:51:49   páginas 50/302
+16:52:18   páginas 75/302
+16:53:03   páginas 100/302
+16:53:51   páginas 125/302
+16:54:37   páginas 150/302
+16:55:19   páginas 175/302
+16:56:09   páginas 200/302
+16:56:52   páginas 225/302
+16:57:33   páginas 250/302
+16:58:16   páginas 275/302
+16:59:00   páginas 300/302
+16:59:06 [rapsodia] TERMINADO {"store": "rapsodia", "platform": "magento", "base": "https://www.rapsodia.com.ar", "requests": 323, "errors": 0, "minutes": 8.8, "catalog_products": 1095, "catalog_findings": 0, "page_findings": 360, "pages_fetched": 302, "uncommon_script_hosts": ["rapsodia-ar.grupo-alas.com.ar", "rum.hlx.page"]}

@@ -1,0 +1,16 @@
+{
+ "store": "rapsodia",
+ "platform": "magento",
+ "base": "https://www.rapsodia.com.ar",
+ "requests": 323,
+ "errors": 0,
+ "minutes": 8.8,
+ "catalog_products": 1095,
+ "catalog_findings": 0,
+ "page_findings": 360,
+ "pages_fetched": 302,
+ "uncommon_script_hosts": [
+  "rapsodia-ar.grupo-alas.com.ar",
+  "rum.hlx.page"
+ ]
+}
