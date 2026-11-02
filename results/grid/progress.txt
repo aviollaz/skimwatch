@@ -1,0 +1,16 @@
+14:55:28 Escaneo profundo de grid -> /home/runner/work/skimwatch/skimwatch/out/grid
+14:55:28 [grid] arrancando https://www.grid.com.ar
+14:55:28 [grid] 4 categorías de primer nivel
+14:55:29 [grid] categoría lista: Combos (1/4)
+14:55:29 [grid] pase 1 categorías 1/4 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:37 [grid] categoría lista: Accesorios (2/4)
+14:55:38 [grid] pase 1 categorías 2/4 | 407 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 12 requests, 0 errores | 0.2 min
+14:56:39 [grid] pase 1 categorías 2/4 | 1,758 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 38 requests, 0 errores | 1.2 min
+14:57:02 [grid] categoría lista: Indumentaria (3/4)
+14:57:02 [grid] pase 1 categorías 3/4 | 2,313 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 50 requests, 0 errores | 1.6 min
+14:57:04 [grid] categoría lista: Calzado (4/4)
+14:57:04 [grid] pase 1 categorías 4/4 | 2,352 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 51 requests, 0 errores | 1.6 min
+14:57:04 [grid] TERMINADO | 2,352 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 51 requests, 0 errores | 1.6 min
+14:57:04 ======================================================================
+14:57:04 grid          2,352 productos     0 sospechosos     0 bajos  0 errores  1.6 min
+14:57:04 Detalle: /home/runner/work/skimwatch/skimwatch/out/grid/findings.csv

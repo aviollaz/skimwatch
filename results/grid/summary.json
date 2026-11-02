@@ -1,0 +1,11 @@
+[
+  {
+    "store": "grid",
+    "products": 2352,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 51,
+    "errors": 0,
+    "minutes": 1.6
+  }
+]
