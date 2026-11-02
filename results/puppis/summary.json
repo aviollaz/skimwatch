@@ -1,0 +1,11 @@
+[
+  {
+    "store": "puppis",
+    "products": 3642,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 80,
+    "errors": 0,
+    "minutes": 2.2
+  }
+]

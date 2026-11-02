@@ -1,0 +1,23 @@
+16:53:48 Escaneo profundo de puppis -> /home/runner/work/skimwatch/skimwatch/out/puppis
+16:53:48 [puppis] arrancando https://www.puppis.com.ar
+16:53:49 [puppis] 7 categorías de primer nivel
+16:53:50 [puppis] pase 1 categorías | 18 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:53:50 [puppis] categoría lista: Aves (1/7)
+16:53:50 [puppis] pase 1 categorías 1/7 | 22 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:53:52 [puppis] categoría lista: Otras Especies (2/7)
+16:53:52 [puppis] pase 1 categorías 2/7 | 212 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+16:53:52 [puppis] categoría lista: OUTLET (3/7)
+16:53:52 [puppis] pase 1 categorías 3/7 | 212 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.1 min
+16:53:52 [puppis] categoría lista: Pet Parent (4/7)
+16:53:52 [puppis] pase 1 categorías 4/7 | 212 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.1 min
+16:53:57 [puppis] categoría lista: Peces (5/7)
+16:53:57 [puppis] pase 1 categorías 5/7 | 673 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+16:54:20 [puppis] categoría lista: Gatos (6/7)
+16:54:20 [puppis] pase 1 categorías 6/7 | 1,735 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 40 requests, 0 errores | 0.5 min
+16:55:22 [puppis] pase 1 categorías 6/7 | 2,572 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 57 requests, 0 errores | 1.6 min
+16:56:01 [puppis] categoría lista: Perros (7/7)
+16:56:01 [puppis] pase 1 categorías 7/7 | 3,642 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 80 requests, 0 errores | 2.2 min
+16:56:01 [puppis] TERMINADO | 3,642 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 80 requests, 0 errores | 2.2 min
+16:56:01 ======================================================================
+16:56:01 puppis        3,642 productos     0 sospechosos     0 bajos  0 errores  2.2 min
+16:56:01 Detalle: /home/runner/work/skimwatch/skimwatch/out/puppis/findings.csv
