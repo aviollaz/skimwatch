@@ -1,0 +1,13 @@
+{
+ "store": "pampero",
+ "platform": "woocommerce",
+ "base": "https://pampero.com.ar",
+ "requests": 434,
+ "errors": 1,
+ "minutes": 16.5,
+ "catalog_products": 955,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 301,
+ "uncommon_script_hosts": []
+}

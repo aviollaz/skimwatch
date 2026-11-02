@@ -1,0 +1,27 @@
+17:01:12 [pampero] woocommerce https://pampero.com.ar
+17:01:12 [pampero] catálogo por API
+17:01:16   woocommerce página 1/10 — 100 productos
+17:01:18   woocommerce página 2/10 — 200 productos
+17:01:21   woocommerce página 3/10 — 300 productos
+17:01:24   woocommerce página 4/10 — 400 productos
+17:01:27   woocommerce página 5/10 — 500 productos
+17:01:30   woocommerce página 6/10 — 600 productos
+17:01:33   woocommerce página 7/10 — 700 productos
+17:01:36   woocommerce página 8/10 — 800 productos
+17:01:39   woocommerce página 9/10 — 900 productos
+17:01:41   woocommerce página 10/10 — 955 productos
+17:01:41 [pampero] páginas
+17:01:41   300 páginas de producto del sitemap (muestra de hasta 300)
+17:02:42   páginas 25/303
+17:03:44   páginas 50/303
+17:04:49   páginas 75/303
+17:05:48   páginas 100/303
+17:06:50   páginas 125/303
+17:10:47   páginas 150/303
+17:11:46   páginas 175/303
+17:12:47   páginas 200/303
+17:13:44   páginas 225/303
+17:14:46   páginas 250/303
+17:15:51   páginas 275/303
+17:16:53   páginas 300/303
+17:17:41 [pampero] TERMINADO {"store": "pampero", "platform": "woocommerce", "base": "https://pampero.com.ar", "requests": 434, "errors": 1, "minutes": 16.5, "catalog_products": 955, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 301, "uncommon_script_hosts": []}
