@@ -1,0 +1,15 @@
+{
+ "store": "mishka",
+ "platform": "other",
+ "base": "https://www.mishka.com.ar",
+ "requests": 314,
+ "errors": 0,
+ "minutes": 18.3,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 16,
+ "pages_fetched": 301,
+ "uncommon_script_hosts": [
+  "modal.readysize.ai"
+ ]
+}

@@ -1,0 +1,16 @@
+16:57:27 [mishka] other https://www.mishka.com.ar
+16:57:27 [mishka] páginas
+16:57:29   300 páginas de producto del sitemap (muestra de hasta 300)
+16:59:09   páginas 25/301
+17:00:51   páginas 50/301
+17:02:18   páginas 75/301
+17:03:40   páginas 100/301
+17:05:03   páginas 125/301
+17:06:29   páginas 150/301
+17:07:56   páginas 175/301
+17:09:37   páginas 200/301
+17:11:12   páginas 225/301
+17:12:38   páginas 250/301
+17:14:04   páginas 275/301
+17:15:35   páginas 300/301
+17:15:45 [mishka] TERMINADO {"store": "mishka", "platform": "other", "base": "https://www.mishka.com.ar", "requests": 314, "errors": 0, "minutes": 18.3, "catalog_products": 0, "catalog_findings": 0, "page_findings": 16, "pages_fetched": 301, "uncommon_script_hosts": ["modal.readysize.ai"]}
