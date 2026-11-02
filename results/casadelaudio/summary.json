@@ -1,0 +1,15 @@
+{
+ "store": "casadelaudio",
+ "platform": "other",
+ "base": "https://casadelaudio.com",
+ "requests": 308,
+ "errors": 0,
+ "minutes": 8.2,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 200,
+ "uncommon_script_hosts": [
+  "assets-cdn.woowup.com"
+ ]
+}

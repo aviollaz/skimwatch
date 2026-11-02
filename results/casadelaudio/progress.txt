@@ -1,0 +1,11 @@
+16:50:06 [casadelaudio] other https://casadelaudio.com
+16:50:06 [casadelaudio] páginas
+16:50:08   300 páginas de producto del sitemap (muestra de hasta 300)
+16:50:42   páginas 25/301
+16:52:02   páginas 75/301
+16:52:48   páginas 100/301
+16:54:17   páginas 150/301
+16:55:02   páginas 175/301
+16:56:26   páginas 225/301
+16:57:04   páginas 250/301
+16:58:18 [casadelaudio] TERMINADO {"store": "casadelaudio", "platform": "other", "base": "https://casadelaudio.com", "requests": 308, "errors": 0, "minutes": 8.2, "catalog_products": 0, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 200, "uncommon_script_hosts": ["assets-cdn.woowup.com"]}
