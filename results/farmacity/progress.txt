@@ -1,7 +1,3 @@
-13:16:00 [farmacity] pase 1 categorías 7/22 | 5,997 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 126 requests, 0 errores | 0.6 min
-13:16:07 [farmacity] categoría lista: Maquillaje (8/22)
-13:16:07 [farmacity] pase 1 categorías 8/22 | 7,403 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 155 requests, 0 errores | 0.7 min
-13:16:11 [farmacity] categoría lista: Farmacia (9/22)
 13:16:11 [farmacity] pase 1 categorías 9/22 | 8,225 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 172 requests, 0 errores | 0.8 min
 13:16:15 [farmacity] categoría lista: Perfumes Y Fragancias (10/22)
 13:16:15 [farmacity] pase 1 categorías 10/22 | 9,020 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 188 requests, 0 errores | 0.8 min
@@ -28,3 +24,7 @@
 13:16:50 [farmacity] categoría lista: Hogar y Alimentos (21/22)
 13:16:50 [farmacity] pase 1 categorías 21/22 | 15,125 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 318 requests, 0 errores | 1.4 min
 13:17:52 [farmacity] pase 1 categorías 21/22 | 17,859 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 374 requests, 0 errores | 2.4 min
+13:18:52 [farmacity] pase 1 categorías 21/22 | 21,214 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 443 requests, 0 errores | 3.4 min
+13:19:52 [farmacity] pase 1 categorías 21/22 | 24,305 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 521 requests, 0 errores | 4.4 min
+13:20:02 [farmacity] aviso: Venta Bajo Receta precio 0-0.74 tiene 3009 y no se puede partir más
+13:20:55 [farmacity] pase 1 categorías 21/22 | 24,306 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 617 requests, 0 errores | 5.5 min
