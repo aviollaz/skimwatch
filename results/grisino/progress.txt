@@ -1,0 +1,30 @@
+16:50:20   magento página 4/18 — 400 productos
+16:50:21   magento página 5/18 — 500 productos
+16:50:22   magento página 6/18 — 600 productos
+16:50:23   magento página 7/18 — 700 productos
+16:50:24   magento página 8/18 — 800 productos
+16:50:26   magento página 9/18 — 900 productos
+16:50:28   magento página 10/18 — 1,000 productos
+16:50:30   magento página 11/18 — 1,100 productos
+16:50:31   magento página 12/18 — 1,200 productos
+16:50:32   magento página 13/18 — 1,300 productos
+16:50:33   magento página 14/18 — 1,400 productos
+16:50:34   magento página 15/18 — 1,500 productos
+16:50:35   magento página 16/18 — 1,600 productos
+16:50:36   magento página 17/18 — 1,700 productos
+16:50:37   magento página 18/18 — 1,727 productos
+16:50:37 [grisino] páginas
+16:50:39   300 páginas de producto del sitemap (muestra de hasta 300)
+16:52:09   páginas 25/302
+16:53:43   páginas 50/302
+16:55:15   páginas 75/302
+16:56:46   páginas 100/302
+16:58:23   páginas 125/302
+16:59:58   páginas 150/302
+17:01:32   páginas 175/302
+17:03:08   páginas 200/302
+17:04:46   páginas 225/302
+17:06:13   páginas 250/302
+17:07:54   páginas 275/302
+17:09:32   páginas 300/302
+17:09:45 [grisino] TERMINADO {"store": "grisino", "platform": "magento", "base": "https://www.grisino.com", "requests": 330, "errors": 0, "minutes": 19.5, "catalog_products": 1727, "catalog_findings": 0, "page_findings": 1, "pages_fetched": 302, "uncommon_script_hosts": []}

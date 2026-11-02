@@ -1,0 +1,13 @@
+{
+ "store": "grisino",
+ "platform": "magento",
+ "base": "https://www.grisino.com",
+ "requests": 330,
+ "errors": 0,
+ "minutes": 19.5,
+ "catalog_products": 1727,
+ "catalog_findings": 0,
+ "page_findings": 1,
+ "pages_fetched": 302,
+ "uncommon_script_hosts": []
+}
