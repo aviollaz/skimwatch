@@ -1,0 +1,20 @@
+16:54:40 Escaneo profundo de bonafide -> /home/runner/work/skimwatch/skimwatch/out/bonafide
+16:54:40 [bonafide] arrancando https://www.bonafide.com.ar
+16:54:41 [bonafide] 6 categorías de primer nivel
+16:54:41 [bonafide] pase 1 categorías | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:54:41 [bonafide] categoría lista: Test (1/6)
+16:54:41 [bonafide] pase 1 categorías 1/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:54:41 [bonafide] categoría lista: Pascuas (2/6)
+16:54:41 [bonafide] pase 1 categorías 2/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:54:42 [bonafide] categoría lista: Desayuno (3/6)
+16:54:42 [bonafide] pase 1 categorías 3/6 | 4 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+16:54:43 [bonafide] categoría lista: Chocolates (4/6)
+16:54:43 [bonafide] pase 1 categorías 4/6 | 28 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+16:54:44 [bonafide] categoría lista: Cafe (5/6)
+16:54:44 [bonafide] pase 1 categorías 5/6 | 48 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.1 min
+16:54:45 [bonafide] categoría lista: Navidad (6/6)
+16:54:45 [bonafide] pase 1 categorías 6/6 | 57 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.1 min
+16:54:45 [bonafide] TERMINADO | 57 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.1 min
+16:54:45 ======================================================================
+16:54:45 bonafide         57 productos     0 sospechosos     0 bajos  0 errores  0.1 min
+16:54:45 Detalle: /home/runner/work/skimwatch/skimwatch/out/bonafide/findings.csv
