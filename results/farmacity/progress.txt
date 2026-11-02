@@ -1,0 +1,30 @@
+13:16:00 [farmacity] pase 1 categorías 7/22 | 5,997 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 126 requests, 0 errores | 0.6 min
+13:16:07 [farmacity] categoría lista: Maquillaje (8/22)
+13:16:07 [farmacity] pase 1 categorías 8/22 | 7,403 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 155 requests, 0 errores | 0.7 min
+13:16:11 [farmacity] categoría lista: Farmacia (9/22)
+13:16:11 [farmacity] pase 1 categorías 9/22 | 8,225 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 172 requests, 0 errores | 0.8 min
+13:16:15 [farmacity] categoría lista: Perfumes Y Fragancias (10/22)
+13:16:15 [farmacity] pase 1 categorías 10/22 | 9,020 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 188 requests, 0 errores | 0.8 min
+13:16:22 [farmacity] categoría lista: Accesorios De Belleza (11/22)
+13:16:22 [farmacity] pase 1 categorías 11/22 | 10,492 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 218 requests, 0 errores | 0.9 min
+13:16:23 [farmacity] categoría lista: Más Categorías (12/22)
+13:16:23 [farmacity] pase 1 categorías 12/22 | 10,686 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 222 requests, 0 errores | 1.0 min
+13:16:27 [farmacity] categoría lista: Nutrición Y Deportes (13/22)
+13:16:27 [farmacity] pase 1 categorías 13/22 | 11,705 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 243 requests, 0 errores | 1.0 min
+13:16:27 [farmacity] categoría lista: Test (14/22)
+13:16:27 [farmacity] pase 1 categorías 14/22 | 11,744 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 245 requests, 0 errores | 1.0 min
+13:16:27 [farmacity] categoría lista: Cuidado Personal (15/22)
+13:16:27 [farmacity] pase 1 categorías 15/22 | 11,749 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 245 requests, 0 errores | 1.0 min
+13:16:28 [farmacity] categoría lista: Test variaciones (16/22)
+13:16:28 [farmacity] pase 1 categorías 16/22 | 11,749 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 246 requests, 0 errores | 1.0 min
+13:16:29 [farmacity] categoría lista: Regalos (17/22)
+13:16:29 [farmacity] pase 1 categorías 17/22 | 11,792 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 248 requests, 0 errores | 1.1 min
+13:16:37 [farmacity] categoría lista: Medicamentos Venta Libre (18/22)
+13:16:37 [farmacity] pase 1 categorías 18/22 | 13,266 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 278 requests, 0 errores | 1.2 min
+13:16:39 [farmacity] categoría lista: Bebés (19/22)
+13:16:39 [farmacity] pase 1 categorías 19/22 | 13,675 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 287 requests, 0 errores | 1.2 min
+13:16:41 [farmacity] categoría lista: Moda (20/22)
+13:16:41 [farmacity] pase 1 categorías 20/22 | 14,074 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 295 requests, 0 errores | 1.3 min
+13:16:50 [farmacity] categoría lista: Hogar y Alimentos (21/22)
+13:16:50 [farmacity] pase 1 categorías 21/22 | 15,125 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 318 requests, 0 errores | 1.4 min
+13:17:52 [farmacity] pase 1 categorías 21/22 | 17,859 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 374 requests, 0 errores | 2.4 min
