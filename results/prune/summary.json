@@ -1,0 +1,16 @@
+{
+ "store": "prune",
+ "platform": "other",
+ "base": "https://www.prune.com.ar",
+ "requests": 313,
+ "errors": 0,
+ "minutes": 9.1,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 13,
+ "pages_fetched": 301,
+ "uncommon_script_hosts": [
+  "cdn.omniconvert.com",
+  "modal.readysize.ai"
+ ]
+}
