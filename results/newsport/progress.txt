@@ -1,0 +1,16 @@
+13:15:25 Escaneo profundo de newsport -> /home/runner/work/skimwatch/skimwatch/out/newsport
+13:15:25 [newsport] arrancando https://www.newsport.com.ar
+13:15:26 [newsport] 7 categorías de primer nivel
+13:15:44 [newsport] categoría lista: Tienda Fuencarral (1/7)
+13:15:44 [newsport] pase 1 categorías 1/7 | 1,128 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 0.3 min
+13:15:44 [newsport] categoría lista: NS Bikes (2/7)
+13:15:44 [newsport] pase 1 categorías 2/7 | 1,137 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 31 requests, 0 errores | 0.3 min
+13:15:45 [newsport] categoría lista: HOMBRE (3/7)
+13:15:45 [newsport] pase 1 categorías 3/7 | 1,159 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 33 requests, 0 errores | 0.3 min
+13:15:45 [newsport] categoría lista: UNISEX (4/7)
+13:15:45 [newsport] pase 1 categorías 4/7 | 1,161 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 34 requests, 0 errores | 0.3 min
+13:15:53 [newsport] categoría lista: Cero26 (5/7)
+13:15:53 [newsport] pase 1 categorías 5/7 | 1,756 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 48 requests, 0 errores | 0.5 min
+13:16:55 [newsport] pase 1 categorías 5/7 | 4,231 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 108 requests, 0 errores | 1.5 min
+13:17:33 [newsport] categoría lista: Templo del Futbol (6/7)
+13:17:33 [newsport] pase 1 categorías 6/7 | 5,333 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 138 requests, 0 errores | 2.1 min
