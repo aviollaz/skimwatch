@@ -1,0 +1,13 @@
+{
+ "store": "hisense",
+ "platform": "other",
+ "base": "https://www.hisense.com.ar",
+ "requests": 159,
+ "errors": 0,
+ "minutes": 2.0,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 138,
+ "uncommon_script_hosts": []
+}

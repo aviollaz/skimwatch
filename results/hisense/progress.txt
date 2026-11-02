@@ -1,0 +1,9 @@
+17:01:43 [hisense] other https://www.hisense.com.ar
+17:01:43 [hisense] páginas
+17:01:49   137 páginas de producto del sitemap (muestra de hasta 300)
+17:02:10   páginas 25/138
+17:02:30   páginas 50/138
+17:02:49   páginas 75/138
+17:03:09   páginas 100/138
+17:03:29   páginas 125/138
+17:03:43 [hisense] TERMINADO {"store": "hisense", "platform": "other", "base": "https://www.hisense.com.ar", "requests": 159, "errors": 0, "minutes": 2.0, "catalog_products": 0, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 138, "uncommon_script_hosts": []}
