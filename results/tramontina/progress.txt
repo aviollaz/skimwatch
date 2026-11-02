@@ -1,0 +1,30 @@
+14:55:59 Escaneo profundo de tramontina -> /home/runner/work/skimwatch/skimwatch/out/tramontina
+14:55:59 [tramontina] arrancando https://www.tramontina.com.ar
+14:55:59 [tramontina] 11 categorías de primer nivel
+14:56:00 [tramontina] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:56:01 [tramontina] categoría lista: Organizadores y Limpieza (1/11)
+14:56:01 [tramontina] pase 1 categorías 1/11 | 301 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.0 min
+14:56:01 [tramontina] categoría lista: Asado (2/11)
+14:56:01 [tramontina] pase 1 categorías 2/11 | 345 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 9 requests, 0 errores | 0.0 min
+14:56:02 [tramontina] categoría lista: Muebles (3/11)
+14:56:02 [tramontina] pase 1 categorías 3/11 | 421 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 11 requests, 0 errores | 0.0 min
+14:56:03 [tramontina] categoría lista: Jardin y Aire Libre (4/11)
+14:56:03 [tramontina] pase 1 categorías 4/11 | 601 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.1 min
+14:56:03 [tramontina] categoría lista: Reforma y Construccion (5/11)
+14:56:03 [tramontina] pase 1 categorías 5/11 | 682 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 17 requests, 0 errores | 0.1 min
+14:56:03 [tramontina] categoría lista: Combos (6/11)
+14:56:03 [tramontina] pase 1 categorías 6/11 | 682 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 18 requests, 0 errores | 0.1 min
+14:56:04 [tramontina] categoría lista: Cuidado Personal (7/11)
+14:56:04 [tramontina] pase 1 categorías 7/11 | 785 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 21 requests, 0 errores | 0.1 min
+14:56:04 [tramontina] categoría lista: Electrodomésticos (8/11)
+14:56:04 [tramontina] pase 1 categorías 8/11 | 806 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.1 min
+14:56:04 [tramontina] categoría lista: Utensilios para el hogar y la cocina (9/11)
+14:56:04 [tramontina] pase 1 categorías 9/11 | 806 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.1 min
+14:56:09 [tramontina] categoría lista: Comedor (10/11)
+14:56:09 [tramontina] pase 1 categorías 10/11 | 1,258 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 33 requests, 0 errores | 0.2 min
+14:56:18 [tramontina] categoría lista: Cocina (11/11)
+14:56:18 [tramontina] pase 1 categorías 11/11 | 1,437 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 37 requests, 0 errores | 0.3 min
+14:56:18 [tramontina] TERMINADO | 1,437 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 37 requests, 0 errores | 0.3 min
+14:56:18 ======================================================================
+14:56:18 tramontina    1,437 productos     0 sospechosos     0 bajos  0 errores  0.3 min
+14:56:18 Detalle: /home/runner/work/skimwatch/skimwatch/out/tramontina/findings.csv
