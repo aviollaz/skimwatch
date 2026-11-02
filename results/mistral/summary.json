@@ -1,0 +1,15 @@
+{
+ "store": "mistral",
+ "platform": "tiendanube",
+ "base": "https://www.mistral.com.ar",
+ "requests": 538,
+ "errors": 0,
+ "minutes": 4.0,
+ "catalog_products": 528,
+ "catalog_findings": 0,
+ "page_findings": 531,
+ "pages_fetched": 528,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}

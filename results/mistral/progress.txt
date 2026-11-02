@@ -1,0 +1,25 @@
+16:58:36 [mistral] tiendanube https://www.mistral.com.ar
+16:58:36 [mistral] páginas
+16:58:37   527 páginas de producto del sitemap (muestra de hasta 3000)
+16:58:48   páginas 25/529
+16:58:57   páginas 50/529
+16:59:07   páginas 75/529
+16:59:16   páginas 100/529
+16:59:25   páginas 125/529
+16:59:34   páginas 150/529
+16:59:44   páginas 175/529
+16:59:55   páginas 200/529
+17:00:07   páginas 225/529
+17:00:17   páginas 250/529
+17:00:28   páginas 275/529
+17:00:38   páginas 300/529
+17:00:48   páginas 325/529
+17:00:59   páginas 350/529
+17:01:11   páginas 375/529
+17:01:22   páginas 400/529
+17:01:32   páginas 425/529
+17:01:42   páginas 450/529
+17:01:54   páginas 475/529
+17:02:05   páginas 500/529
+17:02:15   páginas 525/529
+17:02:35 [mistral] TERMINADO {"store": "mistral", "platform": "tiendanube", "base": "https://www.mistral.com.ar", "requests": 538, "errors": 0, "minutes": 4.0, "catalog_products": 528, "catalog_findings": 0, "page_findings": 531, "pages_fetched": 528, "uncommon_script_hosts": ["acdn-us.mitiendanube.com"]}
