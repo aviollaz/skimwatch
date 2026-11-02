@@ -1,0 +1,15 @@
+{
+ "store": "rodo",
+ "platform": "magento",
+ "base": "https://www.rodo.com.ar",
+ "requests": 18,
+ "errors": 0,
+ "minutes": 0.2,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 2,
+ "uncommon_script_hosts": [
+  "widgets.leadconnectorhq.com"
+ ]
+}
