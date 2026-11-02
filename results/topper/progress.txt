@@ -1,0 +1,20 @@
+14:55:28 Escaneo profundo de topper -> /home/runner/work/skimwatch/skimwatch/out/topper
+14:55:28 [topper] arrancando https://www.topper.com.ar
+14:55:29 [topper] 6 categorías de primer nivel
+14:55:29 [topper] pase 1 categorías | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:29 [topper] categoría lista: INACTIVOS (1/6)
+14:55:29 [topper] pase 1 categorías 1/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:30 [topper] categoría lista: ZZ - Test (2/6)
+14:55:30 [topper] pase 1 categorías 2/6 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+14:55:35 [topper] categoría lista: Últimos Talles (3/6)
+14:55:35 [topper] pase 1 categorías 3/6 | 269 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+14:55:35 [topper] categoría lista: ACCESORIOS (4/6)
+14:55:35 [topper] pase 1 categorías 4/6 | 312 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+14:55:52 [topper] categoría lista: INDUMENTARIA (5/6)
+14:55:52 [topper] pase 1 categorías 5/6 | 714 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 19 requests, 0 errores | 0.4 min
+14:56:06 [topper] categoría lista: Calzado (6/6)
+14:56:06 [topper] pase 1 categorías 6/6 | 852 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.6 min
+14:56:06 [topper] TERMINADO | 852 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 22 requests, 0 errores | 0.6 min
+14:56:06 ======================================================================
+14:56:06 topper          852 productos     0 sospechosos     0 bajos  0 errores  0.6 min
+14:56:06 Detalle: /home/runner/work/skimwatch/skimwatch/out/topper/findings.csv

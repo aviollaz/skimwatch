@@ -1,0 +1,11 @@
+[
+  {
+    "store": "topper",
+    "products": 852,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 22,
+    "errors": 0,
+    "minutes": 0.6
+  }
+]
