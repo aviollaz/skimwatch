@@ -1,0 +1,30 @@
+13:15:31 [easy] categoría lista: Electrodomésticos (1/17)
+13:15:31 [easy] pase 1 categorías 1/17 | 1,444 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 0.1 min
+13:15:46 [easy] categoría lista: Baños y Cocinas (2/17)
+13:15:46 [easy] pase 1 categorías 2/17 | 4,315 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 89 requests, 0 errores | 0.4 min
+13:15:51 [easy] categoría lista: Muebles (3/17)
+13:15:51 [easy] pase 1 categorías 3/17 | 5,365 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 111 requests, 0 errores | 0.4 min
+13:16:07 [easy] categoría lista: Organización y Limpieza (4/17)
+13:16:07 [easy] pase 1 categorías 4/17 | 8,581 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 179 requests, 0 errores | 0.7 min
+13:16:12 [easy] categoría lista: Iluminación (5/17)
+13:16:12 [easy] pase 1 categorías 5/17 | 9,729 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 203 requests, 0 errores | 0.8 min
+13:16:15 [easy] categoría lista: Automotor (6/17)
+13:16:15 [easy] pase 1 categorías 6/17 | 10,311 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 215 requests, 0 errores | 0.8 min
+13:16:22 [easy] categoría lista: Pisos y Revestimientos (7/17)
+13:16:22 [easy] pase 1 categorías 7/17 | 11,638 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 243 requests, 0 errores | 1.0 min
+13:16:28 [easy] categoría lista: Aberturas (8/17)
+13:16:28 [easy] pase 1 categorías 8/17 | 13,048 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 272 requests, 0 errores | 1.0 min
+13:16:48 [easy] categoría lista: Pinturas (9/17)
+13:16:48 [easy] pase 1 categorías 9/17 | 16,601 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 364 requests, 0 errores | 1.4 min
+13:17:03 [easy] categoría lista: Construcción y Maderas (10/17)
+13:17:03 [easy] pase 1 categorías 10/17 | 18,854 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 426 requests, 0 errores | 1.6 min
+13:17:25 [easy] categoría lista: Plomería (11/17)
+13:17:25 [easy] pase 1 categorías 11/17 | 21,298 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 499 requests, 0 errores | 2.0 min
+13:17:32 [easy] categoría lista: Electricidad (12/17)
+13:17:32 [easy] pase 1 categorías 12/17 | 22,184 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 531 requests, 0 errores | 2.1 min
+13:17:51 [easy] categoría lista: Textil, Bazar y Deco (13/17)
+13:17:51 [easy] pase 1 categorías 13/17 | 24,277 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 616 requests, 0 errores | 2.4 min
+13:17:56 [easy] categoría lista: Soluciones Modulares (14/17)
+13:17:56 [easy] pase 1 categorías 14/17 | 25,000 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 637 requests, 0 errores | 2.5 min
+13:18:02 [easy] categoría lista: Herramientas (15/17)
+13:18:02 [easy] pase 1 categorías 15/17 | 25,714 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 657 requests, 0 errores | 2.6 min
