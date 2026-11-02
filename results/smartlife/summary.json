@@ -1,0 +1,11 @@
+[
+  {
+    "store": "smartlife",
+    "products": 298,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 10,
+    "errors": 0,
+    "minutes": 0.1
+  }
+]

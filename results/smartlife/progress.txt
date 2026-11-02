@@ -1,0 +1,15 @@
+16:53:28 Escaneo profundo de smartlife -> /home/runner/work/skimwatch/skimwatch/out/smartlife
+16:53:28 [smartlife] arrancando https://www.smartlife.com.ar
+16:53:28 [smartlife] 4 categorías de primer nivel
+16:53:28 [smartlife] categoría lista: Category (1/4)
+16:53:28 [smartlife] pase 1 categorías 1/4 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:53:28 [smartlife] categoría lista: Tecnologias (2/4)
+16:53:28 [smartlife] pase 1 categorías 2/4 | 0 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:53:30 [smartlife] categoría lista: Electrodomésticos (3/4)
+16:53:30 [smartlife] pase 1 categorías 3/4 | 180 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.0 min
+16:53:31 [smartlife] categoría lista: Accesorios (4/4)
+16:53:31 [smartlife] pase 1 categorías 4/4 | 298 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+16:53:31 [smartlife] TERMINADO | 298 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+16:53:31 ======================================================================
+16:53:31 smartlife       298 productos     0 sospechosos     0 bajos  0 errores  0.1 min
+16:53:31 Detalle: /home/runner/work/skimwatch/skimwatch/out/smartlife/findings.csv
