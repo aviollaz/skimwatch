@@ -1,0 +1,9 @@
+13:15:27 Escaneo profundo de provinciacompras -> /home/runner/work/skimwatch/skimwatch/out/provinciacompras
+13:15:27 [provinciacompras] arrancando https://www.provinciacompras.com.ar
+13:15:27 [provinciacompras] 18 categorías de primer nivel
+13:15:28 [provinciacompras] !!! hallazgo ALTO (detalle en el artifact)
+13:16:00 [provinciacompras] pase 1 categorías | 2,535 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 53 requests, 0 errores | 0.5 min
+13:16:33 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
+13:17:00 [provinciacompras] pase 1 categorías | 8,365 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 176 requests, 0 errores | 1.6 min
+13:18:00 [provinciacompras] pase 1 categorías | 11,960 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 251 requests, 0 errores | 2.6 min
+13:18:22 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
