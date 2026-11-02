@@ -1,0 +1,15 @@
+{
+ "store": "tonelprivado",
+ "platform": "tiendanube",
+ "base": "https://www.tonelprivado.com",
+ "requests": 10,
+ "errors": 0,
+ "minutes": 0.1,
+ "catalog_products": 1,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 1,
+ "uncommon_script_hosts": [
+  "dcdn-us.mitiendanube.com"
+ ]
+}

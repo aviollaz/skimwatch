@@ -1,0 +1,4 @@
+16:56:30 [tonelprivado] tiendanube https://www.tonelprivado.com
+16:56:30 [tonelprivado] páginas
+16:56:31   0 páginas de producto del sitemap (muestra de hasta 3000)
+16:56:33 [tonelprivado] TERMINADO {"store": "tonelprivado", "platform": "tiendanube", "base": "https://www.tonelprivado.com", "requests": 10, "errors": 0, "minutes": 0.1, "catalog_products": 1, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 1, "uncommon_script_hosts": ["dcdn-us.mitiendanube.com"]}
