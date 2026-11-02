@@ -1,0 +1,12 @@
+13:15:30 Escaneo profundo de sportline -> /home/runner/work/skimwatch/skimwatch/out/sportline
+13:15:30 [sportline] arrancando https://www.sportline.com.ar
+13:15:30 [sportline] 6 categorías de primer nivel
+13:15:33 [sportline] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.1 min
+13:15:34 [sportline] categoría lista: BEBES (1/6)
+13:15:34 [sportline] pase 1 categorías 1/6 | 104 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.1 min
+13:16:34 [sportline] pase 1 categorías 1/6 | 3,625 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 81 requests, 0 errores | 1.1 min
+13:16:36 [sportline] categoría lista: NIÑOS (2/6)
+13:16:36 [sportline] pase 1 categorías 2/6 | 3,811 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 86 requests, 0 errores | 1.1 min
+13:16:39 [sportline] categoría lista: UNISEX (3/6)
+13:16:39 [sportline] pase 1 categorías 3/6 | 3,974 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 90 requests, 0 errores | 1.1 min
+13:17:39 [sportline] pase 1 categorías 3/6 | 4,955 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 139 requests, 0 errores | 2.2 min
