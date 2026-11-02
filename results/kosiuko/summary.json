@@ -1,0 +1,16 @@
+{
+ "store": "kosiuko",
+ "platform": "magento",
+ "base": "https://www.kosiuko.com",
+ "requests": 16,
+ "errors": 0,
+ "minutes": 0.1,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 2,
+ "uncommon_script_hosts": [
+  "api.snappylabs.io",
+  "rum.hlx.page"
+ ]
+}

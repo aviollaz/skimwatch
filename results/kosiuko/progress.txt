@@ -1,0 +1,6 @@
+16:57:10 [kosiuko] magento https://www.kosiuko.com
+16:57:10 [kosiuko] catálogo por API
+16:57:11   magento página 1/1 — 0 productos
+16:57:11 [kosiuko] páginas
+16:57:11   0 páginas de producto del sitemap (muestra de hasta 300)
+16:57:17 [kosiuko] TERMINADO {"store": "kosiuko", "platform": "magento", "base": "https://www.kosiuko.com", "requests": 16, "errors": 0, "minutes": 0.1, "catalog_products": 0, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 2, "uncommon_script_hosts": ["api.snappylabs.io", "rum.hlx.page"]}
