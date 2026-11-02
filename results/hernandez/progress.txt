@@ -1,0 +1,4 @@
+16:50:54 [hernandez] tiendanube https://www.libreriahernandez.com
+16:50:54 [hernandez] páginas
+16:50:55   14 páginas de producto del sitemap (muestra de hasta 3000)
+16:51:24 [hernandez] TERMINADO {"store": "hernandez", "platform": "tiendanube", "base": "https://www.libreriahernandez.com", "requests": 22, "errors": 0, "minutes": 0.5, "catalog_products": 15, "catalog_findings": 0, "page_findings": 15, "pages_fetched": 15, "uncommon_script_hosts": ["acdn-us.mitiendanube.com", "www.libreriahernandez.com.ar"]}
