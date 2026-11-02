@@ -1,10 +1,3 @@
-14:56:54 [juleriaque] categoría lista: Packaging (4/18)
-14:56:54 [juleriaque] pase 1 categorías 4/18 | 5,959 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 125 requests, 0 errores | 1.4 min
-14:56:55 [juleriaque] categoría lista: Indumentaria (5/18)
-14:56:55 [juleriaque] pase 1 categorías 5/18 | 5,959 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 126 requests, 0 errores | 1.5 min
-14:56:56 [juleriaque] categoría lista: Deco & Home (6/18)
-14:56:56 [juleriaque] pase 1 categorías 6/18 | 5,972 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 127 requests, 0 errores | 1.5 min
-14:56:56 [juleriaque] categoría lista: Regalos (7/18)
 14:56:56 [juleriaque] pase 1 categorías 7/18 | 5,972 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 128 requests, 0 errores | 1.5 min
 14:56:56 [juleriaque] categoría lista: Gift Cards (8/18)
 14:56:56 [juleriaque] pase 1 categorías 8/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 130 requests, 0 errores | 1.5 min
@@ -28,3 +21,10 @@
 14:59:04 [juleriaque] pase 1 categorías 16/18 | 10,225 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 252 requests, 0 errores | 3.6 min
 14:59:18 [juleriaque] aviso: Premium precio 0-0.74 tiene 3356 y no se puede partir más
 15:00:04 [juleriaque] pase 1 categorías 16/18 | 10,229 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 340 requests, 0 errores | 4.6 min
+15:00:33 [juleriaque] categoría lista: Maquillaje (17/18)
+15:00:33 [juleriaque] pase 1 categorías 17/18 | 10,233 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 397 requests, 0 errores | 5.1 min
+15:01:44 [juleriaque] pase 1 categorías 17/18 | 11,079 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 439 requests, 0 errores | 6.3 min
+15:02:45 [juleriaque] pase 1 categorías 17/18 | 11,272 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 457 requests, 0 errores | 7.3 min
+15:03:04 [juleriaque] aviso: Fragancias precio 0-0.74 tiene 4105 y no se puede partir más
+15:03:46 [juleriaque] pase 1 categorías 17/18 | 11,272 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 491 requests, 0 errores | 8.3 min
+15:04:48 [juleriaque] pase 1 categorías 17/18 | 11,272 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 514 requests, 0 errores | 9.3 min
