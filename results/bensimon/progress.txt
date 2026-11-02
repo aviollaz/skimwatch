@@ -1,0 +1,15 @@
+16:57:26 [bensimon] tiendanube https://www.bensimon.com.ar
+16:57:26 [bensimon] páginas
+16:57:26   284 páginas de producto del sitemap (muestra de hasta 3000)
+16:57:40   páginas 25/286
+16:57:56   páginas 50/286
+16:58:09   páginas 75/286
+16:58:23   páginas 100/286
+16:58:38   páginas 125/286
+16:58:52   páginas 150/286
+16:59:06   páginas 175/286
+16:59:19   páginas 200/286
+16:59:34   páginas 225/286
+16:59:48   páginas 250/286
+17:00:01   páginas 275/286
+17:00:09 [bensimon] TERMINADO {"store": "bensimon", "platform": "tiendanube", "base": "https://www.bensimon.com.ar", "requests": 291, "errors": 0, "minutes": 2.7, "catalog_products": 285, "catalog_findings": 0, "page_findings": 286, "pages_fetched": 285, "uncommon_script_hosts": ["acdn-us.mitiendanube.com"]}

@@ -1,0 +1,15 @@
+{
+ "store": "bensimon",
+ "platform": "tiendanube",
+ "base": "https://www.bensimon.com.ar",
+ "requests": 291,
+ "errors": 0,
+ "minutes": 2.7,
+ "catalog_products": 285,
+ "catalog_findings": 0,
+ "page_findings": 286,
+ "pages_fetched": 285,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}
