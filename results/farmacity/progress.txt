@@ -1,10 +1,3 @@
-13:16:11 [farmacity] pase 1 categorías 9/22 | 8,225 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 172 requests, 0 errores | 0.8 min
-13:16:15 [farmacity] categoría lista: Perfumes Y Fragancias (10/22)
-13:16:15 [farmacity] pase 1 categorías 10/22 | 9,020 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 188 requests, 0 errores | 0.8 min
-13:16:22 [farmacity] categoría lista: Accesorios De Belleza (11/22)
-13:16:22 [farmacity] pase 1 categorías 11/22 | 10,492 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 218 requests, 0 errores | 0.9 min
-13:16:23 [farmacity] categoría lista: Más Categorías (12/22)
-13:16:23 [farmacity] pase 1 categorías 12/22 | 10,686 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 222 requests, 0 errores | 1.0 min
 13:16:27 [farmacity] categoría lista: Nutrición Y Deportes (13/22)
 13:16:27 [farmacity] pase 1 categorías 13/22 | 11,705 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 243 requests, 0 errores | 1.0 min
 13:16:27 [farmacity] categoría lista: Test (14/22)
@@ -28,3 +21,10 @@
 13:19:52 [farmacity] pase 1 categorías 21/22 | 24,305 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 521 requests, 0 errores | 4.4 min
 13:20:02 [farmacity] aviso: Venta Bajo Receta precio 0-0.74 tiene 3009 y no se puede partir más
 13:20:55 [farmacity] pase 1 categorías 21/22 | 24,306 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 617 requests, 0 errores | 5.5 min
+13:21:59 [farmacity] pase 1 categorías 21/22 | 24,306 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 701 requests, 0 errores | 6.6 min
+13:22:57 [farmacity] categoría lista: Venta Bajo Receta (22/22)
+13:22:57 [farmacity] pase 1 categorías 22/22 | 24,306 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 753 requests, 0 errores | 7.5 min
+13:22:57 [farmacity] TERMINADO | 24,306 productos escaneados | 13 sospechosos ALTO/MEDIO, 0 bajos | 753 requests, 0 errores | 7.5 min
+13:22:57 ======================================================================
+13:22:57 farmacity    24,306 productos    13 sospechosos     0 bajos  0 errores  7.5 min
+13:22:57 Detalle: /home/runner/work/skimwatch/skimwatch/out/farmacity/findings.csv

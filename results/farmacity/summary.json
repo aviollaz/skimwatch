@@ -1,0 +1,11 @@
+[
+  {
+    "store": "farmacity",
+    "products": 24306,
+    "suspicious": 13,
+    "low": 0,
+    "requests": 753,
+    "errors": 0,
+    "minutes": 7.5
+  }
+]
