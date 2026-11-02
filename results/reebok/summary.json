@@ -1,0 +1,15 @@
+{
+ "store": "reebok",
+ "platform": "shopify",
+ "base": "https://reebok.com.ar",
+ "requests": 358,
+ "errors": 0,
+ "minutes": 6.5,
+ "catalog_products": 898,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 302,
+ "uncommon_script_hosts": [
+  "cdn.nfcube.com"
+ ]
+}

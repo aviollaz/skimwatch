@@ -1,0 +1,21 @@
+16:50:21 [reebok] shopify https://reebok.com.ar
+16:50:21 [reebok] catálogo por API
+16:50:22   shopify página 1 — 250 productos
+16:50:23   shopify página 2 — 500 productos
+16:50:23   shopify página 3 — 750 productos
+16:50:24   shopify página 4 — 898 productos
+16:50:24 [reebok] páginas
+16:50:27   300 páginas de producto del sitemap (muestra de hasta 300)
+16:50:56   páginas 25/302
+16:51:27   páginas 50/302
+16:51:57   páginas 75/302
+16:52:27   páginas 100/302
+16:52:58   páginas 125/302
+16:53:27   páginas 150/302
+16:53:57   páginas 175/302
+16:54:27   páginas 200/302
+16:54:57   páginas 225/302
+16:55:26   páginas 250/302
+16:55:55   páginas 275/302
+16:56:26   páginas 300/302
+16:56:53 [reebok] TERMINADO {"store": "reebok", "platform": "shopify", "base": "https://reebok.com.ar", "requests": 358, "errors": 0, "minutes": 6.5, "catalog_products": 898, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 302, "uncommon_script_hosts": ["cdn.nfcube.com"]}
