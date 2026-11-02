@@ -1,0 +1,22 @@
+name: store probe
+on:
+  push:
+    branches: [store-scan]
+    paths: [stores/probe.py, .github/workflows/store-probe.yml]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python stores/probe.py
+      - name: Publicar resultado (info pública de cada sitio)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          d=$(mktemp -d); cp probe.json "$d/"
+          cd "$d" && git init -q && git add . && git -c user.name=store-scan -c user.email=store-scan@users.noreply.github.com commit -qm probe \
+            && git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}" HEAD:refs/heads/probe-results
