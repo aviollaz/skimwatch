@@ -1,0 +1,11 @@
+[
+  {
+    "store": "naldo",
+    "products": 4418,
+    "suspicious": 49,
+    "low": 22,
+    "requests": 95,
+    "errors": 0,
+    "minutes": 0.7
+  }
+]
