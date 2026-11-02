@@ -1,0 +1,30 @@
+13:15:33 [pardo] pase 1 categorías 8/19 | 1,206 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 29 requests, 0 errores | 0.1 min
+13:15:33 [pardo] categoría lista: SEGUROS - GARANTÍAS (9/19)
+13:15:33 [pardo] pase 1 categorías 9/19 | 1,256 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 31 requests, 0 errores | 0.1 min
+13:15:33 [pardo] categoría lista: PEQUEÑOS ELECTRODOMÉSTICOS (10/19)
+13:15:33 [pardo] pase 1 categorías 10/19 | 1,269 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 32 requests, 0 errores | 0.1 min
+13:15:34 [pardo] categoría lista: EQUIPAJE (11/19)
+13:15:34 [pardo] pase 1 categorías 11/19 | 1,352 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 34 requests, 0 errores | 0.1 min
+13:15:37 [pardo] categoría lista: BEBES Y NIÑOS (12/19)
+13:15:37 [pardo] pase 1 categorías 12/19 | 1,829 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 44 requests, 0 errores | 0.2 min
+13:15:40 [pardo] categoría lista: JARDÍN (13/19)
+13:15:40 [pardo] pase 1 categorías 13/19 | 2,252 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 53 requests, 0 errores | 0.2 min
+13:15:41 [pardo] categoría lista: ARTE, LIBRERÍA Y OFICINA (14/19)
+13:15:41 [pardo] pase 1 categorías 14/19 | 2,316 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 55 requests, 0 errores | 0.2 min
+13:15:41 [pardo] categoría lista: MASCOTAS (15/19)
+13:15:41 [pardo] pase 1 categorías 15/19 | 2,372 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 57 requests, 0 errores | 0.3 min
+13:15:45 [pardo] categoría lista: INDUMENTARIA Y ACCESORIOS (16/19)
+13:15:45 [pardo] pase 1 categorías 16/19 | 2,575 productos escaneados | 1 sospechosos ALTO/MEDIO, 0 bajos | 62 requests, 0 errores | 0.3 min
+13:15:51 [pardo] !!! hallazgo MEDIO (detalle en el artifact)
+13:16:05 [pardo] !!! hallazgo MEDIO (detalle en el artifact)
+13:16:05 [pardo] categoría lista: HOGAR (17/19)
+13:16:05 [pardo] pase 1 categorías 17/19 | 4,610 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 103 requests, 0 errores | 0.7 min
+13:16:18 [pardo] !!! hallazgo MEDIO (detalle en el artifact)
+13:16:18 [pardo] categoría lista: HERRAMIENTAS (18/19)
+13:16:18 [pardo] pase 1 categorías 18/19 | 5,482 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 121 requests, 0 errores | 0.9 min
+13:16:33 [pardo] categoría lista: COMPRA INTERNACIONAL (19/19)
+13:16:33 [pardo] pase 1 categorías 19/19 | 6,193 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 136 requests, 0 errores | 1.1 min
+13:16:33 [pardo] TERMINADO | 6,193 productos escaneados | 4 sospechosos ALTO/MEDIO, 0 bajos | 136 requests, 0 errores | 1.1 min
+13:16:33 ======================================================================
+13:16:33 pardo         6,193 productos     4 sospechosos     0 bajos  0 errores  1.1 min
+13:16:33 Detalle: /home/runner/work/skimwatch/skimwatch/out/pardo/findings.csv

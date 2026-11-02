@@ -1,0 +1,11 @@
+[
+  {
+    "store": "pardo",
+    "products": 6193,
+    "suspicious": 4,
+    "low": 0,
+    "requests": 136,
+    "errors": 0,
+    "minutes": 1.1
+  }
+]
