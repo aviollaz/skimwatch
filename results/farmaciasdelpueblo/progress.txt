@@ -1,0 +1,30 @@
+16:57:07 [farmaciasdelpueblo] categoría lista: Cuidado Personal (2/14)
+16:57:07 [farmaciasdelpueblo] pase 1 categorías 2/14 | 4,031 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 83 requests, 0 errores | 0.6 min
+16:57:09 [farmaciasdelpueblo] categoría lista: Cuidado del Bebe y Maternidad (3/14)
+16:57:09 [farmaciasdelpueblo] pase 1 categorías 3/14 | 4,191 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 87 requests, 0 errores | 0.6 min
+16:57:19 [farmaciasdelpueblo] categoría lista: Maquillaje (4/14)
+16:57:19 [farmaciasdelpueblo] pase 1 categorías 4/14 | 5,280 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 109 requests, 0 errores | 0.8 min
+16:57:20 [farmaciasdelpueblo] categoría lista: Cuidado Bucal (5/14)
+16:57:20 [farmaciasdelpueblo] pase 1 categorías 5/14 | 5,355 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 111 requests, 0 errores | 0.8 min
+16:57:22 [farmaciasdelpueblo] categoría lista: Dermocosmetica (6/14)
+16:57:22 [farmaciasdelpueblo] pase 1 categorías 6/14 | 5,708 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 119 requests, 0 errores | 0.9 min
+16:57:23 [farmaciasdelpueblo] categoría lista: Electro (7/14)
+16:57:23 [farmaciasdelpueblo] pase 1 categorías 7/14 | 5,774 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 121 requests, 0 errores | 0.9 min
+16:57:27 [farmaciasdelpueblo] categoría lista: Accesorios Farmacias (8/14)
+16:57:27 [farmaciasdelpueblo] pase 1 categorías 8/14 | 6,383 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 135 requests, 0 errores | 1.0 min
+16:57:27 [farmaciasdelpueblo] categoría lista: Accesorios de Belleza (9/14)
+16:57:27 [farmaciasdelpueblo] pase 1 categorías 9/14 | 6,385 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 135 requests, 0 errores | 1.0 min
+16:57:33 [farmaciasdelpueblo] categoría lista: Cuidado Capilar (10/14)
+16:57:33 [farmaciasdelpueblo] pase 1 categorías 10/14 | 7,364 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 155 requests, 0 errores | 1.1 min
+16:57:37 [farmaciasdelpueblo] categoría lista: Cuidado Corporal (11/14)
+16:57:37 [farmaciasdelpueblo] pase 1 categorías 11/14 | 7,853 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 165 requests, 0 errores | 1.1 min
+16:57:37 [farmaciasdelpueblo] categoría lista: Cuidado del Hogar (12/14)
+16:57:37 [farmaciasdelpueblo] pase 1 categorías 12/14 | 7,925 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 167 requests, 0 errores | 1.1 min
+16:57:40 [farmaciasdelpueblo] categoría lista: Cuidado Facial (13/14)
+16:57:40 [farmaciasdelpueblo] pase 1 categorías 13/14 | 8,222 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 173 requests, 0 errores | 1.2 min
+16:57:42 [farmaciasdelpueblo] categoría lista: Salud y Bienestar (14/14)
+16:57:42 [farmaciasdelpueblo] pase 1 categorías 14/14 | 8,291 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 175 requests, 0 errores | 1.2 min
+16:57:42 [farmaciasdelpueblo] TERMINADO | 8,291 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 175 requests, 0 errores | 1.2 min
+16:57:42 ======================================================================
+16:57:42 farmaciasdelpueblo    8,291 productos     0 sospechosos     0 bajos  0 errores  1.2 min
+16:57:42 Detalle: /home/runner/work/skimwatch/skimwatch/out/farmaciasdelpueblo/findings.csv
