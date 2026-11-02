@@ -14,3 +14,7 @@
 13:19:41 [sportline] pase 1 categorías 3/6 | 6,518 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 255 requests, 0 errores | 4.2 min
 13:20:41 [sportline] pase 1 categorías 3/6 | 6,850 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 306 requests, 0 errores | 5.2 min
 13:21:43 [sportline] pase 1 categorías 3/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 378 requests, 0 errores | 6.2 min
+13:22:43 [sportline] pase 1 categorías 3/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 446 requests, 0 errores | 7.2 min
+13:23:21 [sportline] categoría lista: MUJER (4/6)
+13:23:21 [sportline] pase 1 categorías 4/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 505 requests, 0 errores | 7.8 min
+13:24:36 [sportline] pase 1 categorías 4/6 | 6,891 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 543 requests, 0 errores | 9.1 min
