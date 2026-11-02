@@ -1,0 +1,28 @@
+16:50:15 [carocuore] magento https://www.carocuore.com
+16:50:15 [carocuore] catálogo por API
+16:50:17   magento página 1/11 — 100 productos
+16:50:19   magento página 2/11 — 200 productos
+16:50:20   magento página 3/11 — 300 productos
+16:50:22   magento página 4/11 — 400 productos
+16:50:23   magento página 5/11 — 500 productos
+16:50:25   magento página 6/11 — 598 productos
+16:50:26   magento página 7/11 — 698 productos
+16:50:28   magento página 8/11 — 798 productos
+16:50:29   magento página 9/11 — 898 productos
+16:50:30   magento página 10/11 — 998 productos
+16:50:32   magento página 11/11 — 1,095 productos
+16:50:32 [carocuore] páginas
+16:50:32   300 páginas de producto del sitemap (muestra de hasta 300)
+16:51:00   páginas 25/302
+16:51:28   páginas 50/302
+16:51:59   páginas 75/302
+16:52:30   páginas 100/302
+16:53:08   páginas 125/302
+16:53:36   páginas 150/302
+16:54:15   páginas 175/302
+16:54:47   páginas 200/302
+16:55:15   páginas 225/302
+16:55:44   páginas 250/302
+16:56:19   páginas 275/302
+16:56:52   páginas 300/302
+16:56:57 [carocuore] TERMINADO {"store": "carocuore", "platform": "magento", "base": "https://www.carocuore.com", "requests": 323, "errors": 0, "minutes": 6.7, "catalog_products": 1095, "catalog_findings": 0, "page_findings": 363, "pages_fetched": 302, "uncommon_script_hosts": ["carocuore-ar.grupo-alas.com.ar", "rum.hlx.page"]}

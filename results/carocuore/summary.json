@@ -1,0 +1,16 @@
+{
+ "store": "carocuore",
+ "platform": "magento",
+ "base": "https://www.carocuore.com",
+ "requests": 323,
+ "errors": 0,
+ "minutes": 6.7,
+ "catalog_products": 1095,
+ "catalog_findings": 0,
+ "page_findings": 363,
+ "pages_fetched": 302,
+ "uncommon_script_hosts": [
+  "carocuore-ar.grupo-alas.com.ar",
+  "rum.hlx.page"
+ ]
+}
