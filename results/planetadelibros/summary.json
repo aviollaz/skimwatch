@@ -1,0 +1,13 @@
+{
+ "store": "planetadelibros",
+ "platform": "tiendanube",
+ "base": "https://www.planetadelibros.com.ar",
+ "requests": 3019,
+ "errors": 0,
+ "minutes": 80.2,
+ "catalog_products": 3001,
+ "catalog_findings": 0,
+ "page_findings": 67346,
+ "pages_fetched": 3001,
+ "uncommon_script_hosts": []
+}
