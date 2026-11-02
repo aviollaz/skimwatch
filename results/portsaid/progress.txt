@@ -1,0 +1,21 @@
+14:55:29 Escaneo profundo de portsaid -> /home/runner/work/skimwatch/skimwatch/out/portsaid
+14:55:29 [portsaid] arrancando https://www.portsaid.com.ar
+14:55:29 [portsaid] 7 categorías de primer nivel
+14:55:29 [portsaid] categoría lista: General (1/7)
+14:55:29 [portsaid] pase 1 categorías 1/7 | 8 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+14:55:29 [portsaid] categoría lista: SALE (2/7)
+14:55:29 [portsaid] pase 1 categorías 2/7 | 8 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+14:55:29 [portsaid] categoría lista: Hot Sale (3/7)
+14:55:29 [portsaid] pase 1 categorías 3/7 | 8 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+14:55:29 [portsaid] categoría lista: CyberMonday (4/7)
+14:55:29 [portsaid] pase 1 categorías 4/7 | 8 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+14:55:30 [portsaid] categoría lista: Winter (5/7)
+14:55:30 [portsaid] pase 1 categorías 5/7 | 9 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 6 requests, 0 errores | 0.0 min
+14:55:30 [portsaid] categoría lista: Looks (6/7)
+14:55:30 [portsaid] pase 1 categorías 6/7 | 9 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.0 min
+14:56:10 [portsaid] categoría lista: Summer (7/7)
+14:56:10 [portsaid] pase 1 categorías 7/7 | 795 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.7 min
+14:56:10 [portsaid] TERMINADO | 795 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 23 requests, 0 errores | 0.7 min
+14:56:10 ======================================================================
+14:56:10 portsaid        795 productos     0 sospechosos     0 bajos  0 errores  0.7 min
+14:56:10 Detalle: /home/runner/work/skimwatch/skimwatch/out/portsaid/findings.csv
