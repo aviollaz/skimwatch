@@ -1,0 +1,11 @@
+[
+  {
+    "store": "whirlpool",
+    "products": 356,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 10,
+    "errors": 0,
+    "minutes": 0.1
+  }
+]
