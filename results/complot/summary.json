@@ -1,0 +1,15 @@
+{
+ "store": "complot",
+ "platform": "magento",
+ "base": "https://complot.com.ar",
+ "requests": 13,
+ "errors": 1,
+ "minutes": 0.3,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 2,
+ "uncommon_script_hosts": [
+  "event.getblue.io"
+ ]
+}

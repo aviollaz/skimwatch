@@ -1,0 +1,6 @@
+16:57:14 [complot] magento https://complot.com.ar
+16:57:14 [complot] catálogo por API
+16:57:15   magento página 1/1 — 0 productos
+16:57:15 [complot] páginas
+16:57:15   0 páginas de producto del sitemap (muestra de hasta 300)
+16:57:34 [complot] TERMINADO {"store": "complot", "platform": "magento", "base": "https://complot.com.ar", "requests": 13, "errors": 1, "minutes": 0.3, "catalog_products": 0, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 2, "uncommon_script_hosts": ["event.getblue.io"]}
