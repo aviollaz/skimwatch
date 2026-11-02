@@ -1,0 +1,19 @@
+16:55:01 Escaneo profundo de viamo -> /home/runner/work/skimwatch/skimwatch/out/viamo
+16:55:01 [viamo] arrancando https://www.viamo.com
+16:55:01 [viamo] 6 categorías de primer nivel
+16:55:02 [viamo] categoría lista: Accesorios (1/6)
+16:55:02 [viamo] pase 1 categorías 1/6 | 22 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+16:55:02 [viamo] categoría lista: testing (2/6)
+16:55:02 [viamo] pase 1 categorías 2/6 | 22 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 3 requests, 0 errores | 0.0 min
+16:55:02 [viamo] categoría lista: Sale (3/6)
+16:55:02 [viamo] pase 1 categorías 3/6 | 22 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 4 requests, 0 errores | 0.0 min
+16:55:04 [viamo] categoría lista: Carteras (4/6)
+16:55:04 [viamo] pase 1 categorías 4/6 | 30 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 5 requests, 0 errores | 0.0 min
+16:55:09 [viamo] categoría lista: Outlet (5/6)
+16:55:09 [viamo] pase 1 categorías 5/6 | 238 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 10 requests, 0 errores | 0.1 min
+16:55:20 [viamo] categoría lista: Calzado (6/6)
+16:55:20 [viamo] pase 1 categorías 6/6 | 463 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.3 min
+16:55:20 [viamo] TERMINADO | 463 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 15 requests, 0 errores | 0.3 min
+16:55:20 ======================================================================
+16:55:20 viamo           463 productos     0 sospechosos     0 bajos  0 errores  0.3 min
+16:55:20 Detalle: /home/runner/work/skimwatch/skimwatch/out/viamo/findings.csv
