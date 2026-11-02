@@ -1,0 +1,23 @@
+16:50:11 [lamartina] shopify https://lamartina.com
+16:50:11 [lamartina] catálogo por API
+16:50:13   shopify página 1 — 250 productos
+16:50:14   shopify página 2 — 500 productos
+16:50:16   shopify página 3 — 750 productos
+16:50:17   shopify página 4 — 1,000 productos
+16:50:19   shopify página 5 — 1,250 productos
+16:50:19   shopify página 6 — 1,279 productos
+16:50:19 [lamartina] páginas
+16:50:21   300 páginas de producto del sitemap (muestra de hasta 300)
+16:50:37   páginas 25/302
+16:52:02   páginas 50/302
+16:53:10   páginas 75/302
+16:54:16   páginas 100/302
+16:55:21   páginas 125/302
+16:56:30   páginas 150/302
+16:57:43   páginas 175/302
+16:58:47   páginas 200/302
+16:59:54   páginas 225/302
+17:00:57   páginas 250/302
+17:02:08   páginas 275/302
+17:03:17   páginas 300/302
+17:03:48 [lamartina] TERMINADO {"store": "lamartina", "platform": "shopify", "base": "https://lamartina.com", "requests": 657, "errors": 1, "minutes": 13.6, "catalog_products": 1279, "catalog_findings": 0, "page_findings": 298, "pages_fetched": 298, "uncommon_script_hosts": ["cdn.506.io", "cdn.iubenda.com", "client.measmerize.com", "config.gorgias.chat", "config.gorgias.help", "content.9gtb.com", "js.klarna.com"]}

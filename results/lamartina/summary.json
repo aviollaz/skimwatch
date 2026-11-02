@@ -1,0 +1,21 @@
+{
+ "store": "lamartina",
+ "platform": "shopify",
+ "base": "https://lamartina.com",
+ "requests": 657,
+ "errors": 1,
+ "minutes": 13.6,
+ "catalog_products": 1279,
+ "catalog_findings": 0,
+ "page_findings": 298,
+ "pages_fetched": 298,
+ "uncommon_script_hosts": [
+  "cdn.506.io",
+  "cdn.iubenda.com",
+  "client.measmerize.com",
+  "config.gorgias.chat",
+  "config.gorgias.help",
+  "content.9gtb.com",
+  "js.klarna.com"
+ ]
+}
