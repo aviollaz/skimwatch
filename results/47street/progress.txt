@@ -1,0 +1,30 @@
+16:52:41 [47street] categoría lista: Denim (17/29)
+16:52:41 [47street] pase 1 categorías 17/29 | 458 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 29 requests, 0 errores | 0.2 min
+16:52:41 [47street] categoría lista: Licencias (18/29)
+16:52:41 [47street] pase 1 categorías 18/29 | 467 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 29 requests, 0 errores | 0.2 min
+16:52:41 [47street] categoría lista: Sporty (19/29)
+16:52:41 [47street] pase 1 categorías 19/29 | 472 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 0.2 min
+16:52:41 [47street] categoría lista: Newin (20/29)
+16:52:41 [47street] pase 1 categorías 20/29 | 473 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 31 requests, 0 errores | 0.2 min
+16:52:42 [47street] categoría lista: Shop The Look (21/29)
+16:52:42 [47street] pase 1 categorías 21/29 | 480 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 32 requests, 0 errores | 0.2 min
+16:52:42 [47street] categoría lista: Black Friday (22/29)
+16:52:42 [47street] pase 1 categorías 22/29 | 480 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 33 requests, 0 errores | 0.2 min
+16:52:42 [47street] categoría lista: Basicos (23/29)
+16:52:42 [47street] pase 1 categorías 23/29 | 480 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 34 requests, 0 errores | 0.2 min
+16:52:42 [47street] categoría lista: Night looks (24/29)
+16:52:42 [47street] pase 1 categorías 24/29 | 480 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 35 requests, 0 errores | 0.2 min
+16:52:42 [47street] categoría lista: Sastreria (25/29)
+16:52:42 [47street] pase 1 categorías 25/29 | 480 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 36 requests, 0 errores | 0.2 min
+16:52:44 [47street] categoría lista: Hot 47 (26/29)
+16:52:44 [47street] pase 1 categorías 26/29 | 503 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 38 requests, 0 errores | 0.3 min
+16:53:04 [47street] categoría lista: Outfit (27/29)
+16:53:04 [47street] pase 1 categorías 27/29 | 853 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 55 requests, 0 errores | 0.6 min
+16:53:07 [47street] categoría lista: Cyber 47 (28/29)
+16:53:07 [47street] pase 1 categorías 28/29 | 914 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 57 requests, 0 errores | 0.6 min
+16:53:13 [47street] categoría lista: Verano (29/29)
+16:53:13 [47street] pase 1 categorías 29/29 | 938 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 59 requests, 0 errores | 0.7 min
+16:53:13 [47street] TERMINADO | 938 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 59 requests, 0 errores | 0.7 min
+16:53:13 ======================================================================
+16:53:13 47street        938 productos     0 sospechosos     0 bajos  0 errores  0.7 min
+16:53:13 Detalle: /home/runner/work/skimwatch/skimwatch/out/47street/findings.csv

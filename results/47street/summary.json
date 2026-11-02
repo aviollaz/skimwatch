@@ -1,0 +1,11 @@
+[
+  {
+    "store": "47street",
+    "products": 938,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 59,
+    "errors": 0,
+    "minutes": 0.7
+  }
+]
