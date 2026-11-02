@@ -1,0 +1,16 @@
+16:50:05 [jazmin] other https://www.jazminchebar.com.ar
+16:50:05 [jazmin] páginas
+16:50:06   300 páginas de producto del sitemap (muestra de hasta 300)
+16:50:52   páginas 25/301
+16:51:40   páginas 50/301
+16:52:30   páginas 75/301
+16:53:23   páginas 100/301
+16:54:15   páginas 125/301
+16:55:02   páginas 150/301
+16:55:55   páginas 175/301
+16:56:45   páginas 200/301
+16:57:33   páginas 225/301
+16:58:22   páginas 250/301
+16:59:16   páginas 275/301
+17:00:08   páginas 300/301
+17:00:13 [jazmin] TERMINADO {"store": "jazmin", "platform": "other", "base": "https://www.jazminchebar.com.ar", "requests": 309, "errors": 0, "minutes": 10.1, "catalog_products": 0, "catalog_findings": 0, "page_findings": 26, "pages_fetched": 300, "uncommon_script_hosts": ["modal.readysize.ai", "rum.hlx.page"]}

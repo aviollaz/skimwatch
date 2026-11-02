@@ -1,0 +1,16 @@
+{
+ "store": "jazmin",
+ "platform": "other",
+ "base": "https://www.jazminchebar.com.ar",
+ "requests": 309,
+ "errors": 0,
+ "minutes": 10.1,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 26,
+ "pages_fetched": 300,
+ "uncommon_script_hosts": [
+  "modal.readysize.ai",
+  "rum.hlx.page"
+ ]
+}
