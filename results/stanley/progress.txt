@@ -1,0 +1,10 @@
+16:50:07 [stanley] shopify https://stanley1913.ar
+16:50:07 [stanley] catálogo por API
+16:50:08   shopify página 1 — 113 productos
+16:50:08 [stanley] páginas
+16:50:10   113 páginas de producto del sitemap (muestra de hasta 300)
+16:50:27   páginas 25/115
+16:50:45   páginas 50/115
+16:51:16   páginas 75/115
+16:51:40   páginas 100/115
+16:52:22 [stanley] TERMINADO {"store": "stanley", "platform": "shopify", "base": "https://stanley1913.ar", "requests": 206, "errors": 1, "minutes": 2.3, "catalog_products": 113, "catalog_findings": 0, "page_findings": 165, "pages_fetched": 114, "uncommon_script_hosts": []}

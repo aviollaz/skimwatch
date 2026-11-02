@@ -1,0 +1,13 @@
+{
+ "store": "stanley",
+ "platform": "shopify",
+ "base": "https://stanley1913.ar",
+ "requests": 206,
+ "errors": 1,
+ "minutes": 2.3,
+ "catalog_products": 113,
+ "catalog_findings": 0,
+ "page_findings": 165,
+ "pages_fetched": 114,
+ "uncommon_script_hosts": []
+}
