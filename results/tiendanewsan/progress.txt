@@ -1,0 +1,6 @@
+16:50:07 [tiendanewsan] magento https://tiendanewsan.com.ar
+16:50:07 [tiendanewsan] catálogo por API
+16:50:27   magento graphql: HTTP None, respuesta no JSON
+16:50:27 [tiendanewsan] páginas
+16:50:28   0 páginas de producto del sitemap (muestra de hasta 300)
+16:50:36 [tiendanewsan] TERMINADO {"store": "tiendanewsan", "platform": "magento", "base": "https://tiendanewsan.com.ar", "requests": 18, "errors": 1, "minutes": 0.5, "catalog_products": 0, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 2, "uncommon_script_hosts": []}

@@ -1,0 +1,13 @@
+{
+ "store": "tiendanewsan",
+ "platform": "magento",
+ "base": "https://tiendanewsan.com.ar",
+ "requests": 18,
+ "errors": 1,
+ "minutes": 0.5,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 2,
+ "uncommon_script_hosts": []
+}
