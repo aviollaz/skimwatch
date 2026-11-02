@@ -1,0 +1,7 @@
+17:00:20 [yelmo] tiendanube https://www.yelmo.com.ar
+17:00:20 [yelmo] páginas
+17:00:21   91 páginas de producto del sitemap (muestra de hasta 3000)
+17:00:37   páginas 25/93
+17:00:52   páginas 50/93
+17:01:07   páginas 75/93
+17:01:21 [yelmo] TERMINADO {"store": "yelmo", "platform": "tiendanube", "base": "https://www.yelmo.com.ar", "requests": 100, "errors": 0, "minutes": 1.0, "catalog_products": 92, "catalog_findings": 0, "page_findings": 96, "pages_fetched": 92, "uncommon_script_hosts": ["acdn-us.mitiendanube.com", "ftp-cdn.mitiendanube.com"]}

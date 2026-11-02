@@ -1,0 +1,16 @@
+{
+ "store": "yelmo",
+ "platform": "tiendanube",
+ "base": "https://www.yelmo.com.ar",
+ "requests": 100,
+ "errors": 0,
+ "minutes": 1.0,
+ "catalog_products": 92,
+ "catalog_findings": 0,
+ "page_findings": 96,
+ "pages_fetched": 92,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com",
+  "ftp-cdn.mitiendanube.com"
+ ]
+}
