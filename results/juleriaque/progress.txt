@@ -1,0 +1,30 @@
+14:56:54 [juleriaque] categoría lista: Packaging (4/18)
+14:56:54 [juleriaque] pase 1 categorías 4/18 | 5,959 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 125 requests, 0 errores | 1.4 min
+14:56:55 [juleriaque] categoría lista: Indumentaria (5/18)
+14:56:55 [juleriaque] pase 1 categorías 5/18 | 5,959 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 126 requests, 0 errores | 1.5 min
+14:56:56 [juleriaque] categoría lista: Deco & Home (6/18)
+14:56:56 [juleriaque] pase 1 categorías 6/18 | 5,972 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 127 requests, 0 errores | 1.5 min
+14:56:56 [juleriaque] categoría lista: Regalos (7/18)
+14:56:56 [juleriaque] pase 1 categorías 7/18 | 5,972 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 128 requests, 0 errores | 1.5 min
+14:56:56 [juleriaque] categoría lista: Gift Cards (8/18)
+14:56:56 [juleriaque] pase 1 categorías 8/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 130 requests, 0 errores | 1.5 min
+14:56:57 [juleriaque] categoría lista: In Store Merchandising (9/18)
+14:56:57 [juleriaque] pase 1 categorías 9/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 131 requests, 0 errores | 1.5 min
+14:56:57 [juleriaque] categoría lista: Testers (10/18)
+14:56:57 [juleriaque] pase 1 categorías 10/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 132 requests, 0 errores | 1.5 min
+14:56:57 [juleriaque] categoría lista: Exhibidores (11/18)
+14:56:57 [juleriaque] pase 1 categorías 11/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 133 requests, 0 errores | 1.5 min
+14:56:57 [juleriaque] categoría lista: teste (12/18)
+14:56:57 [juleriaque] pase 1 categorías 12/18 | 6,023 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 134 requests, 0 errores | 1.5 min
+14:56:57 [juleriaque] categoría lista: teste (13/18)
+14:56:57 [juleriaque] pase 1 categorías 13/18 | 6,055 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 136 requests, 0 errores | 1.5 min
+14:56:58 [juleriaque] categoría lista: perfume (14/18)
+14:56:58 [juleriaque] pase 1 categorías 14/18 | 6,073 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 137 requests, 0 errores | 1.5 min
+14:56:58 [juleriaque] categoría lista: Servicios (15/18)
+14:56:58 [juleriaque] pase 1 categorías 15/18 | 6,073 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 138 requests, 0 errores | 1.5 min
+14:57:02 [juleriaque] categoría lista: Capilar (16/18)
+14:57:02 [juleriaque] pase 1 categorías 16/18 | 6,204 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 141 requests, 0 errores | 1.6 min
+14:58:03 [juleriaque] pase 1 categorías 16/18 | 8,638 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 191 requests, 0 errores | 2.6 min
+14:59:04 [juleriaque] pase 1 categorías 16/18 | 10,225 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 252 requests, 0 errores | 3.6 min
+14:59:18 [juleriaque] aviso: Premium precio 0-0.74 tiene 3356 y no se puede partir más
+15:00:04 [juleriaque] pase 1 categorías 16/18 | 10,229 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 340 requests, 0 errores | 4.6 min
