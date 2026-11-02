@@ -14,6 +14,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python stores/probe.py
-      - name: Publicar (info pública de cada sitio, sin cifrar)
+      - name: Publicar (cifrado)
         env: { GH_TOKEN: "${{ github.token }}" }
-        run: stores/publish.sh probe out/probe 0
+        run: stores/publish.sh probe-pc out/probe-pc 1
