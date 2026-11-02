@@ -1,21 +1,30 @@
-13:15:30 Escaneo profundo de changomas -> /home/runner/work/skimwatch/skimwatch/out/changomas
-13:15:30 [changomas] arrancando https://www.masonline.com.ar
-13:15:31 [changomas] 19 categorías de primer nivel
-13:15:31 [changomas] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
-13:15:41 [changomas] categoría lista: Indumentaria y Calzado (1/19)
-13:15:41 [changomas] pase 1 categorías 1/19 | 1,739 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 36 requests, 0 errores | 0.2 min
-13:15:41 [changomas] categoría lista: Mascotas (2/19)
-13:15:41 [changomas] pase 1 categorías 2/19 | 1,784 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 37 requests, 0 errores | 0.2 min
-13:15:49 [changomas] categoría lista: Panadería (3/19)
-13:15:49 [changomas] pase 1 categorías 3/19 | 3,113 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 64 requests, 0 errores | 0.3 min
-13:16:01 [changomas] categoría lista: Limpieza (4/19)
-13:16:01 [changomas] pase 1 categorías 4/19 | 5,726 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 121 requests, 0 errores | 0.5 min
-13:17:01 [changomas] pase 1 categorías 4/19 | 15,975 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 388 requests, 0 errores | 1.5 min
-13:17:29 [changomas] categoría lista: Bebés y Niños (5/19)
-13:17:29 [changomas] pase 1 categorías 5/19 | 17,263 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 500 requests, 0 errores | 2.0 min
 13:17:45 [changomas] categoría lista: Automotor (6/19)
 13:17:45 [changomas] pase 1 categorías 6/19 | 18,892 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 555 requests, 0 errores | 2.2 min
 13:17:47 [changomas] categoría lista: Carnicería y Pescadería (7/19)
 13:17:47 [changomas] pase 1 categorías 7/19 | 19,341 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 570 requests, 0 errores | 2.3 min
 13:18:29 [changomas] categoría lista: Bebidas (8/19)
 13:18:29 [changomas] pase 1 categorías 8/19 | 24,622 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 768 requests, 0 errores | 3.0 min
+13:18:36 [changomas] aviso: Perfumería y Belleza precio 0-0.74 tiene 3510 y no se puede partir más
+13:18:39 [changomas] categoría lista: Congelados (9/19)
+13:18:39 [changomas] pase 1 categorías 9/19 | 25,773 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 817 requests, 0 errores | 3.1 min
+13:19:00 [changomas] aviso: Hogar precio 0-0.74 tiene 3871 y no se puede partir más
+13:19:08 [changomas] categoría lista: Almacén (10/19)
+13:19:08 [changomas] pase 1 categorías 10/19 | 27,071 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 985 requests, 0 errores | 3.6 min
+13:19:15 [changomas] aviso: Libros y Novelas precio 0-0.74 tiene 3025 y no se puede partir más
+13:19:44 [changomas] categoría lista: Desayunos y Meriendas (11/19)
+13:19:44 [changomas] pase 1 categorías 11/19 | 30,889 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,183 requests, 0 errores | 4.2 min
+13:19:53 [changomas] categoría lista: Perfumería y Belleza (12/19)
+13:19:53 [changomas] pase 1 categorías 12/19 | 31,689 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,221 requests, 0 errores | 4.4 min
+13:20:09 [changomas] categoría lista: Farmacia (13/19)
+13:20:09 [changomas] pase 1 categorías 13/19 | 33,986 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,286 requests, 0 errores | 4.7 min
+13:20:16 [changomas] categoría lista: Festividades (14/19)
+13:20:16 [changomas] pase 1 categorías 14/19 | 34,888 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,326 requests, 0 errores | 4.8 min
+13:20:22 [changomas] categoría lista: Electro y Tecno (15/19)
+13:20:22 [changomas] pase 1 categorías 15/19 | 35,554 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,362 requests, 0 errores | 4.9 min
+13:20:28 [changomas] categoría lista: Frutas y Verduras (16/19)
+13:20:28 [changomas] pase 1 categorías 16/19 | 36,560 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,384 requests, 0 errores | 5.0 min
+13:20:34 [changomas] categoría lista: Frescos (17/19)
+13:20:34 [changomas] pase 1 categorías 17/19 | 37,530 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,404 requests, 0 errores | 5.1 min
+13:20:42 [changomas] categoría lista: Hogar (18/19)
+13:20:42 [changomas] pase 1 categorías 18/19 | 37,550 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 1,438 requests, 0 errores | 5.2 min
+13:20:49 [changomas] aviso: Librería y Arte precio 0-0.74 tiene 4094 y no se puede partir más
