@@ -1,0 +1,13 @@
+{
+ "store": "onasaez",
+ "platform": "woocommerce",
+ "base": "https://www.onasaez.com",
+ "requests": 405,
+ "errors": 1,
+ "minutes": 12.0,
+ "catalog_products": 200,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 303,
+ "uncommon_script_hosts": []
+}

@@ -1,0 +1,19 @@
+16:58:45 [onasaez] woocommerce https://www.onasaez.com
+16:58:45 [onasaez] catálogo por API
+16:58:49   woocommerce página 1/9 — 100 productos
+16:58:53   woocommerce página 2/9 — 200 productos
+16:59:24 [onasaez] páginas
+16:59:32   300 páginas de producto del sitemap (muestra de hasta 300)
+17:00:23   páginas 25/303
+17:01:11   páginas 50/303
+17:02:00   páginas 75/303
+17:02:48   páginas 100/303
+17:03:38   páginas 125/303
+17:04:26   páginas 150/303
+17:05:17   páginas 175/303
+17:06:06   páginas 200/303
+17:06:55   páginas 225/303
+17:08:27   páginas 250/303
+17:09:14   páginas 275/303
+17:10:03   páginas 300/303
+17:10:44 [onasaez] TERMINADO {"store": "onasaez", "platform": "woocommerce", "base": "https://www.onasaez.com", "requests": 405, "errors": 1, "minutes": 12.0, "catalog_products": 200, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 303, "uncommon_script_hosts": []}
