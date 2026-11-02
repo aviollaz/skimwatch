@@ -1,23 +1,3 @@
-13:16:37 [oncity] pase 1 categorías 3/23 | 9,361 productos escaneados | 60 sospechosos ALTO/MEDIO, 7 bajos | 192 requests, 0 errores | 1.2 min
-13:16:38 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:40 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:40 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:41 [oncity] categoría lista: Aire Libre (4/23)
-13:16:41 [oncity] pase 1 categorías 4/23 | 9,911 productos escaneados | 63 sospechosos ALTO/MEDIO, 7 bajos | 204 requests, 0 errores | 1.3 min
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:16:45 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:17:03 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:17:17 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:17:42 [oncity] pase 1 categorías 4/23 | 16,224 productos escaneados | 74 sospechosos ALTO/MEDIO, 7 bajos | 339 requests, 0 errores | 2.3 min
-13:17:47 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
-13:17:53 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
 13:18:42 [oncity] pase 1 categorías 4/23 | 23,213 productos escaneados | 76 sospechosos ALTO/MEDIO, 7 bajos | 496 requests, 0 errores | 3.3 min
 13:19:43 [oncity] pase 1 categorías 4/23 | 26,107 productos escaneados | 76 sospechosos ALTO/MEDIO, 7 bajos | 703 requests, 0 errores | 4.3 min
 13:20:16 [oncity] categoría lista: Electrodomésticos (5/23)
@@ -28,3 +8,23 @@
 13:20:58 [oncity] pase 1 categorías 7/23 | 29,243 productos escaneados | 76 sospechosos ALTO/MEDIO, 7 bajos | 966 requests, 0 errores | 5.5 min
 13:21:30 [oncity] categoría lista: Mascotas (8/23)
 13:21:30 [oncity] pase 1 categorías 8/23 | 32,152 productos escaneados | 76 sospechosos ALTO/MEDIO, 7 bajos | 1,043 requests, 0 errores | 6.1 min
+13:22:11 [oncity] categoría lista: Juegos y juguetes (9/23)
+13:22:11 [oncity] pase 1 categorías 9/23 | 35,649 productos escaneados | 76 sospechosos ALTO/MEDIO, 7 bajos | 1,154 requests, 0 errores | 6.7 min
+13:22:26 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
+13:22:30 [oncity] categoría lista: Salud y Equipamiento Médico (10/23)
+13:22:30 [oncity] pase 1 categorías 10/23 | 37,916 productos escaneados | 77 sospechosos ALTO/MEDIO, 7 bajos | 1,217 requests, 0 errores | 7.1 min
+13:22:52 [oncity] categoría lista: Belleza y cuidado personal (11/23)
+13:22:52 [oncity] pase 1 categorías 11/23 | 40,109 productos escaneados | 77 sospechosos ALTO/MEDIO, 7 bajos | 1,306 requests, 0 errores | 7.4 min
+13:23:05 [oncity] categoría lista: Tiempo Libre (12/23)
+13:23:05 [oncity] pase 1 categorías 12/23 | 41,069 productos escaneados | 77 sospechosos ALTO/MEDIO, 7 bajos | 1,352 requests, 0 errores | 7.7 min
+13:23:27 [oncity] categoría lista: Autos y Motos (13/23)
+13:23:27 [oncity] pase 1 categorías 13/23 | 42,915 productos escaneados | 77 sospechosos ALTO/MEDIO, 7 bajos | 1,423 requests, 0 errores | 8.0 min
+13:23:28 [oncity] !!! hallazgo MEDIO (detalle en el artifact)
+13:23:39 [oncity] categoría lista: Arte, librería y mercería (14/23)
+13:23:39 [oncity] pase 1 categorías 14/23 | 43,956 productos escaneados | 78 sospechosos ALTO/MEDIO, 7 bajos | 1,453 requests, 0 errores | 8.2 min
+13:24:12 [oncity] categoría lista: Compra Internacional (15/23)
+13:24:12 [oncity] pase 1 categorías 15/23 | 46,244 productos escaneados | 78 sospechosos ALTO/MEDIO, 7 bajos | 1,554 requests, 0 errores | 8.8 min
+13:24:14 [oncity] categoría lista: Equipamiento para Industrias (16/23)
+13:24:14 [oncity] pase 1 categorías 16/23 | 46,345 productos escaneados | 78 sospechosos ALTO/MEDIO, 7 bajos | 1,558 requests, 0 errores | 8.8 min
+13:24:14 [oncity] categoría lista: Gift Cards (17/23)
+13:24:14 [oncity] pase 1 categorías 17/23 | 46,345 productos escaneados | 78 sospechosos ALTO/MEDIO, 7 bajos | 1,559 requests, 0 errores | 8.8 min
