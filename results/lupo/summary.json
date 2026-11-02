@@ -1,0 +1,15 @@
+{
+ "store": "lupo",
+ "platform": "tiendanube",
+ "base": "https://www.lupo.com.ar",
+ "requests": 8,
+ "errors": 0,
+ "minutes": 0.0,
+ "catalog_products": 1,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 1,
+ "uncommon_script_hosts": [
+  "dcdn-us.mitiendanube.com"
+ ]
+}

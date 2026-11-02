@@ -1,0 +1,4 @@
+16:50:05 [lupo] tiendanube https://www.lupo.com.ar
+16:50:05 [lupo] páginas
+16:50:06   0 páginas de producto del sitemap (muestra de hasta 3000)
+16:50:08 [lupo] TERMINADO {"store": "lupo", "platform": "tiendanube", "base": "https://www.lupo.com.ar", "requests": 8, "errors": 0, "minutes": 0.0, "catalog_products": 1, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 1, "uncommon_script_hosts": ["dcdn-us.mitiendanube.com"]}
