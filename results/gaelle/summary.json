@@ -1,0 +1,15 @@
+{
+ "store": "gaelle",
+ "platform": "tiendanube",
+ "base": "https://gaelle.com.ar",
+ "requests": 131,
+ "errors": 0,
+ "minutes": 1.5,
+ "catalog_products": 119,
+ "catalog_findings": 0,
+ "page_findings": 120,
+ "pages_fetched": 119,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}

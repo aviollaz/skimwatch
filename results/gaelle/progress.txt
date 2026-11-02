@@ -1,0 +1,7 @@
+16:50:15 [gaelle] tiendanube https://gaelle.com.ar
+16:50:15 [gaelle] páginas
+16:50:16   122 páginas de producto del sitemap (muestra de hasta 3000)
+16:50:33   páginas 25/124
+16:50:50   páginas 50/124
+16:51:24   páginas 100/124
+16:51:43 [gaelle] TERMINADO {"store": "gaelle", "platform": "tiendanube", "base": "https://gaelle.com.ar", "requests": 131, "errors": 0, "minutes": 1.5, "catalog_products": 119, "catalog_findings": 0, "page_findings": 120, "pages_fetched": 119, "uncommon_script_hosts": ["acdn-us.mitiendanube.com"]}
