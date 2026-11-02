@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Relevamiento 4: archivos estáticos (apiStatic) y caches de Compra Gamer."""
+"""Relevamiento 5: de dónde salen la lista y el detalle de productos de Compra Gamer."""
 import gzip, json, re, urllib.request, urllib.error, urllib.parse
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-def get(url, n=60_000_000):
+def get(url, n=80_000_000):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json, text/plain, */*", "Origin": "https://compragamer.com",
                                                "Referer": "https://compragamer.com/", "Accept-Encoding": "gzip"})
     try:
@@ -23,25 +23,14 @@ while queue and len(seen) < 150:
     seen.add(u); s, t = get(u); js.append(t)
     queue += ["https://compragamer.com/" + c for c in re.findall(r"(chunk-[A-Z0-9]+\.js)", t)]
 big = "\n".join(js)
-out = {}
-out["env"] = sorted(set(re.findall(r"(api[A-Za-z]*|static[A-Za-z]*|base[A-Za-z_]*URL|cdn[A-Za-z]*):\"(https?://[^\"]+)\"", big)))
-out["pathRequest"] = sorted(set(re.findall(r"pathRequest(?:Index)?:([^,}]{1,120})", big)))[:80]
-names = set(re.findall(r"\$\{[A-Za-z_$.]*(?:apiStatic|staticUrl|_staticRoute|newHome|staticPrefix)\}([a-zA-Z0-9_\-./]+)", big))
-names |= set(re.findall(r"getStatic\(\"([a-zA-Z0-9_\-./]+)\"", big))
-out["static_names"] = sorted(names)
-static = dict(out["env"]).get("apiStatic")
-out["static_probe"] = {}
-for nm in sorted(names)[:80]:
-    if not static: break
-    s, t = get(static + nm)
-    info = {"status": s, "len": len(t)}
-    try:
-        j = json.loads(t)
-        if isinstance(j, list):
-            info["list_len"] = len(j); info["first_keys"] = list(j[0].keys())[:40] if j and isinstance(j[0], dict) else None
-        elif isinstance(j, dict):
-            info["keys"] = list(j.keys())[:40]
-    except Exception:
-        info["head"] = t[:150]
-    out["static_probe"][nm] = info
+def ctx(rx, n=25, w=260):
+    return [big[max(0, m.start()-w): m.end()+w].replace("\n", " ") for m in re.finditer(rx, big)][:n]
+out = {"pathRequest_ctx": ctx(r"pathRequest\s*=", 30), "apiGet_ctx": ctx(r"apiGet", 15), "descripcion_ctx": ctx(r"descripcion", 15, 200),
+       "producto_ctx": ctx(r"[\"'`/]productos?[/\"'`?]", 30, 200)}
+tries = {}
+for p in ["https://static.compragamer.com/productos", "https://static.compragamer.com/productos.json", "https://static.compragamer.com/productos_lista",
+          "https://api.compragamer.com/productos", "https://webbis.compragamer.com/serpir/productos"]:
+    s, t = get(p)
+    tries[p] = {"status": s, "len": len(t), "head": t[:300]}
+out["tries"] = tries
 json.dump(out, open("probe.json", "w"), indent=1, ensure_ascii=False)
