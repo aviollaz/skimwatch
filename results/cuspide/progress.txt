@@ -1,0 +1,30 @@
+18:07:22   woocommerce página 1397/1411 — 139,700 productos
+18:07:25   woocommerce página 1398/1411 — 139,800 productos
+18:07:27   woocommerce página 1399/1411 — 139,900 productos
+18:07:30   woocommerce página 1400/1411 — 140,000 productos
+18:07:33   woocommerce página 1401/1411 — 140,100 productos
+18:07:39   woocommerce página 1402/1411 — 140,200 productos
+18:07:43   woocommerce página 1403/1411 — 140,300 productos
+18:07:46   woocommerce página 1404/1411 — 140,400 productos
+18:07:49   woocommerce página 1405/1411 — 140,500 productos
+18:07:51   woocommerce página 1406/1411 — 140,600 productos
+18:07:54   woocommerce página 1407/1411 — 140,700 productos
+18:07:58   woocommerce página 1408/1411 — 140,800 productos
+18:08:01   woocommerce página 1409/1411 — 140,900 productos
+18:08:04   woocommerce página 1410/1411 — 141,000 productos
+18:08:06   woocommerce página 1411/1411 — 141,058 productos
+18:08:06 [cuspide] páginas
+18:08:15   300 páginas de producto del sitemap (muestra de hasta 300)
+18:08:55   páginas 25/303
+18:09:37   páginas 50/303
+18:10:21   páginas 75/303
+18:10:58   páginas 100/303
+18:11:42   páginas 125/303
+18:12:20   páginas 150/303
+18:12:59   páginas 175/303
+18:13:37   páginas 200/303
+18:14:16   páginas 225/303
+18:14:58   páginas 250/303
+18:15:41   páginas 275/303
+18:16:21   páginas 300/303
+18:16:49 [cuspide] TERMINADO {"store": "cuspide", "platform": "woocommerce", "base": "https://cuspide.com", "requests": 1780, "errors": 0, "minutes": 86.0, "catalog_products": 141058, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 303, "uncommon_script_hosts": []}

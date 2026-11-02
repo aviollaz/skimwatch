@@ -1,0 +1,13 @@
+{
+ "store": "cuspide",
+ "platform": "woocommerce",
+ "base": "https://cuspide.com",
+ "requests": 1780,
+ "errors": 0,
+ "minutes": 86.0,
+ "catalog_products": 141058,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 303,
+ "uncommon_script_hosts": []
+}
