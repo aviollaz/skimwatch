@@ -1,0 +1,11 @@
+[
+  {
+    "store": "equus",
+    "products": 2299,
+    "suspicious": 0,
+    "low": 0,
+    "requests": 52,
+    "errors": 0,
+    "minutes": 1.1
+  }
+]
