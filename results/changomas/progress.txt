@@ -1,0 +1,21 @@
+13:15:30 Escaneo profundo de changomas -> /home/runner/work/skimwatch/skimwatch/out/changomas
+13:15:30 [changomas] arrancando https://www.masonline.com.ar
+13:15:31 [changomas] 19 categorías de primer nivel
+13:15:31 [changomas] pase 1 categorías | 50 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 2 requests, 0 errores | 0.0 min
+13:15:41 [changomas] categoría lista: Indumentaria y Calzado (1/19)
+13:15:41 [changomas] pase 1 categorías 1/19 | 1,739 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 36 requests, 0 errores | 0.2 min
+13:15:41 [changomas] categoría lista: Mascotas (2/19)
+13:15:41 [changomas] pase 1 categorías 2/19 | 1,784 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 37 requests, 0 errores | 0.2 min
+13:15:49 [changomas] categoría lista: Panadería (3/19)
+13:15:49 [changomas] pase 1 categorías 3/19 | 3,113 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 64 requests, 0 errores | 0.3 min
+13:16:01 [changomas] categoría lista: Limpieza (4/19)
+13:16:01 [changomas] pase 1 categorías 4/19 | 5,726 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 121 requests, 0 errores | 0.5 min
+13:17:01 [changomas] pase 1 categorías 4/19 | 15,975 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 388 requests, 0 errores | 1.5 min
+13:17:29 [changomas] categoría lista: Bebés y Niños (5/19)
+13:17:29 [changomas] pase 1 categorías 5/19 | 17,263 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 500 requests, 0 errores | 2.0 min
+13:17:45 [changomas] categoría lista: Automotor (6/19)
+13:17:45 [changomas] pase 1 categorías 6/19 | 18,892 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 555 requests, 0 errores | 2.2 min
+13:17:47 [changomas] categoría lista: Carnicería y Pescadería (7/19)
+13:17:47 [changomas] pase 1 categorías 7/19 | 19,341 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 570 requests, 0 errores | 2.3 min
+13:18:29 [changomas] categoría lista: Bebidas (8/19)
+13:18:29 [changomas] pase 1 categorías 8/19 | 24,622 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 768 requests, 0 errores | 3.0 min
