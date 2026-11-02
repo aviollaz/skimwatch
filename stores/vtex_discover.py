@@ -4,7 +4,7 @@ Escribe out/discover/summary.json y el archivo matrix.json con las que se pueden
 import gzip, json, os, re, sys, urllib.request, urllib.error, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-SKIP = set(sys.argv[1].split(",")) if len(sys.argv) > 1 else set()   # ya escaneadas
+SKIP = {l.strip() for l in open("stores/vtex_scanned.txt")} if os.path.exists("stores/vtex_scanned.txt") else set()   # ya escaneadas
 def get(url, n=200_000):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/json,*/*", "Accept-Encoding": "gzip"})
     try:
@@ -27,7 +27,7 @@ def probe(line):
     return {"name": name, "url": url, "root": root, "home": st, "vtex_api": s2, "is_vtex": b2.strip().startswith("["),
             "total": int(total) if total.isdigit() else None, "csp": bool(h.get("content-security-policy")),
             "csp_report_only": bool(h.get("content-security-policy-report-only")), "error": body[:40] if st is None else None}
-lines = [l for l in open("stores/vtex_candidates.txt") if l.strip() and not l.startswith("#")]
+lines = [l for l in open("stores/vtex_candidates.txt") if l.strip() and not l.startswith("#") and l.split()[0] not in SKIP]
 with ThreadPoolExecutor(12) as ex:
     res = list(ex.map(probe, lines))
 for r in res: print(r, flush=True)
