@@ -5,7 +5,7 @@ on:
     paths: [stores/*_scan.py, .github/workflows/store-scan.yml]
   workflow_dispatch:
 permissions:
-  contents: write   # publicar resultados cifrados en ramas progress-<tienda>
+  contents: write   # publicar resultados (cifrados) en la rama scan-results
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -22,16 +22,5 @@ jobs:
         run: python stores/${{ matrix.store }}_scan.py
       - name: Publicar resultados cifrados
         if: always()
-        env:
-          S: ${{ matrix.store }}
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          d=$(mktemp -d)
-          cp out/$S/summary.json "$d/" 2>/dev/null || true
-          tar -czf "$d/f.tgz" -C out "$S"
-          openssl rand -hex 32 > "$d/k"
-          openssl enc -aes-256-cbc -pbkdf2 -salt -in "$d/f.tgz" -out "$d/findings.tgz.enc" -pass file:"$d/k"
-          openssl pkeyutl -encrypt -pubin -inkey deep-scan/results-pubkey.pem -pkeyopt rsa_padding_mode:oaep -in "$d/k" -out "$d/key.enc"
-          rm -f "$d/f.tgz" "$d/k"
-          cd "$d" && git init -q && git add . && git -c user.name=store-scan -c user.email=store-scan@users.noreply.github.com commit -qm "resultados $S" \
-            && git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}" HEAD:refs/heads/progress-$S
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh ${{ matrix.store }} out/${{ matrix.store }} 1
