@@ -1,11 +1,3 @@
-13:15:31 [easy] categoría lista: Electrodomésticos (1/17)
-13:15:31 [easy] pase 1 categorías 1/17 | 1,444 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 30 requests, 0 errores | 0.1 min
-13:15:46 [easy] categoría lista: Baños y Cocinas (2/17)
-13:15:46 [easy] pase 1 categorías 2/17 | 4,315 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 89 requests, 0 errores | 0.4 min
-13:15:51 [easy] categoría lista: Muebles (3/17)
-13:15:51 [easy] pase 1 categorías 3/17 | 5,365 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 111 requests, 0 errores | 0.4 min
-13:16:07 [easy] categoría lista: Organización y Limpieza (4/17)
-13:16:07 [easy] pase 1 categorías 4/17 | 8,581 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 179 requests, 0 errores | 0.7 min
 13:16:12 [easy] categoría lista: Iluminación (5/17)
 13:16:12 [easy] pase 1 categorías 5/17 | 9,729 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 203 requests, 0 errores | 0.8 min
 13:16:15 [easy] categoría lista: Automotor (6/17)
@@ -28,3 +20,11 @@
 13:17:56 [easy] pase 1 categorías 14/17 | 25,000 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 637 requests, 0 errores | 2.5 min
 13:18:02 [easy] categoría lista: Herramientas (15/17)
 13:18:02 [easy] pase 1 categorías 15/17 | 25,714 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 657 requests, 0 errores | 2.6 min
+13:18:52 [easy] categoría lista: Jardín y Aire Libre (16/17)
+13:18:52 [easy] pase 1 categorías 16/17 | 26,699 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 779 requests, 0 errores | 3.4 min
+13:19:08 [easy] categoría lista: Ferreteria (17/17)
+13:19:08 [easy] pase 1 categorías 17/17 | 26,699 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 810 requests, 0 errores | 3.7 min
+13:19:08 [easy] TERMINADO | 26,699 productos escaneados | 0 sospechosos ALTO/MEDIO, 0 bajos | 810 requests, 0 errores | 3.7 min
+13:19:08 ======================================================================
+13:19:08 easy         26,699 productos     0 sospechosos     0 bajos  0 errores  3.7 min
+13:19:08 Detalle: /home/runner/work/skimwatch/skimwatch/out/easy/findings.csv
