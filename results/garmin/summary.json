@@ -1,0 +1,16 @@
+{
+ "store": "garmin",
+ "platform": "tiendanube",
+ "base": "https://www.garmin.com.ar",
+ "requests": 12,
+ "errors": 0,
+ "minutes": 0.1,
+ "catalog_products": 1,
+ "catalog_findings": 0,
+ "page_findings": 0,
+ "pages_fetched": 1,
+ "uncommon_script_hosts": [
+  "dcdn-us.mitiendanube.com",
+  "ftp-cdn.mitiendanube.com"
+ ]
+}

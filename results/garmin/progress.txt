@@ -1,0 +1,4 @@
+17:01:34 [garmin] tiendanube https://www.garmin.com.ar
+17:01:34 [garmin] páginas
+17:01:36   0 páginas de producto del sitemap (muestra de hasta 3000)
+17:01:40 [garmin] TERMINADO {"store": "garmin", "platform": "tiendanube", "base": "https://www.garmin.com.ar", "requests": 12, "errors": 0, "minutes": 0.1, "catalog_products": 1, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 1, "uncommon_script_hosts": ["dcdn-us.mitiendanube.com", "ftp-cdn.mitiendanube.com"]}
