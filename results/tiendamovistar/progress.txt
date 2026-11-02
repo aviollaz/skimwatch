@@ -1,0 +1,12 @@
+16:50:22 [tiendamovistar] magento https://tiendaonline.movistar.com.ar
+16:50:22 [tiendamovistar] catálogo por API
+16:50:23   magento graphql sin datos: [{'message': 'No results were found for this query', 'locations': [], 'path': [], 'extensions': {'category': 'graphql'}}]
+16:50:23 [tiendamovistar] páginas
+16:50:25   160 páginas de producto del sitemap (muestra de hasta 300)
+16:51:04   páginas 25/162
+16:51:42   páginas 50/162
+16:52:17   páginas 75/162
+16:52:55   páginas 100/162
+16:53:30   páginas 125/162
+16:54:14   páginas 150/162
+16:54:44 [tiendamovistar] TERMINADO {"store": "tiendamovistar", "platform": "magento", "base": "https://tiendaonline.movistar.com.ar", "requests": 174, "errors": 0, "minutes": 4.4, "catalog_products": 0, "catalog_findings": 0, "page_findings": 18, "pages_fetched": 162, "uncommon_script_hosts": []}

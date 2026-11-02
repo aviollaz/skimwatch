@@ -1,0 +1,13 @@
+{
+ "store": "tiendamovistar",
+ "platform": "magento",
+ "base": "https://tiendaonline.movistar.com.ar",
+ "requests": 174,
+ "errors": 0,
+ "minutes": 4.4,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 18,
+ "pages_fetched": 162,
+ "uncommon_script_hosts": []
+}
