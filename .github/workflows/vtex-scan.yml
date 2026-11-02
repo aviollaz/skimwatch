@@ -1,0 +1,47 @@
+name: vtex scan
+# Catálogo completo de tiendas VTEX con deep-scan/deep_scan.py (pase por categorías).
+on:
+  push:
+    branches: [store-scan]
+    paths: [.github/workflows/vtex-scan.yml]
+  workflow_dispatch:
+permissions:
+  contents: write   # publicar resultados cifrados en scan-results
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: provinciacompras, url: "https://www.provinciacompras.com.ar" }
+          - { name: oncity,           url: "https://www.oncity.com" }
+          - { name: changomas,        url: "https://www.masonline.com.ar" }
+          - { name: easy,             url: "https://www.easy.com.ar" }
+          - { name: farmacity,        url: "https://www.farmacity.com" }
+          - { name: newsport,         url: "https://www.newsport.com.ar" }
+          - { name: sportline,        url: "https://www.sportline.com.ar" }
+          - { name: pardo,            url: "https://www.pardo.com.ar" }
+          - { name: cetrogar,         url: "https://www.cetrogar.com.ar" }
+          - { name: dia,              url: "https://diaonline.supermercadosdia.com.ar" }
+          - { name: naldo,            url: "https://www.naldo.com.ar" }
+          - { name: blaisten,         url: "https://www.blaisten.com.ar" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Escanear ${{ matrix.name }}
+        env:
+          N: ${{ matrix.name }}
+          U: ${{ matrix.url }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ( while true; do sleep 180; stores/publish.sh "$N" "out/$N" 1 >/dev/null 2>&1; done ) &
+          LOOP=$!
+          python deep-scan/deep_scan.py --site "$N=$U" --no-sitemap --redact --every 60 --out "out/$N"
+          kill $LOOP || true
+      - name: Publicar resultados
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh ${{ matrix.name }} out/${{ matrix.name }} 1
