@@ -1,0 +1,4 @@
+16:56:53 [cafemartinez] tiendanube https://www.cafemartinez.com
+16:56:53 [cafemartinez] páginas
+16:56:54   0 páginas de producto del sitemap (muestra de hasta 3000)
+16:56:56 [cafemartinez] TERMINADO {"store": "cafemartinez", "platform": "tiendanube", "base": "https://www.cafemartinez.com", "requests": 10, "errors": 0, "minutes": 0.1, "catalog_products": 1, "catalog_findings": 0, "page_findings": 0, "pages_fetched": 1, "uncommon_script_hosts": ["acdn-us.mitiendanube.com", "d2az8otjr0j19j.cloudfront.net", "optin.myperfit.com"]}
