@@ -1,0 +1,50 @@
+name: platform scan
+# Tiendas WooCommerce / Shopify / Magento / Tiendanube: detectar plataforma y escanear catálogo + páginas.
+on:
+  push:
+    branches: [store-scan]
+    paths: [.github/workflows/platform-scan.yml, stores/platform_candidates.txt]
+  workflow_dispatch:
+permissions:
+  contents: write   # publicar resultados (cifrados) en scan-results
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      matrix: ${{ steps.d.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - id: d
+        run: |
+          python stores/platform_discover.py
+          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+      - name: Publicar relevamiento (info pública, sin cifrar)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh pdiscover out/pdiscover 0
+  scan:
+    needs: discover
+    if: ${{ needs.discover.outputs.matrix != '[]' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        store: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Escanear ${{ matrix.store.name }} (${{ matrix.store.platform }})
+        env:
+          N: ${{ matrix.store.name }}
+          U: ${{ matrix.store.url }}
+          P: ${{ matrix.store.platform }}
+        run: python stores/platform_scan.py --site "$N=$U" --platform "$P" --pages 300
+      - name: Publicar resultados
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: stores/publish.sh ${{ matrix.store.name }} out/${{ matrix.store.name }} 1
