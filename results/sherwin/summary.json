@@ -1,0 +1,16 @@
+{
+ "store": "sherwin",
+ "platform": "other",
+ "base": "https://sherwin.com.ar",
+ "requests": 441,
+ "errors": 0,
+ "minutes": 3.4,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 76,
+ "pages_fetched": 218,
+ "uncommon_script_hosts": [
+  "prism.sherwin-williams.com",
+  "sherwin.com.uy"
+ ]
+}

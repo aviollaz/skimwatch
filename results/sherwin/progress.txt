@@ -1,0 +1,10 @@
+17:01:49 [sherwin] other https://sherwin.com.ar
+17:01:49 [sherwin] páginas
+17:01:59   300 páginas de producto del sitemap (muestra de hasta 300)
+17:02:27   páginas 50/301
+17:02:36   páginas 75/301
+17:02:47   páginas 100/301
+17:02:57   páginas 125/301
+17:03:19   páginas 175/301
+17:03:48   páginas 250/301
+17:05:14 [sherwin] TERMINADO {"store": "sherwin", "platform": "other", "base": "https://sherwin.com.ar", "requests": 441, "errors": 0, "minutes": 3.4, "catalog_products": 0, "catalog_findings": 0, "page_findings": 76, "pages_fetched": 218, "uncommon_script_hosts": ["prism.sherwin-williams.com", "sherwin.com.uy"]}
