@@ -7,3 +7,6 @@
 13:17:00 [provinciacompras] pase 1 categorías | 8,365 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 176 requests, 0 errores | 1.6 min
 13:18:00 [provinciacompras] pase 1 categorías | 11,960 productos escaneados | 2 sospechosos ALTO/MEDIO, 0 bajos | 251 requests, 0 errores | 2.6 min
 13:18:22 [provinciacompras] !!! hallazgo MEDIO (detalle en el artifact)
+13:19:01 [provinciacompras] pase 1 categorías | 17,532 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 368 requests, 0 errores | 3.6 min
+13:20:01 [provinciacompras] pase 1 categorías | 23,509 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 494 requests, 0 errores | 4.6 min
+13:21:02 [provinciacompras] pase 1 categorías | 26,366 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 624 requests, 0 errores | 5.6 min
