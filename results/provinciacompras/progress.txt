@@ -10,3 +10,8 @@
 13:19:01 [provinciacompras] pase 1 categorías | 17,532 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 368 requests, 0 errores | 3.6 min
 13:20:01 [provinciacompras] pase 1 categorías | 23,509 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 494 requests, 0 errores | 4.6 min
 13:21:02 [provinciacompras] pase 1 categorías | 26,366 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 624 requests, 0 errores | 5.6 min
+13:22:02 [provinciacompras] pase 1 categorías | 27,884 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 766 requests, 0 errores | 6.6 min
+13:23:02 [provinciacompras] pase 1 categorías | 28,106 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 884 requests, 0 errores | 7.6 min
+13:24:03 [provinciacompras] pase 1 categorías | 28,303 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,047 requests, 0 errores | 8.6 min
+13:24:22 [provinciacompras] categoría lista: Moda (1/18)
+13:24:22 [provinciacompras] pase 1 categorías 1/18 | 28,680 productos escaneados | 3 sospechosos ALTO/MEDIO, 0 bajos | 1,103 requests, 0 errores | 8.9 min
