@@ -1,0 +1,8 @@
+17:00:23 [ultracomb] tiendanube https://www.ultracomb.com.ar
+17:00:23 [ultracomb] páginas
+17:00:25   109 páginas de producto del sitemap (muestra de hasta 3000)
+17:00:35   páginas 25/111
+17:00:47   páginas 50/111
+17:00:57   páginas 75/111
+17:01:09   páginas 100/111
+17:01:18 [ultracomb] TERMINADO {"store": "ultracomb", "platform": "tiendanube", "base": "https://www.ultracomb.com.ar", "requests": 119, "errors": 0, "minutes": 0.9, "catalog_products": 110, "catalog_findings": 0, "page_findings": 116, "pages_fetched": 110, "uncommon_script_hosts": ["acdn-us.mitiendanube.com", "ftp-cdn.mitiendanube.com"]}
