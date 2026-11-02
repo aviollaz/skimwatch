@@ -1,0 +1,13 @@
+{
+ "store": "laspepas",
+ "platform": "other",
+ "base": "https://laspepas.com.ar",
+ "requests": 309,
+ "errors": 2,
+ "minutes": 6.0,
+ "catalog_products": 0,
+ "catalog_findings": 0,
+ "page_findings": 57,
+ "pages_fetched": 117,
+ "uncommon_script_hosts": []
+}

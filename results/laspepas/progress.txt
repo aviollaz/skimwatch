@@ -1,0 +1,8 @@
+16:59:18 [laspepas] other https://laspepas.com.ar
+16:59:18 [laspepas] páginas
+16:59:19   300 páginas de producto del sitemap (muestra de hasta 300)
+17:01:43   páginas 200/301
+17:02:26   páginas 225/301
+17:03:19   páginas 250/301
+17:05:11   páginas 300/301
+17:05:17 [laspepas] TERMINADO {"store": "laspepas", "platform": "other", "base": "https://laspepas.com.ar", "requests": 309, "errors": 2, "minutes": 6.0, "catalog_products": 0, "catalog_findings": 0, "page_findings": 57, "pages_fetched": 117, "uncommon_script_hosts": []}
