@@ -1,0 +1,11 @@
+[
+  {
+    "store": "electrolux",
+    "products": 191,
+    "suspicious": 99,
+    "low": 0,
+    "requests": 8,
+    "errors": 0,
+    "minutes": 0.0
+  }
+]

@@ -1,0 +1,30 @@
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] categoría lista: Grandes Electrodomésticos (3/4)
+14:55:29 [electrolux] pase 1 categorías 3/4 | 174 productos escaneados | 96 sospechosos ALTO/MEDIO, 0 bajos | 7 requests, 0 errores | 0.0 min
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] !!! hallazgo MEDIO (detalle en el artifact)
+14:55:29 [electrolux] categoría lista: Pequeños Electrodomésticos (4/4)
+14:55:29 [electrolux] pase 1 categorías 4/4 | 191 productos escaneados | 99 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.0 min
+14:55:29 [electrolux] TERMINADO | 191 productos escaneados | 99 sospechosos ALTO/MEDIO, 0 bajos | 8 requests, 0 errores | 0.0 min
+14:55:29 ======================================================================
+14:55:29 electrolux      191 productos    99 sospechosos     0 bajos  0 errores  0.0 min
+14:55:29 Detalle: /home/runner/work/skimwatch/skimwatch/out/electrolux/findings.csv
