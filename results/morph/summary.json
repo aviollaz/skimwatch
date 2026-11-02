@@ -1,0 +1,15 @@
+{
+ "store": "morph",
+ "platform": "tiendanube",
+ "base": "https://www.morph.com.ar",
+ "requests": 2147,
+ "errors": 0,
+ "minutes": 12.3,
+ "catalog_products": 2137,
+ "catalog_findings": 0,
+ "page_findings": 2142,
+ "pages_fetched": 2137,
+ "uncommon_script_hosts": [
+  "acdn-us.mitiendanube.com"
+ ]
+}
