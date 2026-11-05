@@ -1,0 +1,43 @@
+name: deep scan (catálogo completo)
+on:
+  push:
+    branches: [deep-scan]
+  workflow_dispatch:
+permissions:
+  contents: write   # solo para publicar el progreso (conteos) en ramas progress-<tienda>
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        store: [jumbo, disco, vea, carrefour]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Escanear ${{ matrix.store }}
+        env:
+          S: ${{ matrix.store }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          publish() {
+            [ -f "out/$S/progress.log" ] || return 0
+            d=$(mktemp -d)
+            tail -n 25 "out/$S/progress.log" > "$d/progress.txt"
+            [ -f "out/$S/summary.json" ] && cp "out/$S/summary.json" "$d/"
+            ( cd "$d" && git init -q && git add . && git -c user.name=deep-scan -c user.email=deep-scan@users.noreply.github.com commit -qm "progreso $S" \
+              && git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}" HEAD:refs/heads/progress-$S ) || true
+          }
+          ( while true; do sleep 120; publish; done ) &
+          LOOP=$!
+          python deep-scan/deep_scan.py --stores "$S" --redact --every 60 --out "out/$S"
+          kill $LOOP || true
+          publish
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deep-scan-${{ matrix.store }}
+          path: out/
+          retention-days: 7

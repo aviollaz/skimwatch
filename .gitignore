@@ -6,3 +6,4 @@ report.html
 findings.json
 /go.work
 /go.work.sum
+.env
