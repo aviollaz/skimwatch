@@ -11,6 +11,9 @@ var KnownGood = []string{
 	"facebook.net", "facebook.com", "connect.facebook.net", "hotjar.com", "clarity.ms",
 	"segment.com", "segment.io", "mixpanel.com", "amplitude.com", "tiktok.com", "bing.com",
 	"criteo.com", "criteo.net", "taboola.com", "outbrain.com", "linkedin.com", "licdn.com",
+	// The same companies' other domains, which otherwise look like imitations of the ones above
+	"googletagservices.com", "withgoogle.com", "google.com.ar", "google.com.br", "googleoptimize.com",
+	"fbcdn.net", "fbsbx.com", "hotjar.io", "tiktokw.us", "tiktokcdn.com", "tiktokcdn-us.com", "ttwstatic.com",
 	// CDNs and libraries
 	"cloudflare.com", "cdnjs.cloudflare.com", "jsdelivr.net", "unpkg.com", "jquery.com",
 	"bootstrapcdn.com",

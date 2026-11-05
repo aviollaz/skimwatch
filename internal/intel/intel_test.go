@@ -23,6 +23,11 @@ func TestLookalike(t *testing.T) {
 		"mercadopago.com.ar":       "",
 		"mystore.com.ar":           "",
 		"stripe.network":           "",
+		// The providers' own secondary domains, reported as imitations by the nightly scan.
+		"googletagservices.com": "",
+		"withgoogle.com":        "",
+		"hotjar.io":             "",
+		"tiktokw.us":            "",
 	}
 	for in, want := range cases {
 		if got := Lookalike(in); got != want {

@@ -66,9 +66,13 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 	}
 	analyzeScript := func(pageURL, location, src, content string) {
 		sc.Scripts = append(sc.Scripts, model.NewScript(pageURL, location, src, content))
-		findings = append(findings, static.AnalyzeJS(content, static.Context{
+		fs := static.AnalyzeJS(content, static.Context{
 			Target: t.Name, PageURL: pageURL, Location: location, Scope: scope,
-		})...)
+		})
+		if fromKnownProvider(src, scope) {
+			capSeverity(fs, model.Medium)
+		}
+		findings = append(findings, fs...)
 	}
 
 	for _, page := range t.Pages {
@@ -198,6 +202,32 @@ func (s *Scanner) runtimeLayer(
 		})...)
 	}
 	return out
+}
+
+// fromKnownProvider reports whether a script is served by a widely used provider (Google,
+// Meta, Hotjar, TikTok, VTEX...) rather than by the store or an unknown host. Their tracking
+// libraries read forms and send data out by design, which is exactly what the skimmer rules
+// look for. Hosts on the store's allowlist are excluded: that is the store's own code, the
+// usual place for injected skimmers. So are Google Tag Manager containers, which hold code
+// the store (or whoever gets into its GTM account) configures, and have hosted real skimmers.
+func fromKnownProvider(src string, scope *domains.Scope) bool {
+	host := domains.Host(src)
+	if host == "" || scope.Allowed(host) || !domains.IsKnownGood(host) {
+		return false
+	}
+	return !(domains.Registrable(host) == "googletagmanager.com" && strings.Contains(src, "/gtm.js"))
+}
+
+// capSeverity keeps findings in the report but below max, so a provider's own library
+// does not fail the nightly run. Integrity changes still surface through the baseline layer.
+func capSeverity(fs []model.Finding, max model.Severity) {
+	for i := range fs {
+		if fs[i].Severity > max {
+			fs[i].Severity = max
+			fs[i].Detail += " Severity lowered: this script is served by a widely used provider, " +
+				"and its own tracking code matches these patterns legitimately."
+		}
+	}
 }
 
 func dedupe(fs []model.Finding) []model.Finding {
