@@ -5,6 +5,8 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"net/url"
+	"regexp"
 	"strings"
 	"time"
 )
@@ -80,6 +82,69 @@ func (f Finding) Fingerprint() string {
 	}, "\x00")))
 	return hex.EncodeToString(h[:8])
 }
+
+// BaselineKey decides whether a finding is new compared with the previous scan. Unlike
+// Fingerprint it ignores the evidence snippet and the parts of URLs that change on every
+// deploy (cache-busters, content hashes, build numbers), so a provider shipping a new
+// build of the same script does not turn every one of its findings into a "new" one.
+func (f Finding) BaselineKey() string {
+	h := sha256.Sum256([]byte(strings.Join([]string{
+		string(f.Layer), f.Rule, f.Target, StableURLs(f.PageURL), StableURLs(f.Location),
+	}, "\x00")))
+	return hex.EncodeToString(h[:8])
+}
+
+var (
+	reURLInText = regexp.MustCompile(`https?://[^\s"'<>]+`)
+	reURLToken  = regexp.MustCompile(`[A-Za-z0-9]+`)
+	reDigits    = regexp.MustCompile(`[0-9]`)
+)
+
+// Query parameters that only bust caches or record build versions.
+var volatileParams = map[string]bool{
+	"cb": true, "gtm": true, "_": true, "t": true, "ts": true, "rnd": true, "random": true,
+	"cachebust": true, "cachebuster": true, "nocache": true, "build": true, "hash": true,
+}
+
+// StableURLs rewrites every URL in s into a form that survives redeploys: volatile query
+// parameters are dropped, and path or query tokens that look like hashes or build numbers
+// (8+ characters with at least 2 digits, e.g. "e85a87e594b0", "m202610270101") become "*".
+func StableURLs(s string) string {
+	return reURLInText.ReplaceAllStringFunc(s, func(raw string) string {
+		u, err := url.Parse(raw)
+		if err != nil {
+			return raw
+		}
+		u.Fragment = ""
+		u.Path = stableTokens(u.Path)
+		u.RawPath = ""
+		q := u.Query()
+		for k, vs := range q {
+			if volatileParams[strings.ToLower(k)] {
+				q.Del(k)
+				continue
+			}
+			for i := range vs {
+				vs[i] = stableTokens(vs[i])
+			}
+		}
+		u.RawQuery = q.Encode() // Encode sorts keys, so parameter order does not matter either
+		return u.String()
+	})
+}
+
+func stableTokens(s string) string {
+	s = reURLToken.ReplaceAllStringFunc(s, func(tok string) string {
+		if len(tok) >= 8 && len(reDigits.FindAllStringIndex(tok, 3)) >= 2 {
+			return "*"
+		}
+		return tok
+	})
+	// "bSuJ2xBC8cHT21-c68JXN31m" becomes "*-*": one build ID, so one placeholder.
+	return reStarRun.ReplaceAllString(s, "*")
+}
+
+var reStarRun = regexp.MustCompile(`\*(?:[-_~]\*)+`)
 
 // Script is a piece of JavaScript found on a page, wherever it came from.
 type Script struct {

@@ -217,11 +217,11 @@ func markNew(fs []model.Finding, prev *model.Scan) {
 	old := map[string]bool{}
 	if prev != nil {
 		for _, f := range prev.Findings {
-			old[f.Fingerprint()] = true
+			old[f.BaselineKey()] = true
 		}
 	}
 	for i := range fs {
-		fs[i].New = !old[fs[i].Fingerprint()]
+		fs[i].New = !old[fs[i].BaselineKey()]
 	}
 }
 
