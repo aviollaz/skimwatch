@@ -34,41 +34,59 @@ targets:
   - name: magazineluiza
     pages:
       - https://www.magazineluiza.com.br/
+      - https://www.magazineluiza.com.br/celulares-e-smartphones/l/te/
+      - https://www.magazineluiza.com.br/carrinho/
 
   - name: americanas
     pages:
       - https://www.americanas.com.br/
+      - https://www.americanas.com.br/celulares-e-smartphones
+      - https://www.americanas.com.br/checkout
 
   - name: netshoes
     pages:
       - https://www.netshoes.com.br/
+      - https://www.netshoes.com.br/tenis
+      - https://www.netshoes.com.br/checkout
     allow: [vtexassets.com, vteximg.com.br]
 
   - name: centauro
     pages:
       - https://www.centauro.com.br/
+      - https://www.centauro.com.br/nike
+      - https://www.centauro.com.br/checkout
     allow: [vtexassets.com, vteximg.com.br]
 
   # Chile
   - name: falabella-cl
+    # Cart is a client-side route not reachable by URL; category page loads the full bundle.
     pages:
       - https://www.falabella.com/falabella-cl/
+      - https://www.falabella.com/falabella-cl/category/cat1012/Tecnologia
     allow: [falabella.com, fcom-assets.s3.amazonaws.com]
 
   - name: paris-cl
     pages:
       - https://www.paris.cl/
+      - https://www.paris.cl/tecnologia/
+      - https://www.paris.cl/checkout
     allow: [vtexassets.com, vteximg.com.br, cencosud.com]
 
   - name: ripley-cl
     pages:
       - https://simple.ripley.cl/
+      - https://simple.ripley.cl/tecnologia
+      - https://simple.ripley.cl/carro
 
   # Uruguay
   - name: tienda-inglesa
     pages:
       - https://www.tiendainglesa.com.uy/
+      - https://www.tiendainglesa.com.uy/electro
+      - https://www.tiendainglesa.com.uy/checkout
 
   - name: disco-uy
+    # Cart sits behind an OAuth login, so watch the home and a category page.
     pages:
       - https://www.disco.com.uy/
+      - https://www.disco.com.uy/products/category/almacen/10
