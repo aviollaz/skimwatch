@@ -29,3 +29,46 @@ targets:
     pages:
       - https://diaonline.supermercadosdia.com.ar/
     allow: [vtexassets.com, vteximg.com.br]
+
+  # Brazil
+  - name: magazineluiza
+    pages:
+      - https://www.magazineluiza.com.br/
+
+  - name: americanas
+    pages:
+      - https://www.americanas.com.br/
+
+  - name: netshoes
+    pages:
+      - https://www.netshoes.com.br/
+    allow: [vtexassets.com, vteximg.com.br]
+
+  - name: centauro
+    pages:
+      - https://www.centauro.com.br/
+    allow: [vtexassets.com, vteximg.com.br]
+
+  # Chile
+  - name: falabella-cl
+    pages:
+      - https://www.falabella.com/falabella-cl/
+    allow: [falabella.com, fcom-assets.s3.amazonaws.com]
+
+  - name: paris-cl
+    pages:
+      - https://www.paris.cl/
+    allow: [vtexassets.com, vteximg.com.br, cencosud.com]
+
+  - name: ripley-cl
+    pages:
+      - https://simple.ripley.cl/
+
+  # Uruguay
+  - name: tienda-inglesa
+    pages:
+      - https://www.tiendainglesa.com.uy/
+
+  - name: disco-uy
+    pages:
+      - https://www.disco.com.uy/
