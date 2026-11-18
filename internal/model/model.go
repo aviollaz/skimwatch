@@ -89,9 +89,22 @@ func (f Finding) Fingerprint() string {
 // build of the same script does not turn every one of its findings into a "new" one.
 func (f Finding) BaselineKey() string {
 	h := sha256.Sum256([]byte(strings.Join([]string{
-		string(f.Layer), f.Rule, f.Target, StableURLs(f.PageURL), StableURLs(f.Location),
+		string(f.Layer), f.Rule, f.Target, StableURLs(f.PageURL), StableURLs(stripDiscovery(f.Location)),
 	}, "\x00")))
 	return hex.EncodeToString(h[:8])
+}
+
+// Discovery-method prefixes on a Location: the same script seen in the static HTML, after the
+// browser ran, or inside an iframe is one finding, so the prefix must not change the key.
+var discoveryPrefixes = []string{"runtime-loaded ", "browser version of ", "iframe "}
+
+func stripDiscovery(loc string) string {
+	for _, p := range discoveryPrefixes {
+		if strings.HasPrefix(loc, p) {
+			return loc[len(p):]
+		}
+	}
+	return loc
 }
 
 var (
@@ -134,6 +147,7 @@ func StableURLs(s string) string {
 }
 
 func stableTokens(s string) string {
+	s = reVersionRun.ReplaceAllString(s, "*") // 1.2.3-style versions bump on every provider release
 	s = reURLToken.ReplaceAllStringFunc(s, func(tok string) string {
 		if len(tok) >= 8 && len(reDigits.FindAllStringIndex(tok, 3)) >= 2 {
 			return "*"
@@ -144,7 +158,10 @@ func stableTokens(s string) string {
 	return reStarRun.ReplaceAllString(s, "*")
 }
 
-var reStarRun = regexp.MustCompile(`\*(?:[-_~]\*)+`)
+var (
+	reStarRun    = regexp.MustCompile(`\*(?:[-_~]\*)+`)
+	reVersionRun = regexp.MustCompile(`\d+(?:\.\d+)+`)
+)
 
 // Script is a piece of JavaScript found on a page, wherever it came from.
 type Script struct {

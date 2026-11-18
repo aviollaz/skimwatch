@@ -46,7 +46,9 @@ var (
 	reWebSocket = re(`new\s+WebSocket\s*\(`)
 	reFetchOut  = re(`fetch\s*\(\s*["'\x60]https?://|\.open\s*\(\s*["']POST["']\s*,\s*["'\x60]https?://`)
 	reImagePing = re(`new\s+Image\s*\(\s*\d*\s*,?\s*\d*\s*\)[\s\S]{0,200}?\.src\s*=|\.src\s*=\s*["'\x60]https?://[^"'\x60]+["'\x60]\s*\+`)
-	reAbsURL    = re(`(?i)(?:https?:|wss?:)?//([a-z0-9][a-z0-9.-]*\.[a-z]{2,}|\d{1,3}(?:\.\d{1,3}){3})(?::\d+)?(?:/[^\s"'\x60)]*)?`)
+	// A scheme (https://) or a quote right before // marks a real URL. Without that guard a
+	// regex literal like /...\/\//i.test(x) reads as the protocol-relative host "i.test".
+	reAbsURL = re(`(?i)(?:(?:https?:|wss?:)//|["'\x60]//)([a-z0-9][a-z0-9.-]*\.[a-z]{2,}|\d{1,3}(?:\.\d{1,3}){3})(?::\d+)?(?:/[^\s"'\x60)]*)?`)
 
 	reAntiDebug = re(`\bdebugger\b|outerWidth\s*-\s*(window\.)?innerWidth|outerHeight\s*-\s*(window\.)?innerHeight|devtools`)
 	reMiner     = re(`(?i)(coinhive|coin-hive|cryptoloot|crypto-loot|cryptonight|webminepool|deepminer|jsecoin|stratum\+tcp|minero\.cc|monerominer|\.startMining\s*\()`)
