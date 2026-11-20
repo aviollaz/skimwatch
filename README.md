@@ -41,6 +41,13 @@ Every finding has a severity, a plain-language explanation, where it was found a
 evidence snippet. Findings are fingerprinted across scans, so the report separates **new** problems
 from known ones, and CI only fails on new ones.
 
+<p align="center">
+  <img src="docs/report_ejemplo.png" width="760" alt="skimwatch HTML report: four stores, three flagged critical (encoded skimmer in an event handler, payment skimmers, a cryptominer and a cloaked redirect) and one clean">
+  <br><sub>The report, generated from the test fixtures in <code>testdata/</code> against made-up
+  <code>.invalid</code> stores: a defanged page modeled on the real Vea skimmer, a Magecart-style checkout
+  hook, a miner, a cloaked redirect and a clean store.</sub>
+</p>
+
 ## Quick start
 
 Requires Go 1.24+ and Chrome or Chromium.
