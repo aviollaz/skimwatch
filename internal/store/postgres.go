@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -78,6 +79,33 @@ func (p *PostgresStore) Previous(ctx context.Context, target string) (*model.Sca
 		return nil, err
 	}
 	return &s, nil
+}
+
+// Seen implements Store. Keys are computed from the stored findings rather than stored
+// themselves, so a change to how keys are computed applies to old scans too.
+func (p *PostgresStore) Seen(ctx context.Context, target string, since time.Time) (map[string]bool, error) {
+	rows, err := p.pool.Query(ctx,
+		`SELECT COALESCE(document->'findings', '[]'::jsonb) FROM scans
+		 WHERE target = $1 AND started_at >= $2 ORDER BY started_at DESC LIMIT 100`, target, since)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	out := map[string]bool{}
+	for rows.Next() {
+		var raw []byte
+		if err := rows.Scan(&raw); err != nil {
+			return nil, err
+		}
+		var fs []model.Finding
+		if err := json.Unmarshal(raw, &fs); err != nil {
+			return nil, err
+		}
+		for _, f := range fs {
+			out[f.BaselineKey()] = true
+		}
+	}
+	return out, rows.Err()
 }
 
 // Save implements Store. A finding keeps the date it was first seen, so the report can

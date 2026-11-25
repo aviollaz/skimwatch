@@ -162,7 +162,12 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 		}
 	}
 	sc.Findings = dedupe(findings)
-	markNew(sc.Findings, prev)
+	seen, err := s.Store.Seen(ctx, t.Name, sc.StartedAt.Add(-NewWindow))
+	if err != nil {
+		sc.Errors = append(sc.Errors, "loading recent findings: "+err.Error())
+		seen = map[string]bool{}
+	}
+	markNew(sc.Findings, prev, seen)
 	sort.SliceStable(sc.Findings, func(i, j int) bool { return sc.Findings[i].Severity > sc.Findings[j].Severity })
 	sc.FinishedAt = time.Now().UTC()
 
@@ -342,8 +347,16 @@ func dedupe(fs []model.Finding) []model.Finding {
 	return out
 }
 
-func markNew(fs []model.Finding, prev *model.Scan) {
+// NewWindow is how far back a finding must be absent to count as new. Two weeks covers the
+// scripts a store loads only on some visits and the findings that come and go with A/B tests,
+// without hiding for long a problem that was fixed and then came back.
+const NewWindow = 14 * 24 * time.Hour
+
+func markNew(fs []model.Finding, prev *model.Scan, seen map[string]bool) {
 	old := map[string]bool{}
+	for k := range seen {
+		old[k] = true
+	}
 	if prev != nil {
 		for _, f := range prev.Findings {
 			old[f.BaselineKey()] = true

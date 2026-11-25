@@ -72,7 +72,7 @@ type Finding struct {
 	Title    string   `json:"title"`
 	Detail   string   `json:"detail"`
 	Evidence string   `json:"evidence,omitempty"` // a short, truncated snippet; never executed, always escaped on output
-	New      bool     `json:"new"`                // not present in the previous scan of this target
+	New      bool     `json:"new"`                // not seen in this target's recent scans
 }
 
 // Fingerprint identifies a finding across scans so the same issue is not reported as new every night.
@@ -87,11 +87,46 @@ func (f Finding) Fingerprint() string {
 // Fingerprint it ignores the evidence snippet and the parts of URLs that change on every
 // deploy (cache-busters, content hashes, build numbers), so a provider shipping a new
 // build of the same script does not turn every one of its findings into a "new" one.
+//
+// Bundler chunks (Next.js, webpack) are a special case: every deploy renames them and the
+// browser loads a different subset on each visit, so the file name means nothing. For those
+// the key is the chunk directory plus the evidence with minified identifiers blanked out:
+// the same code in a renamed chunk is the same finding, new code is a new one.
 func (f Finding) BaselineKey() string {
-	h := sha256.Sum256([]byte(strings.Join([]string{
-		string(f.Layer), f.Rule, f.Target, StableURLs(f.PageURL), StableURLs(stripDiscovery(f.Location)),
-	}, "\x00")))
+	loc := StableURLs(stripDiscovery(f.Location))
+	parts := []string{string(f.Layer), f.Rule, f.Target, StableURLs(f.PageURL), loc}
+	if dir, ok := BuildChunkDir(loc); ok {
+		parts[4] = dir
+		parts = append(parts, minifiedShape(f.Evidence))
+	}
+	h := sha256.Sum256([]byte(strings.Join(parts, "\x00")))
 	return hex.EncodeToString(h[:8])
+}
+
+// Directories where bundlers put content-hashed chunks with throwaway names.
+var chunkDirs = []string{"/_next/static/", "/chunks/", "/static/js/", "/_nuxt/", "/build/assets/"}
+
+// BuildChunkDir returns the directory of a bundler chunk URL ("https://cdn/_next/static/chunks/"),
+// or false when the location is not one.
+func BuildChunkDir(loc string) (string, bool) {
+	u, err := url.Parse(strings.TrimSpace(loc))
+	if err != nil || u.Host == "" || !strings.HasSuffix(u.Path, ".js") {
+		return "", false
+	}
+	for _, d := range chunkDirs {
+		if strings.Contains(u.Path, d) {
+			return u.Scheme + "://" + u.Host + u.Path[:strings.LastIndexByte(u.Path, '/')+1], true
+		}
+	}
+	return "", false
+}
+
+// Identifiers of one to three characters are what minifiers produce, and they change on
+// every build; numbers change too.
+var reShortIdent = regexp.MustCompile(`\b[A-Za-z_$][A-Za-z0-9_$]{0,2}\b|\d+`)
+
+func minifiedShape(evidence string) string {
+	return reShortIdent.ReplaceAllString(evidence, "_")
 }
 
 // Discovery-method prefixes on a Location: the same script seen in the static HTML, after the
@@ -129,8 +164,17 @@ func StableURLs(s string) string {
 			return raw
 		}
 		u.Fragment = ""
-		u.Path = stableTokens(u.Path)
+		stable := stableTokens(u.Path)
+		hashed := stable != u.Path
+		u.Path = stable
 		u.RawPath = ""
+		if hashed && strings.HasSuffix(u.Path, ".js") {
+			// A content-addressed file (asset-<hash>.js) is identified by its path. Query
+			// parameters on it list bundle contents or versions that change with every deploy,
+			// as on VTEX's "asset-<hash>.min.js?files=app@1.2.3,..." bundles.
+			u.RawQuery = ""
+			return u.String()
+		}
 		q := u.Query()
 		for k, vs := range q {
 			if volatileParams[strings.ToLower(k)] {
@@ -149,7 +193,8 @@ func StableURLs(s string) string {
 func stableTokens(s string) string {
 	s = reVersionRun.ReplaceAllString(s, "*") // 1.2.3-style versions bump on every provider release
 	s = reURLToken.ReplaceAllStringFunc(s, func(tok string) string {
-		if len(tok) >= 8 && len(reDigits.FindAllStringIndex(tok, 3)) >= 2 {
+		// 20+ characters is a random token whatever it contains (signed tag-gateway paths).
+		if len(tok) >= 20 || len(tok) >= 8 && len(reDigits.FindAllStringIndex(tok, 3)) >= 2 {
 			return "*"
 		}
 		return tok
