@@ -76,3 +76,37 @@ func TestCheck(t *testing.T) {
 		t.Errorf("unexpected extra findings: %v", got)
 	}
 }
+
+// PaperCut (2026) published two server IPs and one attacker repository on jsDelivr.
+// Neither fits a domain blocklist: the IPs have no name and the CDN is legitimate.
+func TestIPAndURLIndicators(t *testing.T) {
+	bl := filepath.Join(t.TempDir(), "bl.txt")
+	os.WriteFile(bl, []byte("89.116.171.109\ncdn.jsdelivr.net/gh/fs82g9omml/\nhttps://github.com/fs82g9omml/\n"), 0o644)
+	c, err := New(Options{BlocklistFiles: []string{bl}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	scope := domains.NewScope([]string{"https://www.diario.com.ar/"}, nil)
+	got := map[string]model.Severity{}
+	for _, f := range c.Check(context.Background(), "t", []string{"89.116.171.109", "203.0.113.7", "cdn.jsdelivr.net"}, scope) {
+		got[f.Rule+" "+f.Location] = f.Severity
+	}
+	if got["blocklisted-domain 89.116.171.109"] != model.Critical {
+		t.Errorf("listed IP should be critical, got %v", got)
+	}
+	if got["bare-ip-host 203.0.113.7"] != model.Medium {
+		t.Errorf("unlisted bare IP should be medium, got %v", got)
+	}
+	if _, ok := got["blocklisted-domain cdn.jsdelivr.net"]; ok {
+		t.Error("a URL indicator must not blocklist the whole CDN")
+	}
+
+	urls := []string{
+		"https://cdn.jsdelivr.net/gh/FS82G9OMML/alianet@main/jQuery.1.3.1.js",
+		"https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js",
+	}
+	fs := c.CheckURLs("t", "https://pay.example/form", urls)
+	if len(fs) != 1 || fs[0].Severity != model.Critical || fs[0].Location != urls[0] {
+		t.Errorf("want one critical match on the attacker repo, got %+v", fs)
+	}
+}

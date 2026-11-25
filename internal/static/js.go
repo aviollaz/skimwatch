@@ -56,7 +56,20 @@ var (
 	reCloak     = re(`(?i)document\.referrer|navigator\.userAgent[\s\S]{0,80}(bot|crawl|spider|google)|navigator\.webdriver`)
 	reDocWrite  = re(`document\.write(ln)?\s*\([^)]*<\s*(script|iframe)`)
 	reInject    = re(`createElement\s*\(\s*["'](script|iframe)["']\s*\)`)
-	reCodeish   = re(`function\s*\(|=>|\bdocument\.|\bwindow\.|\bvar\s|\blet\s|\bconst\s|https?://|<script`)
+	// WebRTC: a peer connection and a data channel give a script a way to send and receive
+	// data that never shows up as an HTTP request, so CSP connect-src and most network
+	// monitoring miss it. Anti-fraud libraries open peer connections to learn the visitor's
+	// IP, but they do not push data through a channel or run code that comes back.
+	reWebRTC      = re(`\b(webkit)?RTCPeerConnection\b`)
+	reDataChannel = re(`\.createDataChannel\s*\(`)
+	reChannelSend = re(`\.send\s*\(`)
+	reICEServer   = re(`(?i)["'\x60](?:stun|turns?):([a-z0-9][a-z0-9.-]*\.[a-z]{2,}|\d{1,3}(?:\.\d{1,3}){3})(?::\d+)?`)
+	// Code that arrives as a message and is executed: the loader half of PaperCut, which kept
+	// the actual skimmer off disk by sending it to each visitor over the data channel.
+	reRunsMessage = re(`(?s)(onmessage\s*=|addEventListener\s*\(\s*["']message["'])` +
+		`.{0,400}?(\beval\s*\(|new\s+Function\s*\(|\bFunction\s*\(|createElement\s*\(\s*["']script["'])`)
+
+	reCodeish = re(`function\s*\(|=>|\bdocument\.|\bwindow\.|\bvar\s|\blet\s|\bconst\s|https?://|<script`)
 )
 
 // AnalyzeJS inspects one piece of code. It never executes anything.
@@ -164,6 +177,40 @@ func AnalyzeJS(code string, ctx Context) []model.Finding {
 			"Beacons, WebSockets or image pings to "+exfilTarget+". Usually analytics; listed so new destinations stand out.", sends)
 	}
 
+	// 3b. WebRTC. A skimmer that exfiltrates through a data channel never names an HTTP host,
+	// so the rules above cannot see where the data goes.
+	if rtc := find(reWebRTC, code); rtc != "" {
+		ice := iceHosts(code, ctx.Scope)
+		channel := find(reDataChannel, code)
+		runsMsg := find(reRunsMessage, code)
+		switch {
+		case channel != "" && runsMsg != "":
+			add("webrtc-loader", model.Critical, "Runs code received over a WebRTC data channel",
+				"This code opens a peer connection, creates a data channel and executes what arrives through it. "+
+					"That is how the 2026 PaperCut attack on 80 US newspapers delivered its skimmer: the loader looked "+
+					"harmless and the real payload was sent to each visitor separately, so it never existed as a file "+
+					"a scanner could download. No legitimate store or payment code works this way.",
+				rtc+" … "+runsMsg)
+		case channel != "" && find(reChannelSend, code) != "" && (collects != "" || listens != "" || harvests != "" || checkout != ""):
+			add("skimmer-webrtc", model.Critical, "Collects form data and sends it over WebRTC",
+				"This code reads form or payment fields and pushes data through a WebRTC data channel. The data "+
+					"leaves as UDP traffic to a peer, not as an HTTP request, so Content-Security-Policy and network "+
+					"logs do not show it.",
+				firstNonEmpty(collects, listens, harvests, checkout)+" … "+channel)
+		case len(ice) > 0:
+			add("webrtc-unknown-server", model.High, "Opens a WebRTC connection to "+ice[0],
+				"The peer connection is configured with a STUN/TURN server outside the store and outside the usual "+
+					"providers. A relay the attacker controls is all it takes to move data out over UDP.",
+				rtc)
+		case channel != "":
+			add("webrtc-datachannel", model.Medium, "Opens a WebRTC data channel",
+				"Data channels are rare on stores. Fraud-detection scripts sometimes create one to learn the visitor's IP; "+
+					"anything else deserves a look at who owns this script.", channel)
+		default:
+			add("webrtc", model.Info, "Uses WebRTC", "Usually fingerprinting or video chat. Noted because it can bypass CSP.", rtc)
+		}
+	}
+
 	// 4. Other client-side attacks.
 	if m := find(reMiner, code); m != "" {
 		add("cryptominer", model.Critical, "Cryptocurrency miner",
@@ -213,6 +260,21 @@ func externalHosts(code string, scope *domains.Scope) []string {
 		if scope == nil || !scope.Trusted(host) {
 			out = append(out, host)
 		}
+	}
+	return out
+}
+
+// iceHosts lists STUN/TURN servers in code that are not the store's or a known provider's.
+func iceHosts(code string, scope *domains.Scope) []string {
+	var out []string
+	seen := map[string]bool{}
+	for _, m := range reICEServer.FindAllStringSubmatch(code, 50) {
+		host := strings.ToLower(m[1])
+		if seen[host] || (scope != nil && scope.Trusted(host)) {
+			continue
+		}
+		seen[host] = true
+		out = append(out, host)
 	}
 	return out
 }

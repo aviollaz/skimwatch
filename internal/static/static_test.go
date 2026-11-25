@@ -46,6 +46,8 @@ func TestDetectsAttacks(t *testing.T) {
 		{"payloads/magecart.js", "skimmer-pattern", model.Critical},
 		{"payloads/miner.js", "cryptominer", model.Critical},
 		{"payloads/cloaked_redirect.js", "cloaked-redirect", model.High},
+		{"payloads/webrtc_loader.js", "webrtc-loader", model.Critical},
+		{"payloads/webrtc_skimmer.js", "skimmer-webrtc", model.Critical},
 	}
 	for _, c := range cases {
 		t.Run(c.file, func(t *testing.T) {
@@ -115,5 +117,27 @@ var b = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x65\x76\x69\x6c\x2e\x63\x6f\x6d";`
 	h := RevealHidden(code)
 	if len(h) != 2 || h[0].Text != "document.write" || h[1].Text != "https://evil.com" {
 		t.Fatalf("unexpected decode: %+v", h)
+	}
+}
+
+// Fraud-detection scripts open peer connections to Google's STUN servers on many checkouts.
+// That alone must not fail a nightly run.
+func TestWebRTCFingerprintingStaysQuiet(t *testing.T) {
+	got := analyzeFile(t, "payloads/webrtc_fingerprint.js")
+	if got["webrtc"] != model.Info {
+		t.Errorf("plain WebRTC use should be noted as info, got %v", got)
+	}
+	for rule, sev := range got {
+		if sev >= model.Medium {
+			t.Errorf("fingerprinting raised %s (%s)", rule, sev)
+		}
+	}
+}
+
+func TestWebRTCUnknownRelay(t *testing.T) {
+	code := `var pc = new RTCPeerConnection({iceServers:[{urls:"turn:relay.evil-cdn.example:3478"}]});`
+	got := rules(AnalyzeJS(code, Context{Target: "t", PageURL: store, Location: "script", Scope: scope()}))
+	if got["webrtc-unknown-server"] != model.High {
+		t.Errorf("unknown TURN relay should be high, got %v", got)
 	}
 }

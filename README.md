@@ -31,10 +31,10 @@ flowchart LR
 
 | Layer | What it catches | How |
 |---|---|---|
-| **Static** | Injected skimmers, obfuscated payloads, miners, cloaked redirects, hidden iframes, card forms posting elsewhere | Parses the HTML, extracts every script, event handler and `javascript:` URL, recursively decodes base64, `fromCharCode` and escape sequences, then correlates behaviors: *reads card fields or hooks fetch/XHR* **and** *sends data to a host the store doesn't control* = probable skimmer |
-| **Runtime** | Skimmers that only appear after the page loads, data actually leaving the browser | Loads each page in headless Chrome with an instrumentation script that records every `eval`, every listener on inputs and every request. Then it **types canary values** (a test card number, a fake email) into the page's forms and checks whether they show up in any request to another host, raw, URL-encoded or base64-encoded. That is evidence, not a heuristic |
-| **Baseline** | Supply-chain attacks (a trusted script replaced with a malicious version), new third-party code | Fingerprints every script with SHA-256 and compares it with the previous scan. Also flags scripts that a server sends differently to a browser than to a plain HTTP client, a trick skimmers use to hide from scanners |
-| **Intel** | Known-malicious infrastructure, look-alike domains, throwaway domains | Blocklists (a seed list plus abuse.ch URLhaus nightly), look-alike detection against about 80 trusted providers (`google-analytlcs.com`, `googletagmanager-cdn.com`, homoglyphs like `rn` → `m`), and RDAP registration dates: skimmer domains are usually days old |
+| **Static** | Injected skimmers, obfuscated payloads, miners, cloaked redirects, hidden iframes, card forms posting elsewhere | Parses the HTML, extracts every script, event handler and `javascript:` URL, recursively decodes base64, `fromCharCode` and escape sequences, then correlates behaviors: *reads card fields or hooks fetch/XHR* **and** *sends data to a host the store doesn't control* = probable skimmer. WebRTC gets its own rules, because a data channel names no HTTP host: code that runs what arrives over a data channel, or pushes form data through one, is critical |
+| **Runtime** | Skimmers that only appear after the page loads, data actually leaving the browser | Loads each page in headless Chrome with an instrumentation script that records every `eval`, every listener on inputs and every request. Then it **types canary values** (a test card number, a fake email) into the page's forms, **moves the pointer over the pay buttons** (never clicking) for skimmers that wait for that moment, and checks whether the canaries show up in any request, WebSocket frame or **WebRTC data channel** to another host, raw, URL-encoded or base64-encoded. That is evidence, not a heuristic. It also records every WebRTC server and peer the page sets up |
+| **Baseline** | Supply-chain attacks (a trusted script replaced with a malicious version), new third-party code | Fingerprints every script with SHA-256 and compares it with the previous scan. Also flags scripts that a server sends differently to a browser than to a plain HTTP client, a trick skimmers use to hide from scanners. Scripts served from someone's GitHub repo or npm package through a public CDN are judged by their account, not by the CDN |
+| **Intel** | Known-malicious infrastructure, look-alike domains, throwaway domains | Blocklists (a seed list plus abuse.ch URLhaus nightly), look-alike detection against about 80 trusted providers (`google-analytlcs.com`, `googletagmanager-cdn.com`, homoglyphs like `rn` → `m`), RDAP registration dates (skimmer domains are usually days old), bare IP addresses, and URL indicators from published attack reports, which catch one attacker's repository on jsDelivr without blocklisting jsDelivr |
 | **Hardening** | Missing defenses | CSP that would or wouldn't stop exfiltration, HSTS, frame protection, third-party scripts without Subresource Integrity |
 
 Every finding has a severity, a plain-language explanation, where it was found and a truncated
@@ -47,6 +47,33 @@ from known ones, and CI only fails on new ones.
   <code>.invalid</code> stores: a defanged page modeled on the real Vea skimmer, a Magecart-style checkout
   hook, a miner, a cloaked redirect and a clean store.</sub>
 </p>
+
+## Shared checkouts
+
+In November 2026 [Guardio Labs reported PaperCut](https://guard.io/labs/papercut---80-us-newspaper-websites-served-a-credit-card-stealer):
+one `<script>` tag added to a payment processor's hosted card form, which about 80 US
+newspapers embed. None of the newspapers' own sites changed. The tag loaded a fake
+`jQuery.1.3.1.js` from a throwaway GitHub account through jsDelivr; that loader opened a
+WebRTC data channel, received the actual skimmer per visitor and sent cards back the same way,
+so no file ever contained the skimmer and no HTTP request ever carried a card.
+
+Forms shared like that are where one compromise pays off most, so they are a target kind of
+their own:
+
+```yaml
+- name: some-hosted-form
+  kind: shared-checkout
+  pages: [https://forms.processor.example/hosted/card-form]
+  used_by: [diario-a, diario-b]
+```
+
+A shared checkout is always treated as a page that takes card data, its baseline is raised a
+level (one new script on a payment form is the whole signal), and every finding names the
+merchants in `used_by`, so the report says who is affected. Every layer has a check for one
+part of PaperCut: `user-hosted-script` (fake library from a personal repo on a moving branch),
+`webrtc-loader` (runs code received over a data channel), `canary-webrtc` (the card actually
+leaving over WebRTC, after hovering the pay button), `webrtc-peer-external` and the IOCs in
+`data/blocklist.txt`. The end-to-end test replays the attack against a fake hosted form.
 
 ## Quick start
 
@@ -121,7 +148,15 @@ first, and give them time to fix it before saying anything publicly.
 - **Only the pages you list are scanned.** The checkout itself often requires a session, so the
   tool watches the pages that load the same scripts.
 - `KnownGood` trusts major providers' domains. Attackers occasionally abuse those platforms
-  (Google Tag Manager containers, cloud storage), which this tool would underrate.
+  (Google Tag Manager containers, cloud storage), which this tool would underrate. GTM containers
+  and code served from personal repositories on jsDelivr, unpkg and GitHub are the exceptions it
+  already makes.
+- **WebRTC payloads can't be read.** The runtime layer records what page code passes to
+  `send()` and which servers it configures, but a skimmer delivered over a data channel only
+  arrives if the attacker's server answers the scanner, and a careful one won't.
+- **Fraud-detection scripts use WebRTC too**, to learn the visitor's IP through a public STUN
+  server. That alone stays informational; data channels, unknown relays and code that comes
+  back are what raise the severity.
 
 ## Project layout
 

@@ -113,6 +113,16 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 		for _, f := range doc.Iframes {
 			noteHost(domains.Host(f.URL))
 		}
+		cardPage := t.Shared() || hasCardForm(doc)
+		var loaded []string
+		for _, f := range doc.Iframes {
+			loaded = append(loaded, f.URL)
+		}
+		for _, ext := range doc.ExternalJS {
+			loaded = append(loaded, ext.URL)
+			findings = append(findings, userHostedScript(t.Name, resp.URL, ext.URL, cardPage)...)
+		}
+		findings = append(findings, s.Intel.CheckURLs(t.Name, resp.URL, loaded)...)
 		for _, ext := range doc.ExternalJS {
 			noteHost(domains.Host(ext.URL))
 			if _, done := staticScripts[ext.URL]; done {
@@ -130,7 +140,7 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 		}
 
 		if s.Browser != nil {
-			findings = append(findings, s.runtimeLayer(ctx, t.Name, resp.URL, scope, staticScripts, noteHost, analyzeScript, log)...)
+			findings = append(findings, s.runtimeLayer(ctx, t.Name, resp.URL, cardPage, scope, staticScripts, noteHost, analyzeScript, log)...)
 		}
 	}
 
@@ -141,8 +151,16 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 	if err != nil {
 		sc.Errors = append(sc.Errors, "loading previous scan: "+err.Error())
 	}
-	findings = append(findings, baseline.Compare(prev, sc, scope)...)
+	findings = append(findings, baseline.Compare(prev, sc, scope, t.Shared())...)
 
+	if t.Shared() && len(t.UsedBy) > 0 {
+		note := " This form is shared: what affects it affects " + strings.Join(t.UsedBy, ", ") + "."
+		for i := range findings {
+			if findings[i].Severity >= model.Medium {
+				findings[i].Detail += note
+			}
+		}
+	}
 	sc.Findings = dedupe(findings)
 	markNew(sc.Findings, prev)
 	sort.SliceStable(sc.Findings, func(i, j int) bool { return sc.Findings[i].Severity > sc.Findings[j].Severity })
@@ -157,7 +175,7 @@ func (s *Scanner) scanTarget(ctx context.Context, t config.Target) *model.Scan {
 }
 
 func (s *Scanner) runtimeLayer(
-	ctx context.Context, target, pageURL string, scope *domains.Scope, staticScripts map[string]string,
+	ctx context.Context, target, pageURL string, cardPage bool, scope *domains.Scope, staticScripts map[string]string,
 	noteHost func(string), analyzeScript func(pageURL, location, src, content string), log *slog.Logger,
 ) []model.Finding {
 	log.Info("loading page in browser", "url", pageURL)
@@ -170,8 +188,19 @@ func (s *Scanner) runtimeLayer(
 		}}
 	}
 	out := runtime.Analyze(res, target, scope)
+	var urls []string
 	for _, r := range res.Requests {
 		noteHost(domains.Host(r.URL))
+		urls = append(urls, r.URL)
+		if r.Type == "Script" {
+			if _, inHTML := staticScripts[r.URL]; !inHTML {
+				out = append(out, userHostedScript(target, pageURL, r.URL, cardPage || res.CardFields > 0)...)
+			}
+		}
+	}
+	out = append(out, s.Intel.CheckURLs(target, pageURL, urls)...)
+	for _, peer := range res.WebRTCPeers {
+		noteHost(peer) // bare IPs and relay hosts go through the blocklist and reputation checks
 	}
 	for _, ws := range res.Sockets {
 		noteHost(domains.Host(ws))
@@ -215,7 +244,77 @@ func fromKnownProvider(src string, scope *domains.Scope) bool {
 	if host == "" || scope.Allowed(host) || !domains.IsKnownGood(host) {
 		return false
 	}
+	if _, userCode := domains.ParseUserCode(src); userCode {
+		return false // jsDelivr is trusted; whoever pushed this file to GitHub or npm is not
+	}
 	return !(domains.Registrable(host) == "googletagmanager.com" && strings.Contains(src, "/gtm.js"))
+}
+
+// hasCardForm reports whether the page asks for payment card data.
+func hasCardForm(doc *static.Document) bool {
+	for _, f := range doc.Forms {
+		if f.HasCardFields {
+			return true
+		}
+	}
+	return false
+}
+
+// userHostedScript judges a script served by a public CDN out of someone's repository or
+// package. Pinned npm versions are everywhere and stay quiet; code from a personal GitHub
+// account, a moving ref or a file named after a library it is not, is reported, and more
+// loudly on pages that take card numbers.
+func userHostedScript(target, pageURL, src string, cardPage bool) []model.Finding {
+	uc, ok := domains.ParseUserCode(src)
+	if !ok {
+		return nil
+	}
+	fake := uc.ImpersonatedLibrary()
+	var sev model.Severity
+	var why []string
+	switch {
+	case uc.Service == "github":
+		sev = model.Medium
+		why = append(why, "it is served straight from the GitHub account "+uc.Account()+", which anyone can create")
+	case uc.Mutable:
+		sev = model.Low
+		why = append(why, "it is an npm package without a pinned version")
+	case fake == "":
+		return nil
+	default:
+		sev = model.Low
+	}
+	if uc.Mutable && uc.Service == "github" {
+		why = append(why, "the ref "+orLatest(uc.Ref)+" can be changed to new code at any time under the same URL")
+		sev++
+	}
+	if fake != "" {
+		why = append(why, "the file is named like "+fake+" but does not come from "+fake+"'s official account")
+		sev++
+	}
+	if cardPage {
+		why = append(why, "the page asks for card data")
+		sev++
+	}
+	if sev > model.Critical {
+		sev = model.Critical
+	}
+	return []model.Finding{{
+		Layer: model.LayerStatic, Rule: "user-hosted-script", Severity: sev, Target: target, PageURL: pageURL,
+		Location: src, Title: "Script loaded from a personal " + uc.Service + " repository: " + uc.Account(),
+		Detail: "Public CDNs like jsDelivr serve whatever their users publish, so the CDN's reputation says nothing " +
+			"about this file. Flagged because " + strings.Join(why, "; ") + ". The 2026 PaperCut skimmer was loaded " +
+			"exactly this way, as a fake jQuery from a throwaway GitHub account. Confirm the store owns this repository " +
+			"and pin it to a commit with Subresource Integrity, or self-host it.",
+		Evidence: src,
+	}}
+}
+
+func orLatest(ref string) string {
+	if ref == "" {
+		return "(none, so the latest)"
+	}
+	return "@" + ref
 }
 
 // capSeverity keeps findings in the report but below max, so a provider's own library

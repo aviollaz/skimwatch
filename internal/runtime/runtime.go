@@ -9,12 +9,14 @@ import (
 	_ "embed"
 	"encoding/base64"
 	"fmt"
+	"net"
 	"net/url"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
 
+	"github.com/chromedp/cdproto/input"
 	"github.com/chromedp/cdproto/network"
 	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/chromedp"
@@ -71,6 +73,10 @@ type Result struct {
 	Scripts   []Script
 	Events    []Event
 	NonNative []string // browser APIs replaced by page code
+
+	CardFields  int      // payment card inputs the page showed
+	Hovered     int      // pay buttons the pointer was moved over
+	WebRTCPeers []string // public IPs and hosts the page set up WebRTC connections with
 }
 
 // Browser owns one headless Chrome process shared by every page of a scan.
@@ -128,6 +134,11 @@ func (b *Browser) Visit(ctx context.Context, pageURL string, wait time.Duration)
 	defer stop()
 
 	res := &Result{PageURL: pageURL}
+	var filled struct {
+		Filled int `json:"filled"`
+		Card   int `json:"card"`
+	}
+	var buttons []struct{ X, Y float64 }
 	var mu sync.Mutex
 	scriptIDs := map[network.RequestID]string{}
 
@@ -165,12 +176,32 @@ func (b *Browser) Visit(ctx context.Context, pageURL string, wait time.Duration)
 		}),
 		chromedp.Navigate(pageURL),
 		chromedp.Sleep(wait),
-		chromedp.Evaluate(fillCanariesJS, nil),
+		chromedp.Evaluate(fillCanariesJS, &filled),
+		// Some skimmers only wake up when the buyer is about to pay: PaperCut ran when the
+		// pointer went over the pay button. Move a real (trusted) pointer over each one.
+		// Nothing is ever clicked.
+		chromedp.Evaluate(payButtonsJS, &buttons),
+		chromedp.ActionFunc(func(c context.Context) error {
+			for _, b := range buttons {
+				for _, p := range [][2]float64{{2, 2}, {b.X, b.Y}} {
+					if err := input.DispatchMouseEvent(input.MouseMoved, p[0], p[1]).Do(c); err != nil {
+						return err
+					}
+				}
+				res.Hovered++
+				if err := chromedp.Sleep(400 * time.Millisecond).Do(c); err != nil {
+					return err
+				}
+			}
+			return nil
+		}),
 		chromedp.Sleep(wait/2+time.Second),
 		chromedp.Location(&res.FinalURL),
 		chromedp.Evaluate(`JSON.parse(JSON.stringify(window.__skimwatch || []))`, &res.Events),
 		chromedp.Evaluate(nonNativeJS, &res.NonNative),
 	)
+	res.CardFields = filled.Card
+	res.WebRTCPeers = webrtcPeers(res.Events)
 	if err != nil {
 		return res, fmt.Errorf("visiting %s: %w", pageURL, err)
 	}
@@ -221,17 +252,43 @@ const fillCanariesJS = `(() => {
     if (el.type === "text" || el.type === "tel" || el.type === "search" || el.type === "") return "` + CanaryText + `";
     return null;
   };
-  let n = 0;
+  let n = 0, card = 0;
   for (const el of document.querySelectorAll("input, textarea")) {
     if (el.type === "hidden" || el.disabled || el.readOnly) continue;
     const v = pick(el);
     if (v === null) continue;
+    if (v === "` + CanaryCard + `") card++;
     el.focus();
     el.value = v;
     for (const t of ["keydown", "keyup", "input", "change", "blur"]) el.dispatchEvent(new Event(t, { bubbles: true }));
     n++;
   }
-  return n;
+  return { filled: n, card: card };
+})()`
+
+// payButtonsJS finds buttons that look like "pay", "buy" or "subscribe", plus the submit
+// buttons of any form with card fields, scrolls each into view and returns its center.
+const payButtonsJS = `(() => {
+  const words = /pagar|pag[aá]|abonar|comprar|confirm|finaliz|suscrib|subscri|checkout|pay|buy|order|place|submit|continuar/i;
+  const out = [], seen = new Set();
+  const add = (el) => {
+    if (seen.has(el) || out.length >= 6) return;
+    seen.add(el);
+    el.scrollIntoView({ block: "center" });
+    const r = el.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return;
+    out.push({ X: r.left + r.width / 2, Y: r.top + r.height / 2 });
+  };
+  for (const f of document.forms) {
+    const card = [...f.elements].some((e) => /card|cc-number|tarjeta|cvv|cvc/i.test([e.name, e.id, e.autocomplete].join(" ")));
+    if (!card) continue;
+    for (const b of f.querySelectorAll("button, input[type=submit], input[type=button]")) add(b);
+  }
+  for (const b of document.querySelectorAll("button, input[type=submit], input[type=button], [role=button], a")) {
+    const label = [b.textContent, b.value, b.getAttribute("aria-label"), b.id, b.className].join(" ");
+    if (words.test(label)) add(b);
+  }
+  return out;
 })()`
 
 // nonNativeJS lists security-relevant browser APIs that page code has replaced.
@@ -289,6 +346,47 @@ func Analyze(r *Result, target string, scope *domains.Scope) []model.Finding {
 				"A fake value typed by the scanner left the page through a WebSocket.", f)
 		}
 	}
+	cardPage := r.CardFields > 0
+	for _, e := range r.Events {
+		if e.Kind != "webrtc-send" {
+			continue
+		}
+		src := e.Source
+		switch which := leakedCanary(e.Detail); {
+		case which != "":
+			add("canary-webrtc", model.Critical, src, "Typed "+which+" was sent over a WebRTC data channel",
+				"The scanner typed a fake "+which+" into the page and "+src+" pushed it through a WebRTC data channel. "+
+					"That traffic goes straight to a peer as UDP, invisible to CSP and to HTTP monitoring. "+
+					"This is direct evidence of data theft, the same technique as the 2026 PaperCut skimmer.", e.Detail)
+		case !scope.Trusted(domains.Host(src)):
+			sev := model.Medium
+			if cardPage {
+				sev = model.High
+			}
+			add("webrtc-data-sent", sev, src, "Page sends data over a WebRTC data channel",
+				"Code from "+src+" sent data through a data channel. Stores almost never need this; on a payment page "+
+					"it is the exfiltration channel of choice for skimmers that want to stay out of the network log.", e.Detail)
+		}
+	}
+	if len(r.WebRTCPeers) > 0 {
+		var untrusted []string
+		for _, p := range r.WebRTCPeers {
+			if !scope.Trusted(p) {
+				untrusted = append(untrusted, p)
+			}
+		}
+		if len(untrusted) > 0 {
+			sev := model.Medium
+			if cardPage {
+				sev = model.High
+			}
+			add("webrtc-peer-external", sev, "WebRTC", "WebRTC connection set up with "+untrusted[0],
+				"The page configured a WebRTC peer, relay or candidate at "+strings.Join(untrusted, ", ")+". "+
+					"Fraud-detection scripts use public STUN servers from known providers; an unknown server or bare IP "+
+					"is a channel the attacker controls.", strings.Join(untrusted, ", "))
+		}
+	}
+
 	for _, s := range r.Sockets {
 		if host := domains.Host(s); !scope.Trusted(host) {
 			add("websocket-external", model.Medium, s, "WebSocket to an outside host",
@@ -317,6 +415,46 @@ func Analyze(r *Result, target string, scope *domains.Scope) []model.Finding {
 			}
 		case "blocked-submit":
 			// Expected: the scanner blocks submissions. Not a finding.
+		}
+	}
+	return out
+}
+
+var (
+	reICEURL   = regexp.MustCompile(`(?i)\b(?:stun|turns?):([a-z0-9.-]+|\[[0-9a-f:]+\])`)
+	reCandAddr = regexp.MustCompile(`(?i)candidate:\S+ \d+ \w+ \d+ (\S+) \d+ typ`)
+	reConnAddr = regexp.MustCompile(`(?m)^c=IN IP[46] (\S+)`)
+)
+
+// webrtcPeers lists the public addresses a page configured as WebRTC servers or peers.
+// mDNS names (.local) and private ranges are the browser's own and are skipped.
+func webrtcPeers(events []Event) []string {
+	seen := map[string]bool{}
+	var out []string
+	addPeer := func(h string) {
+		h = strings.ToLower(strings.Trim(h, "[]"))
+		if h == "" || seen[h] || strings.HasSuffix(h, ".local") || h == "0.0.0.0" {
+			return
+		}
+		if ip := net.ParseIP(h); ip != nil && (ip.IsPrivate() || ip.IsLoopback() || ip.IsLinkLocalUnicast() || ip.IsUnspecified()) {
+			return
+		}
+		seen[h] = true
+		out = append(out, h)
+	}
+	for _, e := range events {
+		switch e.Kind {
+		case "webrtc-peer":
+			for _, m := range reICEURL.FindAllStringSubmatch(e.Detail, 20) {
+				addPeer(m[1])
+			}
+		case "webrtc-remote":
+			for _, m := range reCandAddr.FindAllStringSubmatch(e.Detail, 50) {
+				addPeer(m[1])
+			}
+			for _, m := range reConnAddr.FindAllStringSubmatch(e.Detail, 10) {
+				addPeer(m[1])
+			}
 		}
 	}
 	return out

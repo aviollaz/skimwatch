@@ -10,15 +10,33 @@ import (
 	"github.com/goccy/go-yaml"
 )
 
-// Target is one store. Pages are the URLs worth watching: the home page, a product
-// page and the checkout entry point are where skimmers usually live.
+// Kinds of target.
+const (
+	// KindStore is an online store: home, product and checkout-entry pages.
+	KindStore = "store"
+	// KindSharedCheckout is a payment or subscription form that many merchants embed, such
+	// as a processor's hosted card form or a platform's checkout. One compromise there
+	// reaches every merchant at once (PaperCut, 2026: one script tag in a shared card form,
+	// 80 newspapers), so these targets are held to a stricter baseline.
+	KindSharedCheckout = "shared-checkout"
+)
+
+// Target is one store or shared checkout. Pages are the URLs worth watching: the home page,
+// a product page and the checkout entry point are where skimmers usually live.
 type Target struct {
 	Name  string   `yaml:"name"`
+	Kind  string   `yaml:"kind"` // KindStore (default) or KindSharedCheckout
 	Pages []string `yaml:"pages"`
 	// Domains the store legitimately loads code from (its CDN, payment provider...).
 	// Third-party domains outside this list are reported for review.
 	Allow []string `yaml:"allow"`
+	// For shared checkouts: the merchants known to embed this form. Findings name them,
+	// so a report says who is affected and whom to notify.
+	UsedBy []string `yaml:"used_by"`
 }
+
+// Shared reports whether the target is a form many merchants embed.
+func (t Target) Shared() bool { return t.Kind == KindSharedCheckout }
 
 // Settings tune how politely and how deeply the scanner works.
 type Settings struct {
@@ -98,6 +116,13 @@ func (c *Config) validate() error {
 			return fmt.Errorf("duplicate target name %q", t.Name)
 		}
 		seen[t.Name] = true
+		switch t.Kind {
+		case "":
+			c.Targets[i].Kind = KindStore
+		case KindStore, KindSharedCheckout:
+		default:
+			return fmt.Errorf("target %q: unknown kind %q (want %q or %q)", t.Name, t.Kind, KindStore, KindSharedCheckout)
+		}
 		if len(t.Pages) == 0 {
 			return fmt.Errorf("target %q has no pages", t.Name)
 		}

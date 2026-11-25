@@ -90,3 +90,20 @@ targets:
     pages:
       - https://www.disco.com.uy/
       - https://www.disco.com.uy/products/category/almacen/10
+
+  # Shared checkouts: payment or subscription forms that many merchants embed (a processor's
+  # hosted card form, a platform checkout, a news paywall). One injected script there reaches
+  # every merchant at once, as in the 2026 PaperCut attack (one tag in Payway's US hosted
+  # form, 80 newspapers). They get a stricter baseline, and findings name the merchants.
+  #
+  # To find the URL: open a merchant's checkout, find the <iframe> that holds the card
+  # fields (DevTools → Elements, search "iframe") and use its src. Forms that only load
+  # with a one-time session token can't be watched directly; watch the merchant page that
+  # embeds them instead.
+  #
+  # - name: example-hosted-form
+  #   kind: shared-checkout
+  #   pages:
+  #     - https://forms.processor.example/hosted/card-form
+  #   allow: [processor.example]
+  #   used_by: [diario-a, diario-b, tienda-c]
