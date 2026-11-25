@@ -20,13 +20,21 @@ import (
 
 // Checker is safe for concurrent use; RDAP answers are cached for the whole run.
 type Checker struct {
-	blocklist map[string]string // registrable domain → source of the listing
+	blocklist map[string]string // registrable domain or IP address → source of the listing
+	urlIOCs   []urlIOC          // URL fragments, for malicious files on hosts that are otherwise fine
 	rdap      *http.Client
 	rdapBase  string
 	ageCheck  bool
 
 	mu    sync.Mutex
 	cache map[string]ageResult
+}
+
+// urlIOC is a published indicator that names a path rather than a whole domain, such as one
+// attacker's repository on jsDelivr. Blocking the CDN itself would flag every store.
+type urlIOC struct {
+	fragment string
+	source   string
 }
 
 type ageResult struct {
@@ -76,16 +84,55 @@ func (c *Checker) loadBlocklist(path string) error {
 		}
 		fields := strings.Fields(line)
 		d := fields[len(fields)-1] // hosts-file lines look like "127.0.0.1 bad.example"
-		if d == "localhost" || domains.IsIP(d) {
+		if strings.Contains(d, "/") {
+			// A URL fragment: "cdn.jsdelivr.net/gh/attacker/". Matched as a substring of
+			// script and request URLs, case-insensitively, with any scheme.
+			frag := strings.ToLower(strings.TrimPrefix(strings.TrimPrefix(d, "https://"), "http://"))
+			c.urlIOCs = append(c.urlIOCs, urlIOC{fragment: frag, source: path})
 			continue
 		}
+		if d == "localhost" || d == "0.0.0.0" || d == "127.0.0.1" {
+			continue
+		}
+		// IP addresses are kept: WebRTC skimmers talk to bare IPs, not domains.
 		c.blocklist[domains.Registrable(d)] = path
 	}
 	return sc.Err()
 }
 
-// BlocklistSize is the number of distinct domains loaded.
-func (c *Checker) BlocklistSize() int { return len(c.blocklist) }
+// BlocklistSize is the number of distinct domains, addresses and URL indicators loaded.
+func (c *Checker) BlocklistSize() int { return len(c.blocklist) + len(c.urlIOCs) }
+
+// MatchURL returns the blocklist that lists a URL fragment contained in u, or "".
+func (c *Checker) MatchURL(u string) (fragment, source string) {
+	l := strings.ToLower(u)
+	for _, ioc := range c.urlIOCs {
+		if strings.Contains(l, ioc.fragment) {
+			return ioc.fragment, ioc.source
+		}
+	}
+	return "", ""
+}
+
+// CheckURLs reports every URL that matches a published indicator.
+func (c *Checker) CheckURLs(target, pageURL string, urls []string) []model.Finding {
+	var out []model.Finding
+	seen := map[string]bool{}
+	for _, u := range urls {
+		frag, src := c.MatchURL(u)
+		if frag == "" || seen[u] {
+			continue
+		}
+		seen[u] = true
+		out = append(out, model.Finding{
+			Layer: model.LayerIntel, Rule: "blocklisted-url", Severity: model.Critical, Target: target, PageURL: pageURL,
+			Location: u, Title: "Loads a file named in a published attack report",
+			Detail:   fmt.Sprintf("The URL contains %q, listed in %s. The host may be legitimate; this specific path is not.", frag, src),
+			Evidence: model.Truncate(u, 240),
+		})
+	}
+	return out
+}
 
 // Check evaluates every third-party domain a target talked to.
 func (c *Checker) Check(ctx context.Context, target string, thirdParty []string, scope *domains.Scope) []model.Finding {
@@ -104,6 +151,12 @@ func (c *Checker) Check(ctx context.Context, target string, thirdParty []string,
 			continue
 		}
 		if scope.Allowed(host) || domains.IsKnownGood(host) {
+			continue
+		}
+		if domains.IsIP(host) {
+			add("bare-ip-host", model.Medium, host, "Pages talk to a bare IP address: "+host,
+				"Legitimate providers are reached by name. A raw IP, especially as a WebRTC peer, is how throwaway "+
+					"skimmer servers are often addressed.")
 			continue
 		}
 		if like := Lookalike(reg); like != "" {

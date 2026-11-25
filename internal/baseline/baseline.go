@@ -13,12 +13,21 @@ import (
 
 // Compare reports scripts and domains that appeared or changed since the previous scan.
 // A nil previous scan means this is the first one: it becomes the baseline and nothing is reported.
-func Compare(prev *model.Scan, curr *model.Scan, scope *domains.Scope) []model.Finding {
+//
+// strict is for shared checkouts: payment forms that many merchants embed change rarely and
+// are worth more to an attacker than any single store, so every new or changed script and
+// every new domain is raised a level. PaperCut (2026) was a single added <script> tag in a
+// shared card form; that one line is the whole signal.
+func Compare(prev *model.Scan, curr *model.Scan, scope *domains.Scope, strict bool) []model.Finding {
 	if prev == nil {
 		return nil
 	}
 	var out []model.Finding
 	add := func(rule string, sev model.Severity, page, loc, title, detail, evidence string) {
+		if strict {
+			sev = raise(sev)
+			detail += " Raised one level: this is a payment form shared by many merchants, where unplanned changes are rare."
+		}
 		out = append(out, model.Finding{
 			Layer: model.LayerBaseline, Rule: rule, Severity: sev, Target: curr.Target, PageURL: page,
 			Location: loc, Title: title, Detail: detail, Evidence: evidence,
@@ -56,13 +65,23 @@ func Compare(prev *model.Scan, curr *model.Scan, scope *domains.Scope) []model.F
 		case !existed && scope.Allowed(host):
 			add("new-script", model.Info, s.PageURL, s.Src, "New first-party script", "A script from the store's own domains appeared since the last scan.", s.Src)
 		case !existed:
+			if uc, ok := domains.ParseUserCode(s.Src); ok {
+				sev := model.Medium
+				if uc.Mutable || uc.ImpersonatedLibrary() != "" {
+					sev = model.High
+				}
+				add("new-user-hosted-script", sev, s.PageURL, s.Src, "New script served from a personal repository: "+uc.Account(),
+					"A script from "+host+" appeared since the last scan, served straight out of the "+uc.Service+" account "+
+						uc.Account()+". Anyone can publish there, so the trusted CDN says nothing about who wrote the code.", s.Src)
+				break
+			}
 			sev := model.Medium
 			if domains.IsKnownGood(host) {
 				sev = model.Low
 			}
 			add("new-third-party-script", sev, s.PageURL, s.Src, "New script from "+host,
 				"A third-party script appeared since the last scan. Confirm someone at the store added it on purpose.", s.Src)
-		case old.SHA256 != s.SHA256 && !scope.Allowed(host) && !domains.IsKnownGood(host):
+		case old.SHA256 != s.SHA256 && !scope.Allowed(host) && (!domains.IsKnownGood(host) || isUserCode(s.Src)):
 			add("third-party-script-changed", model.Medium, s.PageURL, s.Src, "Third-party script changed: "+host,
 				fmt.Sprintf("Same URL, different content (%d → %d bytes). This is exactly how supply-chain attacks such as the "+
 					"2024 polyfill.io compromise reached thousands of sites. Review the diff.", old.Size, s.Size),
@@ -94,4 +113,16 @@ func Compare(prev *model.Scan, curr *model.Scan, scope *domains.Scope) []model.F
 			"A third-party domain the pages did not contact in the previous scan.", d)
 	}
 	return out
+}
+
+func isUserCode(src string) bool {
+	_, ok := domains.ParseUserCode(src)
+	return ok
+}
+
+func raise(s model.Severity) model.Severity {
+	if s < model.Critical {
+		return s + 1
+	}
+	return s
 }

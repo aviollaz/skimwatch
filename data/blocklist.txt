@@ -1,5 +1,6 @@
 # Domains known to have served malicious code to online stores.
-# One registrable domain per line. Hosts-file format ("0.0.0.0 domain") also works.
+# One registrable domain or IP address per line. Hosts-file format ("0.0.0.0 domain") also works.
+# A line with a "/" is a URL fragment, for malicious files on hosts that are otherwise legitimate.
 # The nightly workflow adds abuse.ch URLhaus on top of this list.
 
 # 2024 polyfill.io supply-chain attack: the CDN was bought and began injecting
@@ -9,3 +10,13 @@ bootcss.com
 bootcdn.net
 staticfile.org
 staticfile.net
+
+# 2026 PaperCut attack (Guardio Labs): one script tag added to Payway's hosted card form,
+# shared by about 80 US newspapers. The loader was a fake jQuery on jsDelivr that opened a
+# WebRTC channel to the servers below. URL fragments (anything with a "/") match script and
+# request URLs, so the attacker's repository is flagged without blocklisting jsDelivr itself.
+cdn.jsdelivr.net/gh/fs82g9omml/
+github.com/fs82g9omml/
+raw.githubusercontent.com/fs82g9omml/
+89.116.171.109
+89.117.134.66
