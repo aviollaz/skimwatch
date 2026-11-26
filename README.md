@@ -39,7 +39,10 @@ flowchart LR
 
 Every finding has a severity, a plain-language explanation, where it was found and a truncated
 evidence snippet. Findings are fingerprinted across scans, so the report separates **new** problems
-from known ones, and CI only fails on new ones.
+from known ones, and CI only fails on new ones. "New" means absent from every scan of that store
+in the last two weeks, not just from last night's: the browser loads a different set of scripts
+on each visit, and bundler chunks are renamed on every deploy, so a one-night comparison kept
+re-reporting the same findings. Chunk findings are matched by directory and code, not file name.
 
 <p align="center">
   <img src="docs/report_ejemplo.png" width="760" alt="skimwatch HTML report: four stores, three flagged critical (encoded skimmer in an event handler, payment skimmers, a cryptominer and a cloaked redirect) and one clean">

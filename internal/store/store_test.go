@@ -40,6 +40,19 @@ func exercise(t *testing.T, s Store) {
 	if got.Scripts[0].SHA256 == "" {
 		t.Error("script hashes must survive a round trip")
 	}
+
+	key := got.Findings[0].BaselineKey()
+	seen, err := s.Seen(ctx, "shop", t0.Add(-time.Hour))
+	if err != nil || !seen[key] {
+		t.Fatalf("finding should be seen within the window, got %v %v", seen, err)
+	}
+	seen, err = s.Seen(ctx, "shop", t0.Add(2*time.Hour))
+	if err != nil || seen[key] {
+		t.Fatalf("finding should be outside a window that starts after it, got %v %v", seen, err)
+	}
+	if seen, _ := s.Seen(ctx, "other", t0.Add(-time.Hour)); len(seen) != 0 {
+		t.Errorf("other targets' findings leaked: %v", seen)
+	}
 }
 
 func TestFileStore(t *testing.T) {

@@ -264,3 +264,21 @@ func rules(s *model.Scan) map[string]model.Severity {
 	}
 	return m
 }
+
+// A chunk the browser loaded two nights ago but not last night is not new tonight. The
+// nightly run used to compare with the previous scan only, so findings flapped and failed
+// the job on most nights.
+func TestMarkNewUsesRecentHistory(t *testing.T) {
+	f := model.Finding{Layer: model.LayerStatic, Rule: "skimmer-pattern", Target: "americanas",
+		Location: "runtime-loaded https://cdn.example/_next/static/chunks/abc.js", Severity: model.Critical}
+	other := model.Finding{Layer: model.LayerIntel, Rule: "new-domain-age", Target: "americanas", Location: "fresh.example"}
+
+	fs := []model.Finding{f, other}
+	markNew(fs, &model.Scan{}, map[string]bool{f.BaselineKey(): true})
+	if fs[0].New {
+		t.Error("a finding seen within the window must not be new")
+	}
+	if !fs[1].New {
+		t.Error("a finding absent from the whole window is new")
+	}
+}
